@@ -24,6 +24,8 @@ public class Movement : MonoBehaviour
         Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
+        
+
         if(Input.GetMouseButtonDown(0))
         {
             //keyword out because hit isn't assigned, for people who not remember how to code in C# kappa
