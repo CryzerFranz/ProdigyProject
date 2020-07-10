@@ -1,18 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Inte : MonoBehaviour
+public class Interact : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float interactRadius = 2.0f;
+
+    public NavMeshAgent playerNavMeshAgent;
+    public Transform targetToPort;
+
+    //eigene script bekommen... not final
+    private void Update()
     {
-        
+        if (Physics.CheckSphere(transform.position, interactRadius, 1 << 8))
+        {
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                playerNavMeshAgent.Warp(targetToPort.position);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDrawGizmosSelected()
     {
-        
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, interactRadius);
     }
 }
