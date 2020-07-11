@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,13 +11,19 @@ public class playerDetector : MonoBehaviour
     // Start is called before the first frame update
     private NavMeshAgent enemyNavMeshAgent;
 
+    bool sawPlayer = false;
 
     public Transform player;
 
     [Range(2.0f, 360f)]
     public float maxAngle;
-   
-    public float maxRadius;
+
+    //default max radius if player is escaped from enemy
+    public float minRadius = 10f;
+    public float maxRadius = 10f;
+    //new radius if the player has been seen
+    public float radiusSeenPlayer = 15f;
+
 
     private bool isInFOV = false;
 
@@ -35,7 +42,7 @@ public class playerDetector : MonoBehaviour
 
 
         //line between the player and the enemy
-        if(!isInFOV)
+        if (!isInFOV)
         {
             Gizmos.color = Color.cyan;
         }
@@ -43,7 +50,7 @@ public class playerDetector : MonoBehaviour
         {
             Gizmos.color = Color.red;
         }
-        Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius );
+        Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius);
 
         Gizmos.color = Color.black;
         Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
@@ -51,53 +58,59 @@ public class playerDetector : MonoBehaviour
 
 
     //checking if player is in the Radius and viewAngle of the enemy
-    public static bool inFOV(NavMeshAgent enemyToTarget, Transform checkingObject, Transform target, float maxAngle, float maxRadius)
+    public static bool inFOV(NavMeshAgent enemyToTarget, Transform checkingObject, Transform target, float maxAngle, ref float maxRadius, ref bool sawPlayer, float newMaxRadius)
     {
-        //Object in the radius are collected in this Collider Array
-        Collider[] overlaps = new Collider[20];
-        int count = Physics.OverlapSphereNonAlloc(checkingObject.position, maxRadius, overlaps);
 
-        for (int i = 0; i < count; i++)
-        {
-            if(overlaps[i] != null)
+        if(Physics.CheckSphere(checkingObject.position, maxRadius, 1 << 8))
+        { 
+            Debug.Log(sawPlayer);
+            //calculate the position between the objects
+            Vector3 directionBetween = (target.position - checkingObject.position).normalized;
+            //the y axis postion isn't important 
+            directionBetween.y *= 0;
+
+            float angle = Vector3.Angle(checkingObject.forward, directionBetween);
+
+            if (angle <= maxAngle)
             {
-                //checks if the current object ( overlaps[i]) position is equal to the player position
-                if(overlaps[i].transform == target)
+                //We are in the view angle of the AI
+                Ray ray = new Ray(checkingObject.position, target.position - checkingObject.position);
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit, maxRadius))
                 {
-                    //calculate the position between the objects
-                    Vector3 directionBetween = (target.position - checkingObject.position).normalized;
-                    //the y axis postion isn't important 
-                    directionBetween.y *= 0;
-
-
-                    float angle = Vector3.Angle(checkingObject.forward, directionBetween);
-
-
-                    if(angle <= maxAngle)
+                    if (hit.transform == target)
                     {
-                        //We are in the view angle of the AI
-
-                        Ray ray = new Ray(checkingObject.position, target.position - checkingObject.position);
-                        RaycastHit hit;
-
-                        if (Physics.Raycast(ray, out hit, maxRadius))
-                        {
-                            if (hit.transform == target)
-                            {
-                                enemyToTarget.SetDestination(target.position);
-                                return true;
-                            }
-                        }
+                        sawPlayer = true;
+                        maxRadius = newMaxRadius;
+                        enemyToTarget.SetDestination(target.position);
+                        return true;
                     }
                 }
             }
         }
-
         return false;
     }
+    private void checkPlayerInRadius(NavMeshAgent enemyToTarget, Transform target, ref bool sawPlayer,ref float maxRadius, float minRadius)
+    {
+        if (Physics.CheckSphere(transform.position, maxRadius, 1 << 8) && sawPlayer == true)
+        {
+            enemyToTarget.SetDestination(target.position);
+        }
+        else
+        {
+            sawPlayer = false;
+            maxRadius = minRadius;
+        }
+    }
+
+
+
     private void Update()
     {
-        isInFOV = inFOV(enemyNavMeshAgent, transform, player, maxAngle, maxRadius);
+        //don't need isInFOV at the moment
+       isInFOV = inFOV(enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
+       checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer,ref maxRadius, minRadius);
     }
 
     private void Start()

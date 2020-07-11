@@ -11,16 +11,7 @@ public class Interact : MonoBehaviour
     public Transform targetToPort;
 
     //eigene script bekommen... not final
-    private void Update()
-    {
-        if (Physics.CheckSphere(transform.position, interactRadius, 1 << 8))
-        {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                playerNavMeshAgent.Warp(targetToPort.position);
-            }
-        }
-    }
+   
 
     private void OnDrawGizmosSelected()
     {
