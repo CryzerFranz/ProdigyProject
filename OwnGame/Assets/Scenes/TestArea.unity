@@ -299,14 +299,14 @@ RectTransform:
   m_GameObject: {fileID: 96297614}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18.066666, y: 40.714287, z: 0.8064517}
+  m_LocalScale: {x: 7.5, y: 20.8, z: 0.8064517}
   m_Children: []
   m_Father: {fileID: 137404754}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 753.333, y: -629.99927}
+  m_AnchoredPosition: {x: 292, y: -416}
   m_SizeDelta: {x: 52.455566, y: 21.389633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96297616
@@ -489,7 +489,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137404753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 0.15, y: 0.07, z: 1.24}
   m_Children:
   - {fileID: 96297615}
@@ -497,10 +497,10 @@ RectTransform:
   m_Father: {fileID: 96613663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1089, y: 669}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 79, y: -30}
+  m_SizeDelta: {x: 1054.0203, y: 789.56616}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137404755
 MonoBehaviour:
@@ -5341,14 +5341,14 @@ RectTransform:
   m_GameObject: {fileID: 1659451396}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18.066666, y: 40.714287, z: 0.8064517}
+  m_LocalScale: {x: 7.5, y: 20.8, z: 0.8064517}
   m_Children: []
   m_Father: {fileID: 137404754}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1713.3331, y: -629.99927}
+  m_AnchoredPosition: {x: 727, y: -417}
   m_SizeDelta: {x: 52.455566, y: 21.389633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659451398
