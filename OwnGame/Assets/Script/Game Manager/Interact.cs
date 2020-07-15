@@ -8,18 +8,19 @@ public class Interact : MonoBehaviour
 {
     public float interactRadius = 2.0f;
 
+    public static bool playerIsInsight = false;
     public NavMeshAgent playerNavMeshAgent;
-    public Transform targetToPort;
-       
-    public void DisplayOnHUD_E(bool isInRange, GameObject displayObject)
+    public GameObject ui_E_text;
+
+    public void DisplayOnHUD_E(GameObject displayObject)
     {
-        if(isInRange)
+        if(playerIsInsight)
         {
-            displayObject.SetActive(isInRange);
+            displayObject.SetActive(playerIsInsight);
         }
         else
         {
-            displayObject.SetActive(isInRange);
+            displayObject.SetActive(playerIsInsight);
         }
     }
 
