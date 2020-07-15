@@ -63,7 +63,6 @@ public class playerDetector : MonoBehaviour
 
         if(Physics.CheckSphere(checkingObject.position, maxRadius, 1 << 8))
         { 
-            Debug.Log(sawPlayer);
             //calculate the position between the objects
             Vector3 directionBetween = (target.position - checkingObject.position).normalized;
             //the y axis postion isn't important 
