@@ -20,4 +20,20 @@ public class OnClick_Portal : MonoBehaviour
         PausedGame.Resume();
         player.Warp(target.position);
     }
+
+    public void rangeCombat()
+    {
+        NavMeshAgent player = GameObject.FindGameObjectWithTag("Player").GetComponent<NavMeshAgent>();
+        Transform target = GameObject.Find("Port_Position_DA").GetComponent<Transform>();
+        PausedGame.Resume();
+        player.Warp(target.position);
+    }
+
+    public void meleeCombat()
+    {
+        NavMeshAgent player = GameObject.FindGameObjectWithTag("Player").GetComponent<NavMeshAgent>();
+        Transform target = GameObject.Find("Port_Position_CA").GetComponent<Transform>();
+        PausedGame.Resume();
+        player.Warp(target.position);
+    }
 }

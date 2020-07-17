@@ -21,7 +21,6 @@ public class EnemySpawner : MonoBehaviour
     private void spawnEnemy()
     {
         Vector3 pos = center + new Vector3(Random.Range(-spawnRadius, spawnRadius), 0, Random.Range(-spawnRadius, spawnRadius));
-        Debug.Log(center.y);
         Instantiate(enemyPrefab, pos, Quaternion.identity);
     }
     private void OnDrawGizmosSelected()
