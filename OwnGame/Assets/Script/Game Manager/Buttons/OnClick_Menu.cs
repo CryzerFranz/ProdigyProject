@@ -30,4 +30,9 @@ public class OnClick_Menu : MonoBehaviour
         canvas.SetActive(false);
         PausedGame.Resume();
     }
+
+    public void Save()
+    {
+        Debug.Log("No implementation at the momemnt");
+    }
 }

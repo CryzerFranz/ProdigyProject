@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stats 
+public class Stats : MonoBehaviour
 {
     float LifePoints { get; set; }
     float Defense { get; set; }
