@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
 {
-    float LifePoints { get; set; }
-    float Defense { get; set; }
-    float CritChance { get; set; }
-    float Dexterity { get; set; }
-    float Strength { get; set; }
+    // TESTING PHASE: PUBLIC
+    // FINAL: PROTECTED
+    public float LifePoints;
+    public float Defense;
+    public float CritChance;
+    public float Dexterity;
+    public float Strength;
 }
