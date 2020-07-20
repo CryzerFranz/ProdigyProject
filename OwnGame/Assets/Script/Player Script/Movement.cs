@@ -7,8 +7,7 @@ using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
-    //To set animation
-    //private Animator playerAnimator;
+    
     //public Interact focus;
     private NavMeshAgent playerNavMeshAgent;
     private Camera playerCamera;
@@ -30,7 +29,6 @@ public class Movement : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            //keyword out because hit isn't assigned, for people who not remember how to code in C# kappa
             if(Physics.Raycast(ray, out hit, 100))
             {
                 animator.SetFloat("Forward", 2f);
@@ -46,15 +44,6 @@ public class Movement : MonoBehaviour
                 playerNavMeshAgent.ResetPath();
             }
         }
-
-        //if (playerNavMeshAgent.remainingDistance <= playerNavMeshAgent.stoppingDistance)
-        //{
-        //    animator.SetFloat("Forward", 0f);
-        //    //playerNavMeshAgent.ResetPath();
-        //}
-
-       
-
     }
  
 }
