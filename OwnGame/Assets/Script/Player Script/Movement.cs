@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
         playerNavMeshAgent = GetComponent<NavMeshAgent>();
         playerCamera = Camera.main;
         animator = GetComponent<Animator>();
+       
     }
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class Movement : MonoBehaviour
     {
         Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+
 
         if(Input.GetMouseButtonDown(0))
         {
