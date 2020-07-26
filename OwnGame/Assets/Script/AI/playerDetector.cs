@@ -12,7 +12,7 @@ public class playerDetector : MonoBehaviour
     private NavMeshAgent enemyNavMeshAgent;
 
     bool sawPlayer = false;
-
+    public Attacking attack;
     public Transform player;
 
     [Range(2.0f, 360f)]
@@ -110,6 +110,14 @@ public class playerDetector : MonoBehaviour
         //don't need isInFOV at the moment
        isInFOV = inFOV(enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
        checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer,ref maxRadius, minRadius);
+        if(isInFOV)
+        {
+            float distance = Vector3.Distance(player.position, transform.position);
+            if(distance <= enemyNavMeshAgent.stoppingDistance)
+            {
+                attack.BasicAttack(20);
+            }
+        }
     }
 
     private void Start()

@@ -554,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &96613660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,6 +1613,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7034247754080618281}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &417075268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417075261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a09f730c35f14fa75ccd7271592c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  basicDamage: 20
+  playerHealth: {fileID: 1464966163}
 --- !u!1 &444372369
 GameObject:
   m_ObjectHideFlags: 0
@@ -5704,12 +5719,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6377917589375101041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1464966163 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6377917590797988968, guid: e9491f0b892ee6f4a8acf835df04c272,
+    type: 3}
+  m_PrefabInstance: {fileID: 6377917589375101041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464966162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4932f989fd2055e478f8421049ab2743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &1464966165 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 6377917590797988964, guid: e9491f0b892ee6f4a8acf835df04c272,
     type: 3}
   m_PrefabInstance: {fileID: 6377917589375101041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1464966168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464966162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f346fb88eb7e5d247b0693597e4f7f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1465254386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6377917590798150019, guid: e9491f0b892ee6f4a8acf835df04c272,
@@ -9356,6 +9395,16 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 1805992792}
+    - target: {fileID: 6377917590797988968, guid: e9491f0b892ee6f4a8acf835df04c272,
+        type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 1464966168}
+    - target: {fileID: 6377917590797988968, guid: e9491f0b892ee6f4a8acf835df04c272,
+        type: 3}
+      propertyPath: maxHealth
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6377917590798150019, guid: e9491f0b892ee6f4a8acf835df04c272,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9430,6 +9479,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1465254386}
+    - target: {fileID: 7034247753958725399, guid: 368a32adcf88bcd4eab0126c7919ec39,
+        type: 3}
+      propertyPath: attack
+      value: 
+      objectReference: {fileID: 417075268}
     - target: {fileID: 7034247753958725482, guid: 368a32adcf88bcd4eab0126c7919ec39,
         type: 3}
       propertyPath: m_LocalPosition.x
