@@ -7,21 +7,25 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
 
-    public PlayerStats playerStats;
+    private PlayerStats playerStats;
+    public Healthbar healthbar;
+
     private float maxHealth;
     private float currentHealth;
-    public Healthbar healthbar;
-    // Start is called before the first frame update
+
     void Start()
     {
+        playerStats = GetComponent<PlayerStats>();
         maxHealth = playerStats.LifePoints;
-        Debug.Log(maxHealth);
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(float damage)
     {
+        ///// TESTPHASE
+        damage -= (damage * (playerStats.Defense * 0.1f));
+        ///// TESTPHASE
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
     }
@@ -32,5 +36,6 @@ public class Health : MonoBehaviour
         {
             return maxHealth;
         }
+        set { maxHealth += value; }
     }
 }

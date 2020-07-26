@@ -5,15 +5,17 @@ using UnityEngine.AI;
 
 public class Attacking : MonoBehaviour
 {
+
+    public Health playerHealth;
+    NavMeshAgent navMesh;
+
     public float attackSpeed = 1f;
     private float attackCooldown = 0f;
     public float basicDamage;
-    public Health playerHealth;
-    NavMeshAgent navMesh;
+   
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(playerHealth.MaxHealth);
         navMesh = GetComponent<NavMeshAgent>();
     }
 

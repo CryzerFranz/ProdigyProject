@@ -103,21 +103,19 @@ public class playerDetector : MonoBehaviour
         }
     }
 
-
-
     private void Update()
     {
-        //don't need isInFOV at the moment
+       int distance = (int)Vector3.Distance(player.position, transform.position);
        isInFOV = inFOV(enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
+       if (isInFOV)
+       {
+           if (distance <= enemyNavMeshAgent.stoppingDistance)
+           {
+               attack.BasicAttack(20);
+           }
+       }
        checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer,ref maxRadius, minRadius);
-        if(isInFOV)
-        {
-            float distance = Vector3.Distance(player.position, transform.position);
-            if(distance <= enemyNavMeshAgent.stoppingDistance)
-            {
-                attack.BasicAttack(20);
-            }
-        }
+        
     }
 
     private void Start()
