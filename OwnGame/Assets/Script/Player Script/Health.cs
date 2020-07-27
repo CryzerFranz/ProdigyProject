@@ -30,6 +30,8 @@ public class Health : MonoBehaviour
         healthbar.SetHealth(currentHealth);
     }
 
+
+
     public float MaxHealth
     {
         get
