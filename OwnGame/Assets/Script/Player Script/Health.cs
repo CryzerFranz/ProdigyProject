@@ -14,9 +14,6 @@ public class Health : MonoBehaviour
 
     private float maxHealth;
     private float currentHealth;
-
-    private bool isPlayerDead = false;
-
     public bool IsPlayerDead
     {
         get
