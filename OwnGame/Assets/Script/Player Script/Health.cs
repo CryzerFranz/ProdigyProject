@@ -14,9 +14,6 @@ public class Health : MonoBehaviour
 
     private float maxHealth;
     private float currentHealth;
-
-    private bool isPlayerDead = false;
-
     public bool IsPlayerDead
     {
         get
@@ -37,10 +34,8 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        Debug.Log(IsPlayerDead + "555");
         if(!IsPlayerDead)
         {
-            
             ///// TESTPHASE
             damage -= (damage * (playerStats.Defense * 0.1f));
             ///// TESTPHASE
