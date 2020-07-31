@@ -37,8 +37,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log(IsPlayerDead + "555");
         if(!IsPlayerDead)
         {
+            
             ///// TESTPHASE
             damage -= (damage * (playerStats.Defense * 0.1f));
             ///// TESTPHASE
