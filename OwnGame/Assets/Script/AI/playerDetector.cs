@@ -12,8 +12,9 @@ public class playerDetector : MonoBehaviour
     private NavMeshAgent enemyNavMeshAgent;
 
     bool sawPlayer = false;
-    public Attacking attack;
     public Transform player;
+    private Attacking attack;
+    private BasicEnemyStats statsOfEnemy;
 
     [Range(2.0f, 360f)]
     public float maxAngle;
@@ -105,21 +106,29 @@ public class playerDetector : MonoBehaviour
 
     private void Update()
     {
-       int distance = (int)Vector3.Distance(player.position, transform.position);
-       isInFOV = inFOV(enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
-       if (isInFOV)
-       {
-           if (distance <= enemyNavMeshAgent.stoppingDistance)
-           {
-               attack.BasicAttack(20);
-           }
-       }
-       checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer,ref maxRadius, minRadius);
+        if (!statsOfEnemy.Dead)
+        {
+            int distance = (int)Vector3.Distance(player.position, transform.position);
+            isInFOV = inFOV(enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
+            if (isInFOV)
+            {
+                if (distance <= enemyNavMeshAgent.stoppingDistance)
+                {
+
+                    attack.BasicAttack();
+
+                }
+            }
+            checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer, ref maxRadius, minRadius);
+        }
+
         
     }
 
     private void Start()
     {
         enemyNavMeshAgent = GetComponent<NavMeshAgent>();
+        attack = GetComponent<Attacking>();
+        statsOfEnemy = GetComponent<BasicEnemyStats>();
     }
 }

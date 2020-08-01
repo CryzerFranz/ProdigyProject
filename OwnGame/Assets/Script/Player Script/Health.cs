@@ -11,6 +11,7 @@ public class Health : MonoBehaviour
 
     private PlayerStats playerStats;
     private Animator animator;
+    public Animator transitionAnimator;
 
     private float maxHealth;
     private float currentHealth;
@@ -45,6 +46,7 @@ public class Health : MonoBehaviour
             if (IsPlayerDead)
             {
                 animator.SetTrigger("isDead");
+                
             }
         }
        

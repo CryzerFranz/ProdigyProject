@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    float lifePoints = 200f;
+    float lifePoints = 500f;
     float defense = 1f;
     float critChance = 1f;
     float dexterity = 1f;
