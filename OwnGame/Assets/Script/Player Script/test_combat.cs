@@ -8,6 +8,7 @@ public class test_combat : MonoBehaviour
     Animator animator;
 
     public Transform attackPoint;
+    public Transform attackPointEnd;
 
     public float attackRange = 1f;
     public LayerMask enemyLayers;
@@ -32,9 +33,20 @@ public class test_combat : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Melee_Spalten");
-        Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+        //Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+        //Debug.Log(hitEnemies.Length);
+        //foreach(Collider enemy in hitEnemies)
+        //{
+        //    Debug.Log(enemy.name);
+        //    enemy.GetComponent<BasicEnemyStats>().takeDamage(20);
+        //}
+    }
 
-        foreach(Collider enemy in hitEnemies)
+    void hitEnemies()
+    {
+        Collider[] hitEnemies = Physics.OverlapCapsule(attackPoint.position, attackPointEnd.position, 2, enemyLayers);
+        Debug.Log(hitEnemies.Length);
+        foreach (Collider enemy in hitEnemies)
         {
             Debug.Log(enemy.name);
             enemy.GetComponent<BasicEnemyStats>().takeDamage(20);
@@ -45,6 +57,5 @@ public class test_combat : MonoBehaviour
     {
         if (attackPoint == null)
             return;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
