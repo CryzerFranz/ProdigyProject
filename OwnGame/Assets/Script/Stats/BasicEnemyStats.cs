@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class BasicEnemyStats : MonoBehaviour
 {
+
+    public GameObject FloatingTextPrefab;
     private Animator animator;
     private float health;
     private float damage;
@@ -23,7 +26,13 @@ public class BasicEnemyStats : MonoBehaviour
     public void takeDamage(float dmg)
     {
         health -= dmg;
-        if(Dead)
+
+        if(FloatingTextPrefab)
+        {
+            ShowFloatingText((int)dmg);
+        }
+
+        if (Dead)
         {
             GetComponent<CapsuleCollider>().enabled = false;
             this.enabled = false;
@@ -31,6 +40,11 @@ public class BasicEnemyStats : MonoBehaviour
 
         }
         
+    }
+    void ShowFloatingText(int dmg)
+    {
+        var go = Instantiate(FloatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMeshPro>().text = dmg.ToString();
     }
 
     public float Health
