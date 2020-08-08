@@ -6,14 +6,14 @@ using UnityEngine.AI;
 public class Attacking : MonoBehaviour
 {
 
-    
+    public Animator animator;
     public Health playerHealth;
    
     private BasicEnemyStats enemyStat; 
     
     NavMeshAgent navMesh;
 
-    public float attackSpeed = 1f;
+    public float attackSpeed = 0.25f;
     private float attackCooldown = 0f;
    
     // Start is called before the first frame update
@@ -29,13 +29,18 @@ public class Attacking : MonoBehaviour
         attackCooldown -= Time.deltaTime;
     }
 
-    public void BasicAttack()
+    public void BasicAttackAnimation()
     {
         if(attackCooldown <= 0f)
         {
-            playerHealth.TakeDamage(enemyStat.Damage);
+            animator.SetTrigger("attack");
             attackCooldown = 1f / attackSpeed;
         }
+    }
+
+    public void BasicAttack()
+    {
+        playerHealth.TakeDamage(enemyStat.Damage);
     }
 
     public void SpecialAttack()

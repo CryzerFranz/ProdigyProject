@@ -9,6 +9,7 @@ public class BasicEnemyStats : MonoBehaviour
 
     public GameObject FloatingTextPrefab;
     private Animator animator;
+
     private float health;
     private float damage;
    
@@ -26,7 +27,6 @@ public class BasicEnemyStats : MonoBehaviour
     public void takeDamage(float dmg)
     {
         health -= dmg;
-
         if(FloatingTextPrefab)
         {
             ShowFloatingText((int)dmg);
@@ -36,8 +36,7 @@ public class BasicEnemyStats : MonoBehaviour
         {
             GetComponent<CapsuleCollider>().enabled = false;
             this.enabled = false;
-            animator.SetTrigger("EnemyDead");
-
+            animator.SetTrigger("Dead");
         }
         
     }

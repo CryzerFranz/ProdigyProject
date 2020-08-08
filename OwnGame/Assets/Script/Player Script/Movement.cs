@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
+
     private NavMeshAgent playerNavMeshAgent;
     private Health health;
     private Animator animator;

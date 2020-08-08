@@ -9,10 +9,10 @@ using UnityEngine.AI;
 public class playerDetector : MonoBehaviour
 {
     // Start is called before the first frame update
-    private NavMeshAgent enemyNavMeshAgent;
-
-    bool sawPlayer = false;
     public Transform player;
+    public Animator animator;
+
+    private NavMeshAgent enemyNavMeshAgent;
     private Attacking attack;
     private BasicEnemyStats statsOfEnemy;
 
@@ -26,6 +26,7 @@ public class playerDetector : MonoBehaviour
     public float radiusSeenPlayer = 15f;
 
 
+    bool sawPlayer = false;
     private bool isInFOV = false;
 
     //just drawing lines to show
@@ -59,7 +60,7 @@ public class playerDetector : MonoBehaviour
 
 
     //checking if player is in the Radius and viewAngle of the enemy
-    public static bool inFOV(NavMeshAgent enemyToTarget, Transform checkingObject, Transform target, float maxAngle, ref float maxRadius, ref bool sawPlayer, float newMaxRadius)
+    public static bool inFOV(Animator animator,NavMeshAgent enemyToTarget, Transform checkingObject, Transform target, float maxAngle, ref float maxRadius, ref bool sawPlayer, float newMaxRadius)
     {
 
         if(Physics.CheckSphere(checkingObject.position, maxRadius, 1 << 8))
@@ -84,11 +85,14 @@ public class playerDetector : MonoBehaviour
                         sawPlayer = true;
                         maxRadius = newMaxRadius;
                         enemyToTarget.SetDestination(target.position);
+                        animator.SetFloat("Forward", 2f);
                         return true;
                     }
                 }
             }
         }
+        animator.SetFloat("Forward", 0f);
+
         return false;
     }
     private void checkPlayerInRadius(NavMeshAgent enemyToTarget, Transform target, ref bool sawPlayer,ref float maxRadius, float minRadius)
@@ -109,14 +113,15 @@ public class playerDetector : MonoBehaviour
         if (!statsOfEnemy.Dead)
         {
             int distance = (int)Vector3.Distance(player.position, transform.position);
-            isInFOV = inFOV(enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
+            isInFOV = inFOV(animator, enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
             if (isInFOV)
             {
                 if (distance <= enemyNavMeshAgent.stoppingDistance)
                 {
-
-                    attack.BasicAttack();
-
+                    //Attacks player
+                    Debug.Log("Attack");
+                    animator.SetFloat("Forward", 0f);
+                    attack.BasicAttackAnimation();
                 }
             }
             checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer, ref maxRadius, minRadius);

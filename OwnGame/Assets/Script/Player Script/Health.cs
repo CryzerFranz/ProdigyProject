@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    //Canvas
+    public GameObject deathTransition;
+    public GameObject playerUI; 
 
     public Healthbar healthbar;
 
     private PlayerStats playerStats;
     private Animator animator;
-    public Animator transitionAnimator;
 
     private float maxHealth;
     private float currentHealth;
@@ -44,9 +46,11 @@ public class Health : MonoBehaviour
             currentHealth -= damage;
             healthbar.SetHealth(currentHealth);
             if (IsPlayerDead)
-            {
+            {  
                 animator.SetTrigger("isDead");
-                
+                deathTransition.SetActive(true);
+                playerUI.SetActive(false);
+
             }
         }
        
