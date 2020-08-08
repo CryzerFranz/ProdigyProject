@@ -108,6 +108,12 @@ public class playerDetector : MonoBehaviour
         }
     }
 
+    void FaceTarget()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 4f); ;
+    }
     private void Update()
     {
         if (!statsOfEnemy.Dead)
@@ -120,6 +126,7 @@ public class playerDetector : MonoBehaviour
                 {
                     //Attacks player
                     animator.SetFloat("Forward", 0f);
+                    FaceTarget();
                     attack.BasicAttackAnimation();
                 }
             }

@@ -25,6 +25,10 @@ public class Movement : MonoBehaviour
         playerCamera = Camera.main;  
     }
 
+    //void FaceTarget()
+    //{
+    //    Vector3 direction = ()
+    //}
     void Update()
     {
         if (!health.IsPlayerDead)
