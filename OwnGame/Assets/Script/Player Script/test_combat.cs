@@ -10,7 +10,9 @@ public class test_combat : MonoBehaviour
     public Transform attackPoint;
     public Transform attackPointEnd;
 
-    public float attackRange = 1f;
+
+    private GameObject weapon;
+    private float attackRange = 0f;
     public LayerMask enemyLayers;
 
     void Start()
@@ -23,6 +25,7 @@ public class test_combat : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
+            attackRange = 2f;
             Attack();
         }
     }
@@ -32,5 +35,14 @@ public class test_combat : MonoBehaviour
         animator.SetTrigger("Melee_Spalten");
     }
 
-    
+    void hitEnemies(GameObject _Weapon)
+    {
+        Collider[] hitEnemies = Physics.OverlapCapsule(attackPoint.position, attackPointEnd.position, attackRange, enemyLayers);
+        foreach (Collider enemy in hitEnemies)
+        {
+            Debug.Log(enemy.name);
+            enemy.GetComponent<BasicEnemyStats>().takeDamage(_Weapon.GetComponent<Wep_Sword>().Damage);
+        }
+    }
+
 }

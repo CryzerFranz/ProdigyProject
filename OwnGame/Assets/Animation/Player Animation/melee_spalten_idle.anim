@@ -82458,7 +82458,8 @@ AnimationClip:
   - time: 0.6
     functionName: hitEnemies
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 7156802381249775264, guid: 1cb80bd9573d4eb47a502432e31c076f,
+      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

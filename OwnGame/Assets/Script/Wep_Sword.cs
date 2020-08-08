@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wep_Sword : Meele_Weapon
+public class Wep_Sword : MonoBehaviour
 {
-    void Start()
-    {
-        //Attribute
-        Damage = 20;
-        CritChance = 15f;
+    public Transform attackPoint;
+    public Transform attackPointEnd;
 
-        animator.GetComponentInParent<Animator>();
+    public LayerMask enemyLayers;
+
+    private int damage = 20;
+    private float critChance = 1f;
+
+    public int Damage
+    {
+        get { return damage; }
+        set { damage = value; }
     }
 
+    public float CritChance
+    {
+        get { return critChance; }
+        set { critChance = value; }
+    }
 
 }
