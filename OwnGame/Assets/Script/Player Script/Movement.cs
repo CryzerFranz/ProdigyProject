@@ -7,10 +7,13 @@ using UnityEngine.UIElements;
 
 public class Movement : MonoBehaviour
 {
+    private Transform playerRespawnPoint;
     private NavMeshAgent playerNavMeshAgent;
     private Health health;
     private Animator animator;
     private Camera playerCamera;
+
+    private GameObject deathTransition;
 
     int layer_mask;
     bool isFollowTarget = false;
@@ -18,6 +21,10 @@ public class Movement : MonoBehaviour
     void Start()
     {
         layer_mask = LayerMask.GetMask("enemy");
+
+        playerRespawnPoint = PlayerManager.instance.respawnPoint.transform;
+        deathTransition = PlayerManager.instance.deathTransition;
+
         playerNavMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<Health>();
         animator = GetComponent<Animator>();
@@ -25,10 +32,6 @@ public class Movement : MonoBehaviour
         playerCamera = Camera.main;  
     }
 
-    //void FaceTarget()
-    //{
-    //    Vector3 direction = ()
-    //}
     void Update()
     {
         if (!health.IsPlayerDead)
@@ -81,6 +84,22 @@ public class Movement : MonoBehaviour
         else
         {
             playerNavMeshAgent.ResetPath();
+            if(Input.anyKeyDown)
+            {
+                Debug.Log("Respawn");
+
+                //respawn player at xyz
+                health.healthbar.SetMaxHealth(health.MaxHealth);
+                playerNavMeshAgent.Warp(playerRespawnPoint.position);
+                deathTransition.SetActive(false);
+                PlayerManager.instance.deathTransition.SetActive(true);
+                Debug.Log(health.);
+
+                // reset maxHealth ( maxHealth  >= 0 ? player movement activ : player movement disabled )
+
+                
+
+            }
         }
     }
  
