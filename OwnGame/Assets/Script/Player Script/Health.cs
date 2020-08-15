@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     //Canvas
-    public GameObject deathTransition;
-    public GameObject playerUI; 
 
     public Healthbar healthbar;
+
+    private GameObject playerUI; 
+    private GameObject deathTransition;
 
     private PlayerStats playerStats;
     private Animator animator;
@@ -29,6 +30,9 @@ public class Health : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerStats = GetComponent<PlayerStats>();
+
+        deathTransition = PlayerManager.instance.deathTransition;
+        playerUI = PlayerManager.instance.userInterface;
 
         maxHealth = playerStats.LifePoints;
         currentHealth = maxHealth;
@@ -52,8 +56,7 @@ public class Health : MonoBehaviour
                 playerUI.SetActive(false);
 
             }
-        }
-       
+        }  
     }
 
     public float MaxHealth

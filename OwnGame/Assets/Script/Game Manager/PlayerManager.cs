@@ -10,7 +10,11 @@ public class PlayerManager : MonoBehaviour
     {
         instance = this;
     }
+
     public GameObject oPlayer;
+    public GameObject respawnPoint;
+    public GameObject deathTransition;
+    public GameObject userInterface;
 
     /////////////////////////////////////////////////////////
 

@@ -9,12 +9,12 @@ using UnityEngine.AI;
 public class playerDetector : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Transform player;
     public Animator animator;
 
-    private NavMeshAgent enemyNavMeshAgent;
+    private Transform player;
     private Attacking attack;
     private BasicEnemyStats statsOfEnemy;
+    private NavMeshAgent enemyNavMeshAgent;
 
     [Range(2.0f, 360f)]
     public float maxAngle;
@@ -30,33 +30,33 @@ public class playerDetector : MonoBehaviour
     private bool isInFOV = false;
 
     //just drawing lines to show
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, maxRadius);
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(transform.position, maxRadius);
 
-        Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
-        Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
+    //    Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
+    //    Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
 
-        Gizmos.color = Color.green;
-        Gizmos.DrawRay(transform.position, fovLine1);
-        Gizmos.DrawRay(transform.position, fovLine2);
+    //    Gizmos.color = Color.green;
+    //    Gizmos.DrawRay(transform.position, fovLine1);
+    //    Gizmos.DrawRay(transform.position, fovLine2);
 
 
-        //line between the player and the enemy
-        if (!isInFOV)
-        {
-            Gizmos.color = Color.cyan;
-        }
-        else
-        {
-            Gizmos.color = Color.red;
-        }
-        Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius);
+    //    //line between the player and the enemy
+    //    if (!isInFOV)
+    //    {
+    //        Gizmos.color = Color.cyan;
+    //    }
+    //    else
+    //    {
+    //        Gizmos.color = Color.red;
+    //    }
+    //    Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius);
 
-        Gizmos.color = Color.black;
-        Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
-    }
+    //    Gizmos.color = Color.black;
+    //    Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
+    //}
 
 
     //checking if player is in the Radius and viewAngle of the enemy
@@ -140,6 +140,7 @@ public class playerDetector : MonoBehaviour
     {
         enemyNavMeshAgent = GetComponent<NavMeshAgent>();
         attack = GetComponent<Attacking>();
+        player = PlayerManager.instance.oPlayer.transform;
         statsOfEnemy = GetComponent<BasicEnemyStats>();
     }
 }
