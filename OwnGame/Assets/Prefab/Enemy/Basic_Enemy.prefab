@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 4141087617292137696}
   - component: {fileID: 4141087617292137699}
   - component: {fileID: 4141087617292137700}
+  - component: {fileID: 6073053858581362453}
   m_Layer: 9
   m_Name: Basic_Enemy
   m_TagString: Enemy
@@ -573,6 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b98a09f730c35f14fa75ccd7271592c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 4047580201802615737}
   playerHealth: {fileID: 0}
   attackSpeed: 1
 --- !u!114 &4141087617292137699
@@ -587,7 +589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9e4704d35946374e99524217ae70ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   animator: {fileID: 4047580201802615737}
   maxAngle: 360
   minRadius: 10
@@ -606,6 +607,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FloatingTextPrefab: {fileID: 6482898052179126153, guid: b2c30f94503996f48bd93b6c3e2d69bc,
+    type: 3}
+--- !u!114 &6073053858581362453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142151468833346949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b0c95799629ed48ac1992f1103a7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNavMeshAgent: {fileID: 8196514906075794170, guid: ae8fe3284e4d11e41b52e2b7f86a9b5b,
+    type: 3}
+  animator: {fileID: 8136611286479105103, guid: ae8fe3284e4d11e41b52e2b7f86a9b5b,
+    type: 3}
+  playerCamera: {fileID: 6321822569875482212, guid: 2e2c783f534b9d84b82bbabc8d9b9273,
     type: 3}
 --- !u!1 &4142152713558469973
 GameObject:

@@ -15,12 +15,9 @@ public class Movement : MonoBehaviour
 
     private GameObject deathTransition;
 
-    int layer_mask;
-    bool isFollowTarget = false;
    
     void Start()
     {
-        layer_mask = LayerMask.GetMask("enemy");
 
         playerRespawnPoint = PlayerManager.instance.respawnPoint.transform;
         deathTransition = PlayerManager.instance.deathTransition;
@@ -39,20 +36,19 @@ public class Movement : MonoBehaviour
             Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Input.GetMouseButtonDown(1))
-            {
-                Debug.Log("RightCLick");
-                if (Physics.Raycast(ray, out hit, 100, layer_mask))
-                {
-                    isFollowTarget = true;
-                    animator.SetFloat("Forward", 2f);
-                    playerNavMeshAgent.SetDestination(hit.point);
-                }
-            }
+            //if (Input.GetMouseButtonDown(1))
+            //{
+            //    Debug.Log("RightCLick");
+            //    if (Physics.Raycast(ray, out hit, 100, layer_mask))
+            //    {
+            //        isFollowTarget = true;
+            //        animator.SetFloat("Forward", 2f);
+            //        playerNavMeshAgent.SetDestination(hit.point);
+            //    }
+            //}
 
             if (Input.GetMouseButtonDown(0))
             {
-                isFollowTarget = false;
                 if (Physics.Raycast(ray, out hit, 100))
                 {
                     animator.SetFloat("Forward", 2f);
@@ -66,18 +62,7 @@ public class Movement : MonoBehaviour
                 if (distanceRemaining != Mathf.Infinity && playerNavMeshAgent.pathStatus == NavMeshPathStatus.PathComplete && playerNavMeshAgent.remainingDistance == 0)
                 {
                     animator.SetFloat("Forward", 0f);
-
-                    if (!isFollowTarget)
-                    {
-                        playerNavMeshAgent.ResetPath();
-                    }
-                }
-                else
-                {
-                    if (isFollowTarget)
-                    {
-                        animator.SetFloat("Forward", 2f);
-                    }
+                    playerNavMeshAgent.ResetPath();                    
                 }
             }
         }
@@ -93,7 +78,7 @@ public class Movement : MonoBehaviour
                 playerNavMeshAgent.Warp(playerRespawnPoint.position);
                 deathTransition.SetActive(false);
                 PlayerManager.instance.deathTransition.SetActive(true);
-                Debug.Log(health.);
+                //Debug.Log(health.);
 
                 // reset maxHealth ( maxHealth  >= 0 ? player movement activ : player movement disabled )
 
