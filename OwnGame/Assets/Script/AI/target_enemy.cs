@@ -12,14 +12,12 @@ public class target_enemy : MonoBehaviour
 
     private Transform playerTransform;
 
-    private bool isFollowTarget;
     private int layer_mask;
 
     void Start()
     {
         playerTransform = PlayerManager.instance.respawnPoint.transform;
 
-        isFollowTarget = false;
         layer_mask = LayerMask.GetMask("enemy");
     }
 
@@ -29,18 +27,27 @@ public class target_enemy : MonoBehaviour
         Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if (Input.GetMouseButtonDown(1) || isFollowTarget)
+        if (Input.GetMouseButtonDown(1) || PlayerManager.instance.playerFollowTarget)
         {
             if (Physics.Raycast(ray, out hit, 100, layer_mask))
             {
-                isFollowTarget = true;
                 animator.SetFloat("Forward", 2f);
-                playerNavMeshAgent.SetDestination(this.transform.position);
-                Debug.Log(this.name);
-                Debug.Log(this.transform.position);
-                isFollowTarget = false;
+                playerNavMeshAgent.SetDestination(hit.point);
+                PlayerManager.instance.playerFollowTarget = true;
 
             }
         }
+        if(PlayerManager.instance.playerFollowTarget)
+        {
+            FaceTarget();
+        }
+    }
+    void FaceTarget()
+    {
+        Vector3 direction = (transform.position - playerTransform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation, lookRotation, Time.deltaTime * 4f); ;
     }
 }
+
+

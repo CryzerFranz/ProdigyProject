@@ -957,6 +957,12 @@ Transform:
   m_Father: {fileID: 1590331786}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &300914293 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2829220483468299250, guid: 73a642ffa6dc2ac439e0ef9d38bd0fc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3590035122190341659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &325579592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7665,6 +7671,7 @@ GameObject:
   - component: {fileID: 416457153}
   - component: {fileID: 416457154}
   - component: {fileID: 416457157}
+  - component: {fileID: 1119233531003045}
   m_Layer: 9
   m_Name: Basic_Enemy
   m_TagString: Enemy
@@ -7672,6 +7679,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1119233531003045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119233531003044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b0c95799629ed48ac1992f1103a7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNavMeshAgent: {fileID: 1523049164}
+  animator: {fileID: 1476113932852950}
+  playerCamera: {fileID: 300914293}
 --- !u!1 &1136706847939360
 GameObject:
   m_ObjectHideFlags: 0
@@ -8066,6 +8088,12 @@ GameObject:
 --- !u!1 &1476113932852945 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8426477334748291553, guid: 73a642ffa6dc2ac439e0ef9d38bd0fc1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3590035122190341659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1476113932852950 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8476109587547028297, guid: 73a642ffa6dc2ac439e0ef9d38bd0fc1,
     type: 3}
   m_PrefabInstance: {fileID: 3590035122190341659}
   m_PrefabAsset: {fileID: 0}

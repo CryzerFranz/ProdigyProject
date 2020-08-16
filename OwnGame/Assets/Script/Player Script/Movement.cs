@@ -51,6 +51,7 @@ public class Movement : MonoBehaviour
             {
                 if (Physics.Raycast(ray, out hit, 100))
                 {
+                    PlayerManager.instance.playerFollowTarget = false;
                     animator.SetFloat("Forward", 2f);
                     playerNavMeshAgent.SetDestination(hit.point);
                 }
@@ -62,7 +63,10 @@ public class Movement : MonoBehaviour
                 if (distanceRemaining != Mathf.Infinity && playerNavMeshAgent.pathStatus == NavMeshPathStatus.PathComplete && playerNavMeshAgent.remainingDistance == 0)
                 {
                     animator.SetFloat("Forward", 0f);
-                    playerNavMeshAgent.ResetPath();                    
+                    if(!PlayerManager.instance.playerFollowTarget)
+                    {
+                        playerNavMeshAgent.ResetPath();                    
+                    }
                 }
             }
         }

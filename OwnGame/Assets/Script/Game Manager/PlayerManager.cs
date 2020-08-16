@@ -16,6 +16,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject deathTransition;
     public GameObject userInterface;
 
+    public bool playerFollowTarget = false;
+
     /////////////////////////////////////////////////////////
 
 
