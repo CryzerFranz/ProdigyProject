@@ -64,20 +64,18 @@ public class Movement : MonoBehaviour
             playerNavMeshAgent.ResetPath();
             if(Input.anyKeyDown)
             {
-                Debug.Log("Respawn");
-
-                //respawn player at xyz
-                health.healthbar.SetMaxHealth(health.MaxHealth);
+                //reset life
+                health.ResetHealth();
+                // teleport player to respawn point
                 playerNavMeshAgent.Warp(playerRespawnPoint.position);
+                // reset animation
                 animator.SetTrigger("Respawn");
+                // deactivate death transition
                 deathTransition.SetActive(false);
-                PlayerManager.instance.deathTransition.SetActive(false);
-                //Debug.Log(health.);
+                // reactivate UI
+                PlayerManager.instance.userInterface.SetActive(true);
 
                 // reset maxHealth ( maxHealth  >= 0 ? player movement activ : player movement disabled )
-
-                
-
             }
         }
     }

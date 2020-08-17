@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: Game
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1357
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
-  controlID: 123
+  controlID: 76
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 677, y: 492}
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 124
+  controlID: 77
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 125
+  controlID: 78
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 126
+  controlID: 79
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -457,9 +457,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 6a550000
       m_LastClickedID: 0
-      m_ExpandedIDs: a69cffff34fbffff2a8d0000
+      m_ExpandedIDs: 34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -33.94664, y: 18.599043, z: 35.524673}
+    m_Target: {x: -28.913162, y: 14.61766, z: 18.672081}
     speed: 2
-    m_Value: {x: -33.94664, y: 18.599043, z: 35.524673}
+    m_Value: {x: -28.913162, y: 14.61766, z: 18.672081}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -569,9 +569,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.16803771, y: 0.060784537, z: 0.0016751916, w: 0.98469466}
+    m_Target: {x: 0.046324942, y: 0.9657366, z: -0.19499815, w: 0.16953042}
     speed: 2
-    m_Value: {x: 0.16790698, y: 0.06073725, z: 0.0016738883, w: 0.9839286}
+    m_Value: {x: 0.0462889, y: 0.9649852, z: -0.19484642, w: 0.16939852}
   m_Size:
     m_Target: 2.134202
     speed: 2
@@ -677,7 +677,7 @@ MonoBehaviour:
     x: 483
     y: 73
     width: 1580
-    height: 848
+    height: 846
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -690,14 +690,14 @@ MonoBehaviour:
     - {fileID: 6669687891624541869, guid: 074b2e58eca4ab24fae8b2792e8db0d0, type: 2}
     - {fileID: -8060061500721973071, guid: 9102531064254d94d91344e7f9d66e54, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.6789183
+    - e00: 0.9472727
       e01: 0
       e02: 0
-      e03: -63.237274
+      e03: 75.163605
       e10: 0
-      e11: 0.6789183
+      e11: 0.9472727
       e12: 0
-      e13: 224.02711
+      e13: 305.03638
       e20: 0
       e21: 0
       e22: 1
@@ -819,10 +819,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 5ba210dc665ad1540878311924706e9e,
+  m_AnimatorController: {fileID: 9100000, guid: c6c64060bbdbd924dabf634c0dfab6b7,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -7307561688863128507, guid: 5ba210dc665ad1540878311924706e9e,
+  - m_Target: {fileID: 6878075763171848505, guid: c6c64060bbdbd924dabf634c0dfab6b7,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 0
+  m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &20
@@ -875,21 +875,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/Game Manager
+    - Assets/Animation/Player Animation
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Script/Game Manager
+  - Assets/Animation/Player Animation
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Paleyron\Documents\GitHub\Game2020\OwnGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 581}
-    m_SelectedIDs: 3a8b0000
-    m_LastClickedID: 35642
-    m_ExpandedIDs: 00000000c28a0000c48a0000c68a0000c88a0000ca8a0000cc8a0000ce8a0000d08a0000d28a0000d48a0000d68a0000d88a0000da8a0000dc8a0000de8a0000e08a0000e28a0000e48a0000e68a0000e88a0000ea8a000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 7a580000
+    m_LastClickedID: 22650
+    m_ExpandedIDs: 00000000325800003458000036580000385800003a5800003c5800003e58000040580000425800004458000046580000485800004a5800004c5800004e58000050580000525800005458000056580000585800005a58000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -917,7 +917,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c28a0000c48a0000c68a0000c88a0000ca8a0000cc8a0000ce8a0000d08a0000d28a0000d48a0000d68a0000d88a0000da8a0000dc8a0000de8a0000e08a0000e28a0000e48a0000e68a0000e88a0000ea8a0000
+    m_ExpandedIDs: 00000000325800003458000036580000385800003a5800003c5800003e58000040580000425800004458000046580000485800004a5800004c5800004e58000050580000525800005458000056580000585800005a580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

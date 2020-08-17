@@ -54,9 +54,13 @@ public class Health : MonoBehaviour
                 animator.SetTrigger("isDead");
                 deathTransition.SetActive(true);
                 playerUI.SetActive(false);
-
             }
         }  
+    }
+
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
     }
 
     public float MaxHealth
