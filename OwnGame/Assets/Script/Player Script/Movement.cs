@@ -36,17 +36,6 @@ public class Movement : MonoBehaviour
             Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            //if (Input.GetMouseButtonDown(1))
-            //{
-            //    Debug.Log("RightCLick");
-            //    if (Physics.Raycast(ray, out hit, 100, layer_mask))
-            //    {
-            //        isFollowTarget = true;
-            //        animator.SetFloat("Forward", 2f);
-            //        playerNavMeshAgent.SetDestination(hit.point);
-            //    }
-            //}
-
             if (Input.GetMouseButtonDown(0))
             {
                 if (Physics.Raycast(ray, out hit, 100))
@@ -80,8 +69,9 @@ public class Movement : MonoBehaviour
                 //respawn player at xyz
                 health.healthbar.SetMaxHealth(health.MaxHealth);
                 playerNavMeshAgent.Warp(playerRespawnPoint.position);
+                animator.SetTrigger("Respawn");
                 deathTransition.SetActive(false);
-                PlayerManager.instance.deathTransition.SetActive(true);
+                PlayerManager.instance.deathTransition.SetActive(false);
                 //Debug.Log(health.);
 
                 // reset maxHealth ( maxHealth  >= 0 ? player movement activ : player movement disabled )

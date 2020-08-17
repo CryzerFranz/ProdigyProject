@@ -26,6 +26,7 @@ public class PausedGame : MonoBehaviour
             {
                 Pause();
                 PauseMenueCanvas.SetActive(true);
+                PlayerManager.instance.userInterface.SetActive(false);
             }
         }
     }
@@ -41,6 +42,5 @@ public class PausedGame : MonoBehaviour
     {
         Time.timeScale = 0f;
         GameIsPaused = true;
-        PlayerManager.instance.userInterface.SetActive(false);
     }
 }
