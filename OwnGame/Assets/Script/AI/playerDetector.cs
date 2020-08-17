@@ -125,6 +125,7 @@ public class playerDetector : MonoBehaviour
                 if (distance <= enemyNavMeshAgent.stoppingDistance)
                 {
                     //Attacks player
+                    Debug.Log("enemy is in range");
                     animator.SetFloat("Forward", 0f);
                     FaceTarget();
                     attack.BasicAttackAnimation();
