@@ -6,7 +6,6 @@ public class PausedGame : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject PauseMenueCanvas;
-    public GameObject PlayerUI;
     // Update is called once per frame
 
     void Start()
@@ -22,14 +21,11 @@ public class PausedGame : MonoBehaviour
             {
                 Resume();
                 PauseMenueCanvas.SetActive(false);
-                PlayerUI.SetActive(true);
             }
             else
             {
                 Pause();
                 PauseMenueCanvas.SetActive(true);
-                PlayerUI.SetActive(false);
-
             }
         }
     }
@@ -38,11 +34,13 @@ public class PausedGame : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
+        PlayerManager.instance.userInterface.SetActive(true);
     }
 
     public static void Pause()
     {
         Time.timeScale = 0f;
         GameIsPaused = true;
+        PlayerManager.instance.userInterface.SetActive(false);
     }
 }
