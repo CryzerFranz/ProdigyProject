@@ -2329,7 +2329,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6098924145076851180, guid: ca62ad2f7ebc49440abcd3485e55beeb, type: 3}
+  - {fileID: 2100000, guid: d77dd8a62300fed45b477a27a25e5b74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2572,7 +2572,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6999160489909377424}
   m_Layer: 8
-  m_Name: TEXTURED1
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
