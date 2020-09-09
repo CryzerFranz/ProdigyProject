@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour
     
     public int enemyCount = 1;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         for (int i = 0; i < enemyCount; i++)
         {
