@@ -112,7 +112,7 @@ public class playerDetector : MonoBehaviour
     {
         Vector3 direction = (player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 4f); ;
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 4f); 
     }
     private void Update()
     {
