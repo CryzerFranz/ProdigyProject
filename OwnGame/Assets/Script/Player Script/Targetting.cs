@@ -49,17 +49,21 @@ public class Targetting : MonoBehaviour
         if(selectedEnemy == null)
         {
             SortEnemyByDistance();
-            selectedEnemy = targetableEnemies[0];
+            if(isInRange(0))
+            {
+                selectedEnemy = targetableEnemies[0];
+            }
         }
         else
         {
             int index = targetableEnemies.IndexOf(selectedEnemy);
-            while (true)
+            int tmpIndex = index;
+            do
             {
                 if (index < targetableEnemies.Count - 1)
                 {
                     index++;
-                    if(isInRange(index))
+                    if (isInRange(index))
                     {
                         break; //break endless loop 
                     }
@@ -67,16 +71,19 @@ public class Targetting : MonoBehaviour
                 else
                 {
                     index = 0;
-                    if(isInRange(index))
+                    if (isInRange(index))
                     {
                         break; //break endless loop
                     }
-                }       
-            }
+                }
+            } while (index != tmpIndex);
             DeselectTarget();
             selectedEnemy = targetableEnemies[index];
         }
-        SelectTarget();
+        if(selectedEnemy != null)
+        {
+            SelectTarget();
+        }
     }
     private bool isInRange(int index)
     {
