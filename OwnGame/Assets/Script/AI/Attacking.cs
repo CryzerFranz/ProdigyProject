@@ -5,9 +5,12 @@ using UnityEngine.AI;
 
 public class Attacking : MonoBehaviour
 {
+    // Gegner soll nach Respawn vom Spieler, denn Spieler nicht mehr angreifen
+    // Gegner soll nach Respawn vom Spieler, ihren Path resetten.
+
 
     public Animator animator;
-    public Health playerHealth;
+    private Health playerHealth;
    
     private BasicEnemyStats enemyStat; 
     
@@ -21,6 +24,7 @@ public class Attacking : MonoBehaviour
     {
         navMesh = GetComponent<NavMeshAgent>();
         enemyStat = GetComponent<BasicEnemyStats>();
+        playerHealth = PlayerManager.instance.oPlayer.GetComponent<Health>();
 
     }
 
@@ -31,11 +35,11 @@ public class Attacking : MonoBehaviour
 
     public void BasicAttackAnimation()
     {
-        if(attackCooldown <= 0f)
-        {
-            animator.SetTrigger("attack");
-            attackCooldown = 1f / attackSpeed;
-        }
+            if (attackCooldown <= 0f)
+            {
+                animator.SetTrigger("attack");
+                attackCooldown = 1f / attackSpeed;
+            }   
     }
 
     public void BasicAttack()

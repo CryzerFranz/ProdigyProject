@@ -30,33 +30,33 @@ public class playerDetector : MonoBehaviour
     private bool isInFOV = false;
 
     //just drawing lines to show
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.yellow;
-    //    Gizmos.DrawWireSphere(transform.position, maxRadius);
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, maxRadius);
 
-    //    Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
-    //    Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
+        Vector3 fovLine1 = Quaternion.AngleAxis(maxAngle, transform.up) * transform.forward * maxRadius;
+        Vector3 fovLine2 = Quaternion.AngleAxis(-maxAngle, transform.up) * transform.forward * maxRadius;
 
-    //    Gizmos.color = Color.green;
-    //    Gizmos.DrawRay(transform.position, fovLine1);
-    //    Gizmos.DrawRay(transform.position, fovLine2);
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(transform.position, fovLine1);
+        Gizmos.DrawRay(transform.position, fovLine2);
 
 
-    //    //line between the player and the enemy
-    //    if (!isInFOV)
-    //    {
-    //        Gizmos.color = Color.cyan;
-    //    }
-    //    else
-    //    {
-    //        Gizmos.color = Color.red;
-    //    }
-    //    Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius);
+        //line between the player and the enemy
+        if (!isInFOV)
+        {
+            Gizmos.color = Color.cyan;
+        }
+        else
+        {
+            Gizmos.color = Color.red;
+        }
+        Gizmos.DrawRay(transform.position, (player.position - transform.position).normalized * maxRadius);
 
-    //    Gizmos.color = Color.black;
-    //    Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
-    //}
+        Gizmos.color = Color.black;
+        Gizmos.DrawRay(transform.position, transform.forward * maxRadius);
+    }
 
 
     //checking if player is in the Radius and viewAngle of the enemy
@@ -118,23 +118,32 @@ public class playerDetector : MonoBehaviour
     {
         if (!statsOfEnemy.Dead)
         {
-            int distance = (int)Vector3.Distance(player.position, transform.position);
-            isInFOV = inFOV(animator, enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
-            if (isInFOV)
+            if (!player.gameObject.GetComponent<Health>().IsPlayerDead)
             {
-                if (distance <= enemyNavMeshAgent.stoppingDistance)
+                int distance = (int)Vector3.Distance(player.position, transform.position);
+                isInFOV = inFOV(animator, enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
+                if (isInFOV)
                 {
-                    //Attacks player
-                    Debug.Log("enemy is in range");
-                    animator.SetFloat("Forward", 0f);
-                    FaceTarget();
-                    attack.BasicAttackAnimation();
+                    if (distance <= enemyNavMeshAgent.stoppingDistance)
+                    {
+                        //Attacks player
+                        animator.SetFloat("Forward", 0f);
+                        FaceTarget();
+                        attack.BasicAttackAnimation();
+                    }
                 }
-            }
-            checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer, ref maxRadius, minRadius);
-        }
+                checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer, ref maxRadius, minRadius);
 
-        
+            }
+            else
+            {
+                enemyNavMeshAgent.ResetPath();
+                sawPlayer = false;
+                animator.SetFloat("Forward", 0f);
+                animator.SetTrigger("AttackToFloat");
+
+            }
+        }
     }
 
     private void Start()
