@@ -46,6 +46,7 @@ public class Targetting : MonoBehaviour
 
     private void TargetEnemy()
     {
+        bool nothingInRange = false;
         if(selectedEnemy == null)
         {
             SortEnemyByDistance();
@@ -76,6 +77,7 @@ public class Targetting : MonoBehaviour
                         break; //break endless loop
                     }
                 }
+                nothingInRange = true;
             } while (index != tmpIndex);
             DeselectTarget();
             selectedEnemy = targetableEnemies[index];
@@ -84,10 +86,17 @@ public class Targetting : MonoBehaviour
         {
             SelectTarget();
         }
+        if(selectedEnemy != null && nothingInRange)
+        {
+            DeselectTarget();
+            nothingInRange = false;
+        }
     }
+ 
     private bool isInRange(int index)
     {
         float distance = Vector3.Distance(transform.position, targetableEnemies[index].position);
+        
         if(distance <= interactRadius)
         {
             return true;

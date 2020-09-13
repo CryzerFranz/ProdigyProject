@@ -118,23 +118,32 @@ public class playerDetector : MonoBehaviour
     {
         if (!statsOfEnemy.Dead)
         {
-            int distance = (int)Vector3.Distance(player.position, transform.position);
-            isInFOV = inFOV(animator, enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
-            if (isInFOV)
+            if (!player.gameObject.GetComponent<Health>().IsPlayerDead)
             {
-                if (distance <= enemyNavMeshAgent.stoppingDistance)
+                int distance = (int)Vector3.Distance(player.position, transform.position);
+                isInFOV = inFOV(animator, enemyNavMeshAgent, transform, player, maxAngle, ref maxRadius, ref sawPlayer, radiusSeenPlayer);
+                if (isInFOV)
                 {
-                    //Attacks player
-                    Debug.Log("enemy is in range");
-                    animator.SetFloat("Forward", 0f);
-                    FaceTarget();
-                    attack.BasicAttackAnimation();
+                    if (distance <= enemyNavMeshAgent.stoppingDistance)
+                    {
+                        //Attacks player
+                        animator.SetFloat("Forward", 0f);
+                        FaceTarget();
+                        attack.BasicAttackAnimation();
+                    }
                 }
-            }
-            checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer, ref maxRadius, minRadius);
-        }
+                checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer, ref maxRadius, minRadius);
 
-        
+            }
+            else
+            {
+                enemyNavMeshAgent.ResetPath();
+                sawPlayer = false;
+                animator.SetFloat("Forward", 0f);
+                animator.SetTrigger("AttackToFloat");
+
+            }
+        }
     }
 
     private void Start()
