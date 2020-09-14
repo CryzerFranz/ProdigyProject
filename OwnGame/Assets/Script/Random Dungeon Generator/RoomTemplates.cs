@@ -11,14 +11,5 @@ public class RoomTemplates : MonoBehaviour
 
     public GameObject closedRoom;
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

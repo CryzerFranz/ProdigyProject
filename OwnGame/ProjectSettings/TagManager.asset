@@ -8,6 +8,8 @@ TagManager:
   - Light
   - SpawnPoint
   - Rooms
+  - BlockRoom
+  - StartPlane
   layers:
   - Default
   - TransparentFX
