@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RoomTemplates : MonoBehaviour
 {
+    public NavMeshSurface navmesh;
     public GameObject[] bottomRooms;
     public GameObject[] topRooms;
     public GameObject[] leftRooms;
@@ -24,6 +26,9 @@ public class RoomTemplates : MonoBehaviour
         if (coolDown <= 0 && spawnedBoss == false)
         {
             Instantiate(boss, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
+            var inf = navmesh.GetBuildSettings();
+            inf.agentHeight= 1;
+            navmesh.BuildNavMesh();
             spawnedBoss = true;
         }
         coolDown -= Time.deltaTime;
