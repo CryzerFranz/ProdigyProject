@@ -61,6 +61,7 @@ public class Health : MonoBehaviour
     public void ResetHealth()
     {
         currentHealth = maxHealth;
+        healthbar.slider.value = currentHealth;
     }
 
     public float MaxHealth
