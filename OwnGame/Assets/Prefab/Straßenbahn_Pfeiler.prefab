@@ -27,78 +27,96 @@ Transform:
   m_LocalPosition: {x: -94.476, y: 4.7, z: -65.823}
   m_LocalScale: {x: 0.59987, y: 1, z: 1}
   m_Children:
-  - {fileID: 45715580616866273}
-  - {fileID: 6939158484859052744}
+  - {fileID: 144044097154970235}
+  - {fileID: 8248990692675164103}
   - {fileID: 1302443016603848015}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &50247311943432173
+--- !u!1001 &465284916718114192
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 6054337961906798451}
     m_Modifications:
-    - target: {fileID: 1547287164585002, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
-      propertyPath: m_Name
-      value: SM_Prop_Cable_Crossing_Pillar_01 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.000045478257
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: -4.6000004
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.13199615
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.000000081460335
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
+    - target: {fileID: -7803719898341835977, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 999599c9c31e97a47bb457d4ac7274fb, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b103efddde787a45ac844ebc57b0aca, type: 2}
+    - target: {fileID: 919132149155446097, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Prop_Cable_Crossing_Pillar_01_Modified
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
---- !u!4 &45715580616866273 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: ea0fd602a3a907c43b8ccf0aab959112, type: 3}
+--- !u!4 &144044097154970235 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687,
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
     type: 3}
-  m_PrefabInstance: {fileID: 50247311943432173}
+  m_PrefabInstance: {fileID: 465284916718114192}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1297626450118833363
 PrefabInstance:
@@ -171,70 +189,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1297626450118833363}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6943493296903253188
+--- !u!1001 &8498560953893613612
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 6054337961906798451}
     m_Modifications:
-    - target: {fileID: 1547287164585002, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
-      propertyPath: m_Name
-      value: SM_Prop_Cable_Crossing_Pillar_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.000041523617
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.2
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.13199615
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 2.4155683e-13
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.000000081460335
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.0000029653306
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
+    - target: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
+    - target: {fileID: -7803719898341835977, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 999599c9c31e97a47bb457d4ac7274fb, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5b103efddde787a45ac844ebc57b0aca, type: 2}
+    - target: {fileID: 919132149155446097, guid: ea0fd602a3a907c43b8ccf0aab959112,
+        type: 3}
+      propertyPath: m_Name
+      value: SM_Prop_Cable_Crossing_Pillar_01_Modified
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 264ccdf2cfd286448a19cf25c2f48687, type: 3}
---- !u!4 &6939158484859052744 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: ea0fd602a3a907c43b8ccf0aab959112, type: 3}
+--- !u!4 &8248990692675164103 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4760601680154124, guid: 264ccdf2cfd286448a19cf25c2f48687,
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea0fd602a3a907c43b8ccf0aab959112,
     type: 3}
-  m_PrefabInstance: {fileID: 6943493296903253188}
+  m_PrefabInstance: {fileID: 8498560953893613612}
   m_PrefabAsset: {fileID: 0}
