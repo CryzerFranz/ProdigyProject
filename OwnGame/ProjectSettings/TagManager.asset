@@ -10,6 +10,7 @@ TagManager:
   - Rooms
   - BlockRoom
   - StartPlane
+  - BillBoards
   layers:
   - Default
   - TransparentFX
