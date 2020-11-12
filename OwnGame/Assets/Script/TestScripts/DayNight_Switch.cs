@@ -7,12 +7,18 @@ public class DayNight_Switch : MonoBehaviour
 {
     private GameObject[] billboardsSwitcher;
 
-    //Player Camera
+    [Header("Camera")]
     [SerializeField]
     private Camera playerCamera;
+    [Space]
 
-    //Define Material
-     [SerializeField]
+    [Header("GameObjects")]
+    [SerializeField]
+    private GameObject oSkyDome;
+
+    [Space]
+    [Header("Materials")]
+    [SerializeField]
     private Material day_Billboards;
     [SerializeField]
     private Material twillight_Billboards;
@@ -24,8 +30,7 @@ public class DayNight_Switch : MonoBehaviour
 
     void Start()
     {
-        billboardsSwitcher = GameObject.FindGameObjectsWithTag("BillBoards");
-
+        billboardsSwitcher = GameObject.FindGameObjectsWithTag("BillBoards"); 
     }
 
     void Update()
@@ -35,6 +40,7 @@ public class DayNight_Switch : MonoBehaviour
             //Tageszyklus = Tag
             //PP Profile nicht vorhanden
             playerCamera.GetComponent<Volume>().profile = Profile_Day;
+            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
             {
                 billboardsSwitcher[i].GetComponent<Renderer>().material = day_Billboards;
@@ -45,6 +51,7 @@ public class DayNight_Switch : MonoBehaviour
             //Tageszyklus = Abenddaemmerung
             //PP Profile vorhanden
             playerCamera.GetComponent<Volume>().profile = Profile_Twillight;
+            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(-0.26f, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
             {
                 billboardsSwitcher[i].GetComponent<Renderer>().material = twillight_Billboards;
@@ -54,12 +61,20 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Nacht
             //PP Profile nicht vorhanden
+            for (int i = 0; i < billboardsSwitcher.Length; i++)
+            {
+                billboardsSwitcher[i].GetComponent<Renderer>().material = twillight_Billboards;
+            }
 
         }
         else if(Input.GetKeyDown(KeyCode.Alpha4)) 
         {
             //Tageszyklus = Morgendaemmerung
             //PP Profile nicht vorhanden
+            for (int i = 0; i < billboardsSwitcher.Length; i++)
+            {
+                billboardsSwitcher[i].GetComponent<Renderer>().material = twillight_Billboards;
+            }
 
         }
     }
