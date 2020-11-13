@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 
@@ -16,8 +17,13 @@ public class Health : MonoBehaviour
     private PlayerStats playerStats;
     private Animator animator;
 
+    private Transform playerRespawnPoint;
+
+    // maxHealth = Maximale Lebenspunkte
     private float maxHealth;
+    // currentHealth = aktuelle Lebenspunkte
     private float currentHealth;
+
     public bool IsPlayerDead
     {
         get
@@ -26,19 +32,42 @@ public class Health : MonoBehaviour
         }
     }
 
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
         playerStats = GetComponent<PlayerStats>();
-
-        deathTransition = PlayerManager.instance.deathTransition;
-        playerUI = PlayerManager.instance.userInterface;
 
         maxHealth = playerStats.LifePoints;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
     }
+    private void Start()
+    {
+        deathTransition = PlayerManager.instance.deathTransition;
+        playerUI = PlayerManager.instance.userInterface;
+        playerRespawnPoint = PlayerManager.instance.respawnPoint.transform;
+    }
 
+    private void Update()
+    {
+        if(IsPlayerDead)
+        {
+            this.GetComponent<Movement>().enabled = false;
+            this.GetComponent<NavMeshAgent>().ResetPath();
+            if(Input.anyKeyDown)
+            {
+                ResetHealth();
+                this.GetComponent<NavMeshAgent>().Warp(playerRespawnPoint.position);
+                animator.SetTrigger("Respawn");
+                deathTransition.SetActive(false);
+                PlayerManager.instance.userInterface.SetActive(true);
+            }
+        }
+        else
+        {
+            this.GetComponent<Movement>().enabled = true;
+        }
+    }
     public void TakeDamage(float damage)
     {
         if(!IsPlayerDead)

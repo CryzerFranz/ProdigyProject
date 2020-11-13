@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// UI anzeige der Lebenspunkte
+
 public class Healthbar : MonoBehaviour
 {
+    [Header("Slider")]
     public Slider slider;
+    [Header("Gradient")]
     public Gradient gradient;
+    [Header("Image")]
     public Image fill;
 
     public void SetMaxHealth(float health)
