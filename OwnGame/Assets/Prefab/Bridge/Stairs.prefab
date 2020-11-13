@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 40170141014191107}
   - component: {fileID: 3972576272805356454}
   - component: {fileID: 1208541792356898668}
+  - component: {fileID: 3451118302482216456}
   m_Layer: 0
   m_Name: Stairs
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848196441092011705}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.099245, y: 6.510001, z: -72.685844}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7090306099258948927}
@@ -84,6 +85,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &3451118302482216456
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848196441092011705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3402742096233047544, guid: c45f05f12d3966f4896073f8e3ed01cb, type: 3}
 --- !u!1 &7977763392684478119
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +110,7 @@ GameObject:
   - component: {fileID: 7090306099258948927}
   - component: {fileID: 6156174417546491695}
   - component: {fileID: 6422163880844343729}
+  - component: {fileID: -7605508920993727290}
   m_Layer: 0
   m_Name: Last_Step.001
   m_TagString: Untagged
@@ -165,6 +181,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-7605508920993727290
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7977763392684478119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6717352002023367144, guid: c45f05f12d3966f4896073f8e3ed01cb, type: 3}
 --- !u!1 &8540269603894191070
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,6 +206,7 @@ GameObject:
   - component: {fileID: 2519366978423216710}
   - component: {fileID: 6431854395201436739}
   - component: {fileID: 440159335751289518}
+  - component: {fileID: -1882126917363691218}
   m_Layer: 0
   m_Name: StepsMidLane
   m_TagString: Untagged
@@ -246,3 +277,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-1882126917363691218
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8540269603894191070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7500510112135179181, guid: c45f05f12d3966f4896073f8e3ed01cb, type: 3}
