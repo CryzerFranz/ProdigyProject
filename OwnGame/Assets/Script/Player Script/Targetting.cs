@@ -5,13 +5,18 @@ using UnityEngine;
 
 public class Targetting : MonoBehaviour
 {
-    public float interactRadius = 20.0f;
+    [Header("Radius to interact")]
+    [SerializeField]
+    private float interactRadius = 20.0f;
+    [Space]
+    [Header("Target symbol")]
+    [SerializeField]
+    private GameObject TargetSymbol;
 
-    public List<Transform> targetableEnemies;
-    public Transform selectedEnemy;
-    public GameObject TargetSymbol;
+    private Transform selectedEnemy;
     private GameObject currentSymbol;
     private Animator playerAnim;
+    private List<Transform> targetableEnemies;
     // Start is called before the first frame update
     void Start()
     {
