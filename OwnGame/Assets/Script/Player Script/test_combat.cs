@@ -13,7 +13,9 @@ public class test_combat : MonoBehaviour
 
     private GameObject weapon;
     private float attackRange = 0f;
-    public LayerMask enemyLayers;
+    
+    [SerializeField]
+    private LayerMask enemyLayers;
 
     void Start()
     {
