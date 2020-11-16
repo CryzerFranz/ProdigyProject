@@ -22,10 +22,16 @@ public class DayNight_Switch : MonoBehaviour
     private Material day_Billboards;
     [SerializeField]
     private Material twillight_Billboards;
+    [Space]
+    [Header("PP Profiles")]
     [SerializeField]
     private VolumeProfile Profile_Twillight;
     [SerializeField]
     private VolumeProfile Profile_Day;
+    [SerializeField]
+    private VolumeProfile Profile_Dust;
+    [SerializeField]
+    private VolumeProfile Profile_Night;
 
 
     void Start()
@@ -38,7 +44,7 @@ public class DayNight_Switch : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha1))                 
         {
             //Tageszyklus = Tag
-            //PP Profile nicht vorhanden
+            //PP Profile vorhanden
             playerCamera.GetComponent<Volume>().profile = Profile_Day;
             oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
@@ -60,7 +66,9 @@ public class DayNight_Switch : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Alpha3)) 
         {
             //Tageszyklus = Nacht
-            //PP Profile nicht vorhanden
+            //PP Profile vorhanden
+            playerCamera.GetComponent<Volume>().profile = Profile_Night;
+            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(-0.52f, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
             {
                 billboardsSwitcher[i].GetComponent<Renderer>().material = twillight_Billboards;
@@ -70,10 +78,12 @@ public class DayNight_Switch : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Alpha4)) 
         {
             //Tageszyklus = Morgendaemmerung
-            //PP Profile nicht vorhanden
+            //PP Profile vorhanden
+            playerCamera.GetComponent<Volume>().profile = Profile_Dust;
+            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0.79f, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
             {
-                billboardsSwitcher[i].GetComponent<Renderer>().material = twillight_Billboards;
+                billboardsSwitcher[i].GetComponent<Renderer>().material = day_Billboards;
             }
 
         }
