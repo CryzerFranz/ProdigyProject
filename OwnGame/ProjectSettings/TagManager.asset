@@ -11,6 +11,7 @@ TagManager:
   - BlockRoom
   - StartPlane
   - BillBoards
+  - CullingMask
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - vent
   - Glowing
   - NoGlow
-  - 
+  - CullingMask
   - 
   - 
   - 
