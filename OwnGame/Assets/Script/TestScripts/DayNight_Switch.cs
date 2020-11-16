@@ -46,68 +46,73 @@ public class DayNight_Switch : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))                 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             //Tageszyklus = Tag
             //PP Profile vorhanden
-            SunLight.color = new Vector4(1f,1f,1f);
 
-            playerCamera.GetComponent<Volume>().profile = Profile_Day;
-            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0, 0));
-            for (int i = 0; i < billboardsSwitcher.Length; i++)
-            {
-                billboardsSwitcher[i].GetComponent<Renderer>().material = day_Billboards;
-            }
+            setSunLightColor(new Vector4(1f, 1f, 1f));
+            setProfile(Profile_Day);
+            setSkyDomeOffset(0, 0f);
+            changeMaterialOfBillboards(day_Billboards);
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))       
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //Tageszyklus = Abenddaemmerung
             //PP Profile vorhanden
             //SunLight.color.blue = 0.972549f;
             //SunLight.color.red = 0.5960785f;
             //SunLight.color.green = 0.4705882f;
-            SunLight.color = new Vector4(0.5960785f, 0.4705882f, 0.972549f);
 
-            playerCamera.GetComponent<Volume>().profile = Profile_Twillight;
-            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(-0.26f, 0));
-            for (int i = 0; i < billboardsSwitcher.Length; i++)
-            {
-                billboardsSwitcher[i].GetComponent<Renderer>().material = twillight_Billboards;
-            }
+            setSunLightColor(new Vector4(0.5960785f, 0.4705882f, 0.972549f));
+            setProfile(Profile_Twillight);
+            setSkyDomeOffset(-0.26f, 0f);
+            changeMaterialOfBillboards(twillight_Billboards);
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha3)) 
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             //Tageszyklus = Nacht
             //PP Profile vorhanden
             //SunLight.color.blue = 0.5372549f;
             //SunLight.color.red = 0.3333333f;
             //SunLight.color.green = 0f;
-            SunLight.color = new Vector4(0.3333333f, 0f, 0.5372549f);
+            setSunLightColor(new Vector4(0.3333333f, 0f, 0.5372549f));
+            setProfile(Profile_Night);
+            setSkyDomeOffset(-0.52f, 0f);
+            changeMaterialOfBillboards(twillight_Billboards);
 
-            playerCamera.GetComponent<Volume>().profile = Profile_Night;
-            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(-0.52f, 0));
-            for (int i = 0; i < billboardsSwitcher.Length; i++)
-            {
-                billboardsSwitcher[i].GetComponent<Renderer>().material = twillight_Billboards;
-            }
 
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha4)) 
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             //Tageszyklus = Morgendaemmerung
             //PP Profile vorhanden
             //SunLight.color.blue = 0.4039216f;
             //SunLight.color.red = 0.7176471f;
             //SunLight.color.green = 0.5529412f;
-            SunLight.color = new Vector4(0.7176471f, 0.5529412f, 0.4039216f);
-
-            playerCamera.GetComponent<Volume>().profile = Profile_Dust;
-            oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0.79f, 0));
-            for (int i = 0; i < billboardsSwitcher.Length; i++)
-            {
-                billboardsSwitcher[i].GetComponent<Renderer>().material = day_Billboards;
-            }
-
+            setSunLightColor(new Vector4(0.7176471f, 0.5529412f, 0.4039216f));
+            setProfile(Profile_Dust);
+            setSkyDomeOffset(0.79f, 0f);
+            changeMaterialOfBillboards(day_Billboards);
+        }  
+    }
+    private void changeMaterialOfBillboards(Material billboardMaterial)
+    {
+        for (int i = 0; i < billboardsSwitcher.Length; i++)
+        {
+            billboardsSwitcher[i].GetComponent<Renderer>().material = billboardMaterial;
         }
+    }
+    public void setSkyDomeOffset(float x, float y, string name = "_MainTex")
+    {
+        oSkyDome.GetComponent<Renderer>().material.SetTextureOffset(name, new Vector2(x, y));
+    }
+    public void setProfile(VolumeProfile profile)
+    {
+        playerCamera.GetComponent<Volume>().profile = profile;
+    }
+    public void setSunLightColor(Vector4 container)
+    {
+        SunLight.color = container;
     }
 }
