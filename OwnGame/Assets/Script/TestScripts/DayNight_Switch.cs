@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering;
 
 public class DayNight_Switch : MonoBehaviour
@@ -15,6 +16,10 @@ public class DayNight_Switch : MonoBehaviour
     [Header("GameObjects")]
     [SerializeField]
     private GameObject oSkyDome;
+
+    [Header("Sun")]
+    [SerializeField]
+    private Light SunLight;
 
     [Space]
     [Header("Materials")]
@@ -45,6 +50,8 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Tag
             //PP Profile vorhanden
+            SunLight.color = new Vector4(1f,1f,1f);
+
             playerCamera.GetComponent<Volume>().profile = Profile_Day;
             oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
@@ -56,6 +63,11 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Abenddaemmerung
             //PP Profile vorhanden
+            //SunLight.color.blue = 0.972549f;
+            //SunLight.color.red = 0.5960785f;
+            //SunLight.color.green = 0.4705882f;
+            SunLight.color = new Vector4(0.5960785f, 0.4705882f, 0.972549f);
+
             playerCamera.GetComponent<Volume>().profile = Profile_Twillight;
             oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(-0.26f, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
@@ -67,6 +79,11 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Nacht
             //PP Profile vorhanden
+            //SunLight.color.blue = 0.5372549f;
+            //SunLight.color.red = 0.3333333f;
+            //SunLight.color.green = 0f;
+            SunLight.color = new Vector4(0.3333333f, 0f, 0.5372549f);
+
             playerCamera.GetComponent<Volume>().profile = Profile_Night;
             oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(-0.52f, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
@@ -79,6 +96,11 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Morgendaemmerung
             //PP Profile vorhanden
+            //SunLight.color.blue = 0.4039216f;
+            //SunLight.color.red = 0.7176471f;
+            //SunLight.color.green = 0.5529412f;
+            SunLight.color = new Vector4(0.7176471f, 0.5529412f, 0.4039216f);
+
             playerCamera.GetComponent<Volume>().profile = Profile_Dust;
             oSkyDome.GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(0.79f, 0));
             for (int i = 0; i < billboardsSwitcher.Length; i++)
