@@ -6,7 +6,11 @@ using UnityEngine.Rendering;
 
 public class DayNight_Switch : MonoBehaviour
 {
+    //Custom_Signs  = Day
+    //SignsLight    = Night
+
     private GameObject[] billboardsSwitcher;
+    private GameObject[] signsSwitcher;
 
     [Header("Camera")]
     [SerializeField]
@@ -27,6 +31,10 @@ public class DayNight_Switch : MonoBehaviour
     private Material day_Billboards;
     [SerializeField]
     private Material twillight_Billboards;
+    [SerializeField]
+    private Material day_signs;
+    [SerializeField]
+    private Material night_signs;
     [Space]
     [Header("PP Profiles")]
     [SerializeField]
@@ -41,7 +49,8 @@ public class DayNight_Switch : MonoBehaviour
 
     void Start()
     {
-        billboardsSwitcher = GameObject.FindGameObjectsWithTag("BillBoards"); 
+        billboardsSwitcher = GameObject.FindGameObjectsWithTag("BillBoards");
+        signsSwitcher = GameObject.FindGameObjectsWithTag("Signs");
     }
 
     void Update()
@@ -54,7 +63,8 @@ public class DayNight_Switch : MonoBehaviour
             setSunLightColor(new Vector4(1f, 1f, 1f));
             setProfile(Profile_Day);
             setSkyDomeOffset(0, 0f);
-            changeMaterialOfBillboards(day_Billboards);
+            changeMaterialOfGameObjects(ref billboardsSwitcher ,day_Billboards);
+            changeMaterialOfGameObjects(ref signsSwitcher, day_signs);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -67,7 +77,8 @@ public class DayNight_Switch : MonoBehaviour
             setSunLightColor(new Vector4(0.5960785f, 0.4705882f, 0.972549f));
             setProfile(Profile_Twillight);
             setSkyDomeOffset(-0.26f, 0f);
-            changeMaterialOfBillboards(twillight_Billboards);
+            changeMaterialOfGameObjects(ref billboardsSwitcher ,twillight_Billboards);
+            changeMaterialOfGameObjects(ref signsSwitcher, night_signs);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -79,9 +90,8 @@ public class DayNight_Switch : MonoBehaviour
             setSunLightColor(new Vector4(0.3333333f, 0f, 0.5372549f));
             setProfile(Profile_Night);
             setSkyDomeOffset(-0.52f, 0f);
-            changeMaterialOfBillboards(twillight_Billboards);
-
-
+            changeMaterialOfGameObjects(ref billboardsSwitcher,twillight_Billboards);
+            changeMaterialOfGameObjects(ref signsSwitcher, night_signs);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
@@ -93,14 +103,15 @@ public class DayNight_Switch : MonoBehaviour
             setSunLightColor(new Vector4(0.7176471f, 0.5529412f, 0.4039216f));
             setProfile(Profile_Dust);
             setSkyDomeOffset(0.79f, 0f);
-            changeMaterialOfBillboards(day_Billboards);
-        }  
+            changeMaterialOfGameObjects(ref billboardsSwitcher ,day_Billboards);
+            changeMaterialOfGameObjects(ref signsSwitcher, day_signs);
+        }
     }
-    private void changeMaterialOfBillboards(Material billboardMaterial)
+    private void changeMaterialOfGameObjects(ref GameObject[] _object, Material _material)
     {
-        for (int i = 0; i < billboardsSwitcher.Length; i++)
+        for (int i = 0; i < _object.Length; i++)
         {
-            billboardsSwitcher[i].GetComponent<Renderer>().material = billboardMaterial;
+            _object[i].GetComponent<Renderer>().material = _material;
         }
     }
     public void setSkyDomeOffset(float x, float y, string name = "_MainTex")

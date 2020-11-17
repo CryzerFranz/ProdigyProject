@@ -12,6 +12,7 @@ TagManager:
   - StartPlane
   - BillBoards
   - CullingMask
+  - Signs
   layers:
   - Default
   - TransparentFX
