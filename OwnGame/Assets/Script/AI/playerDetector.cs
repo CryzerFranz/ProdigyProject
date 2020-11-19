@@ -9,7 +9,9 @@ using UnityEngine.AI;
 public class playerDetector : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Animator animator;
+    [Header("Enemy animator")]
+    [SerializeField]
+    private Animator animator;
 
     private Transform player;
     private Attacking attack;
@@ -26,7 +28,7 @@ public class playerDetector : MonoBehaviour
     public float radiusSeenPlayer = 15f;
 
 
-    bool sawPlayer = false;
+    private bool sawPlayer = false;
     private bool isInFOV = false;
 
     //just drawing lines to show
