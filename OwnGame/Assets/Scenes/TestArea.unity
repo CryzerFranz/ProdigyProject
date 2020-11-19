@@ -5653,11 +5653,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 300914293}
   oSkyDome: {fileID: 1157545111}
+  SunLight: {fileID: 1988580091}
   day_Billboards: {fileID: 2100000, guid: 22d5a8e38cd5481468fc51d09fd28a49, type: 2}
   twillight_Billboards: {fileID: 2100000, guid: dce7db7eb488e92419342df6d5c52bcd,
     type: 2}
+  day_signs: {fileID: 2100000, guid: 645239ff32eb54b46859289bb9a8efcd, type: 2}
+  night_signs: {fileID: 239378781582670930, guid: 9d622ecb8356a194a9a78cd6f3beec4f,
+    type: 3}
   Profile_Twillight: {fileID: 11400000, guid: 8107cd0ef53712a46abe00e28ab5f6dd, type: 2}
   Profile_Day: {fileID: 11400000, guid: 96a6332f1688693458b7a75cc0a92e99, type: 2}
+  Profile_Dust: {fileID: 11400000, guid: d954a38ecb3c2c3449de278c72b49144, type: 2}
+  Profile_Night: {fileID: 11400000, guid: c128c4c357787224e82ac9beaea3aeee, type: 2}
 --- !u!1 &1846995663
 GameObject:
   m_ObjectHideFlags: 0
