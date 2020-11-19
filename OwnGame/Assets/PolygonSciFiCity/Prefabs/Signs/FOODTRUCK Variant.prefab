@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1212175896477092, guid: 2f1faa803b2a15f4ab11a8fb9e4330a1, type: 3}
       propertyPath: m_Name
-      value: FOODTRUCK
+      value: FOODTRUCK Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4828677093211942, guid: 2f1faa803b2a15f4ab11a8fb9e4330a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59,6 +59,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c4f94ab33cd696549bb5b98497f97179, type: 2}
+      objectReference: {fileID: 2100000, guid: b0b8310e54f24414787d2f047d93f51b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f1faa803b2a15f4ab11a8fb9e4330a1, type: 3}

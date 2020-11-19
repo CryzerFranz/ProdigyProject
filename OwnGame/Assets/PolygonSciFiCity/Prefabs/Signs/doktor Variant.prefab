@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1851211399293568, guid: 8d170e43fac3efa4b9cb032c3f873663, type: 3}
       propertyPath: m_Name
-      value: doktor
+      value: doktor Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4866695100107702, guid: 8d170e43fac3efa4b9cb032c3f873663, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59,6 +59,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c4f94ab33cd696549bb5b98497f97179, type: 2}
+      objectReference: {fileID: 2100000, guid: b0b8310e54f24414787d2f047d93f51b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d170e43fac3efa4b9cb032c3f873663, type: 3}
