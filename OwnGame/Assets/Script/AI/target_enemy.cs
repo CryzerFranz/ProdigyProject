@@ -6,15 +6,9 @@ using UnityEngine.AI;
 public class target_enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-    [Header("Player NavMeshAgent")]
-    [SerializeField]
-    private NavMeshAgent playerNavMeshAgent;
-    [Header("Player animator")]
-    [SerializeField]
-    private Animator animator;
-    [Header("Player playerCamera")]
-    [SerializeField]
-    private Camera playerCamera;
+    public NavMeshAgent playerNavMeshAgent;
+    public Animator animator;
+    public Camera playerCamera;
 
     private Transform playerTransform;
 
