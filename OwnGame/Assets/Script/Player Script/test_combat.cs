@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class test_combat : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class test_combat : MonoBehaviour
     public Transform attackPoint;
     public Transform attackPointEnd;
 
+    private NavMeshAgent playerNavMesh;
 
     private GameObject weapon;
     private float attackRange = 0f;
@@ -20,6 +22,7 @@ public class test_combat : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        playerNavMesh = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -28,7 +31,9 @@ public class test_combat : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             attackRange = 2f;
+            playerNavMesh.isStopped = true;
             Attack();
+            //playerNavMesh.Resume();
         }
     }
 
