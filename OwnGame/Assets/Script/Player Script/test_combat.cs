@@ -31,15 +31,15 @@ public class test_combat : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             attackRange = 2f;
-            playerNavMesh.isStopped = true;
+            playerNavMesh.ResetPath();
             Attack();
-            //playerNavMesh.Resume();
         }
     }
 
     void Attack()
     {
         animator.SetTrigger("Melee_Spalten");
+        Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
     }
 
     void hitEnemies(GameObject _Weapon)
