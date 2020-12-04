@@ -12,6 +12,7 @@ public class test_combat : MonoBehaviour
     public Transform attackPointEnd;
 
     private NavMeshAgent playerNavMesh;
+    private Movement playerMovement;
 
     private GameObject weapon;
     private float attackRange = 0f;
@@ -23,15 +24,18 @@ public class test_combat : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerNavMesh = GetComponent<NavMeshAgent>();
+        playerMovement = GetComponent<Movement>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        Debug.Log(playerMovement.isActiveAndEnabled);
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            Debug.Log("Pressed 1");
             attackRange = 2f;
-            playerNavMesh.ResetPath();
             Attack();
         }
     }
@@ -39,7 +43,9 @@ public class test_combat : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Melee_Spalten");
-        Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        playerMovement.enabled = false;
+        playerNavMesh.ResetPath();
+        //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
     }
 
     void hitEnemies(GameObject _Weapon)

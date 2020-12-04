@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Cinemachine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,12 +15,32 @@ public class FPSController : MonoBehaviour
 
     // Shift - running
     float speed = 20;
+
+    public CinemachineFreeLook cm;
+
     private void Start()
     {
-        
+
     }
     void Update()
     {
+        if(Input.GetKey(KeyCode.Mouse1))
+        {
+            cm.m_XAxis.m_MaxSpeed = 700;
+            cm.m_YAxis.m_MaxSpeed = 10;
+        }
+        else
+        {
+            cm.m_XAxis.m_MaxSpeed = 0f;
+            cm.m_YAxis.m_MaxSpeed = 0f;
+        }
+
+        if(Input.GetKey(KeyCode.Mouse1) && Input.GetKey(KeyCode.Mouse0))
+        {
+            cm.m_XAxis.m_MaxSpeed = 700;
+            cm.m_YAxis.m_MaxSpeed = 0f;
+        }
+
         if (Input.GetKeyDown(KeyCode.U))
         {
             speed += 2.5f;
@@ -40,21 +61,22 @@ public class FPSController : MonoBehaviour
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z);
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            transform.Translate(new Vector3(1 * x , 0, 1 * z) * (speed * 2) * Time.deltaTime);
+            transform.Translate(new Vector3(x, 0, z) * (speed * 2) * Time.deltaTime);
         }
-        else if(Input.GetKey(KeyCode.Space))
+        else if (Input.GetKey(KeyCode.Space))
         {
 
-                transform.Translate(new Vector3(1 * x, 0.5f, 1 * z) * (speed) * Time.deltaTime); 
+            transform.Translate(new Vector3(x, 0.5f, z) * (speed) * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.LeftControl))
         {
 
-            transform.Translate(new Vector3(1 * x, -0.5f, 1 * z) * (speed) * Time.deltaTime);
+            transform.Translate(new Vector3(x, -0.5f, z) * (speed) * Time.deltaTime);
         }
         else
-            transform.Translate(new Vector3(1 * x, 0 ,1 * z) * (speed) * Time.deltaTime);
-        
+        {
+            transform.Translate(new Vector3(x, 0, z) * (speed) * Time.deltaTime);
+        }
 
 
     }
