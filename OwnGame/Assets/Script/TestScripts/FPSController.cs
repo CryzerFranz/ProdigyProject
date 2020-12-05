@@ -16,6 +16,13 @@ public class FPSController : MonoBehaviour
     // Shift - running
     float speed = 20;
 
+    [Header("Empfindlichkeit")]
+    [SerializeField]
+    private float XAxis_Speed = 700;
+    [SerializeField]
+    private float YAxis_Speed = 10;
+
+
     public CinemachineFreeLook cm;
 
     private void Start()
@@ -26,8 +33,8 @@ public class FPSController : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Mouse1))
         {
-            cm.m_XAxis.m_MaxSpeed = 700;
-            cm.m_YAxis.m_MaxSpeed = 10;
+            cm.m_XAxis.m_MaxSpeed = XAxis_Speed;
+            cm.m_YAxis.m_MaxSpeed = YAxis_Speed;
         }
         else
         {
@@ -37,7 +44,7 @@ public class FPSController : MonoBehaviour
 
         if(Input.GetKey(KeyCode.Mouse1) && Input.GetKey(KeyCode.Mouse0))
         {
-            cm.m_XAxis.m_MaxSpeed = 700;
+            cm.m_XAxis.m_MaxSpeed = XAxis_Speed;
             cm.m_YAxis.m_MaxSpeed = 0f;
         }
 
