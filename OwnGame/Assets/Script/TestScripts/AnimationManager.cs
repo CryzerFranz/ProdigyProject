@@ -11,6 +11,7 @@ public class AnimationManager : MonoBehaviour
     private Dodge dodge;
     private Movement playerMovement;
     private NavMeshAgent playerNavMeshAgent;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -27,13 +28,8 @@ public class AnimationManager : MonoBehaviour
         }
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("rollBack"))
         {
-            //Debug.Log("rollBack");
-            //Debug.Log("dodge.newPosition = " + dodge.PortPosition);
-            //transform.Translate(dodge.PortPosition);
             transform.position = Vector3.MoveTowards(transform.position, dodge.PortPosition, 30 * Time.deltaTime);
-
         }
-
     }
 
     public void animationDone()

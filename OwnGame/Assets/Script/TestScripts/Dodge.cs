@@ -16,7 +16,7 @@ public class Dodge : MonoBehaviour
     Transform arrow_End_point;
     GameObject actualArrow;
 
-
+    public float Time_Slow = 0.3f;
 
     float dodgeCDR = 0.15f;
     float dodgeCoolDown = 0f;
@@ -37,7 +37,6 @@ public class Dodge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         dodgeCoolDown -= Time.deltaTime;
         if(dodgeCoolDown <= 0f)
         {
@@ -45,7 +44,8 @@ public class Dodge : MonoBehaviour
             {
                 move.enabled = false;
                 nv.ResetPath();
-                Time.timeScale = 0.5f;
+                animator.SetFloat("Forward", 0f);
+                Time.timeScale = Time_Slow;
 
                 if(!isArrowSpawned)
                 {
@@ -55,12 +55,10 @@ public class Dodge : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
                     portPosition = actualArrow.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.position;
-                    Debug.Log(portPosition);
                     destroyArrow();
-                    //movePlayerToMouseClickPosition();
                     Time.timeScale = 1f;
                     animator.SetTrigger("Dodge");
-                    transform.position = Vector3.MoveTowards(transform.position, portPosition, 10 * Time.deltaTime);
+                    //Cooldown
                     dodgeCoolDown = 1f / dodgeCDR;
                 }
             }
@@ -69,24 +67,11 @@ public class Dodge : MonoBehaviour
                 if(isArrowSpawned)
                 {
                     destroyArrow();
+                    move.enabled = true;
+                    Time.timeScale = 1f;
                 }
-                move.enabled = true;
-                Time.timeScale = 1f;
-
             }
-        }
-
-       
-    }
-    private void movePlayerToMouseClickPosition()
-    {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
-        {
-            portPosition = hit.point;
-            animator.SetTrigger("Dodge");
-        }
-
+        }  
     }
     public void dodgeDone()
     {
