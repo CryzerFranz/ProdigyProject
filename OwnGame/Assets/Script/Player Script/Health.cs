@@ -61,11 +61,8 @@ public class Health : MonoBehaviour
                 animator.SetTrigger("Respawn");
                 deathTransition.SetActive(false);
                 PlayerManager.instance.userInterface.SetActive(true);
+                this.GetComponent<Movement>().enabled = true;
             }
-        }
-        else
-        {
-            this.GetComponent<Movement>().enabled = true;
         }
     }
     public void TakeDamage(float damage)

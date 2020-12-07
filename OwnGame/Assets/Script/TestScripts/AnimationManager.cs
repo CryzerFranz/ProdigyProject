@@ -8,6 +8,7 @@ public class AnimationManager : MonoBehaviour
     public bool animationIsPlayer = false;
     private Animator animator;
 
+    private Dodge dodge;
     private Movement playerMovement;
     private NavMeshAgent playerNavMeshAgent;
     void Start()
@@ -15,20 +16,28 @@ public class AnimationManager : MonoBehaviour
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<Movement>();
         playerNavMeshAgent = GetComponent<NavMeshAgent>();
+        dodge = GetComponent<Dodge>();
     }
     void Update()
     {
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("melee_spalten_idle"))
         {
             playerNavMeshAgent.ResetPath();    
-            animationIsPlayer = true;
             Debug.Log(playerMovement.isActiveAndEnabled);
         }
-        else
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("rollBack"))
         {
-            animationIsPlayer = false;
-            playerMovement.enabled = true;
-            Debug.Log("else verzweigung");
+            //Debug.Log("rollBack");
+            //Debug.Log("dodge.newPosition = " + dodge.PortPosition);
+            //transform.Translate(dodge.PortPosition);
+            transform.position = Vector3.MoveTowards(transform.position, dodge.PortPosition, 30 * Time.deltaTime);
+
         }
+
+    }
+
+    public void animationDone()
+    {
+        playerMovement.enabled = true;
     }
 }

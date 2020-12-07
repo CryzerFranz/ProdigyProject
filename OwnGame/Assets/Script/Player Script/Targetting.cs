@@ -114,7 +114,7 @@ public class Targetting : MonoBehaviour
         // selectedEnemy.GetComponentInChildren<Renderer>().material.color = Color.red;
        
 
-        currentSymbol = Instantiate(TargetSymbol, selectedEnemy.position, Quaternion.Euler(90,0,0) ,selectedEnemy);
+       currentSymbol = Instantiate(TargetSymbol, selectedEnemy.position, Quaternion.Euler(90,0,0) ,selectedEnemy);
     }
     public void DeselectTarget()
     {
