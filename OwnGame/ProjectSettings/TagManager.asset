@@ -13,6 +13,7 @@ TagManager:
   - BillBoards
   - CullingMask
   - Signs
+  - PathCreator
   layers:
   - Default
   - TransparentFX
