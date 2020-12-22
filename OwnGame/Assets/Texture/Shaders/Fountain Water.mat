@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Fountain Water
+  m_Shader: {fileID: -6465566751694194690, guid: cc68db986c9adb149b34be64bd55de3b,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_2dc1fcb0a10042848a8ce898bf14c647: 5
+    - Vector1_3161434cded24a5db9da20f21dda82ad: 0.1
+    - Vector1_a4266531474c46dd98a3617cdb4169a0: 3
+    - Vector1_fd8983fffb1b4e2f823982bc8281c7b9: 1
+    m_Colors:
+    - Color_17cf38ed255747a08eafac0bd2cc9a19: {r: 0.4552305, g: 2.968895, b: 3.780393,
+        a: 0}
+    - Color_32c54e9b742246ada24c80e51627af5d: {r: 0.1804913, g: 0.5193233, b: 0.9811321,
+        a: 0}
+  m_BuildTextureStacks: []
