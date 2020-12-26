@@ -43,9 +43,9 @@ public class Targetting : MonoBehaviour
     public void SortEnemyByDistance()
     {
         targetableEnemies.Sort(delegate (Transform t1, Transform t2) 
-                                {
-                                    return Vector3.Distance(t1.position, transform.position).CompareTo(Vector3.Distance(t2.position, transform.position));
-                                });
+        {
+            return Vector3.Distance(t1.position, transform.position).CompareTo(Vector3.Distance(t2.position, transform.position));
+        });
 
     }
 
@@ -111,18 +111,15 @@ public class Targetting : MonoBehaviour
 
     private void SelectTarget()
     {
-        // selectedEnemy.GetComponentInChildren<Renderer>().material.color = Color.red;
-       
-
        currentSymbol = Instantiate(TargetSymbol, selectedEnemy.position, Quaternion.Euler(90,0,0) ,selectedEnemy);
     }
+
     public void DeselectTarget()
     {
         Destroy(currentSymbol);
         selectedEnemy = null;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
