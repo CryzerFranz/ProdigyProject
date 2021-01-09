@@ -21,7 +21,7 @@ public class BasicEnemyStats : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         health = 80;
-        damage = 200;
+        damage = 20;
     }
 
     public void takeDamage(float dmg)
