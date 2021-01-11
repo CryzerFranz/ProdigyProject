@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabList: []
   prefabData:
-  - prefab: {fileID: -927199367670048503, guid: 8c3c64da712922b4781dc3b057714152,
-      type: 3}
+  - prefab: {fileID: 1728184955809802, guid: 53597c8bf8fac774b9f55260a5ddadc8, type: 3}
     selected: 1
-  - prefab: {fileID: 1112569982101358, guid: 5ce583200b155db40b5f92847e1b28f8, type: 3}
+  - prefab: {fileID: 1560030287085454, guid: 7aed49cac7aa42d4585cfa65722c86be, type: 3}
     selected: 1
-  - prefab: {fileID: 2764552721371663147, guid: 7908bb875e092f4488e947488cac38ed,
-      type: 3}
+  - prefab: {fileID: 1221860424776778, guid: 30b74090ba79abb4a921ed08cf6365c6, type: 3}
+    selected: 1
+  - prefab: {fileID: 1583468931079096, guid: 69b5ac7139df353409e90edb95cc7502, type: 3}
     selected: 1
   paintType: 0
   brushSize: 1
   minBrushSize: 0.1
   maxBrushSize: 20
-  paintDeltaDistance: 0.4
+  paintDeltaDistance: 0.44
   maxPaintDeltaDistance: 3
   minPaintDeltaDistance: 0.1
   prefabsPerStroke: 1
-  maxprefabsPerStroke: 20
+  maxprefabsPerStroke: 4
   minprefabsPerStroke: 1
   spawnHeight: 10
   addRigidbodyToPaintedPrefab: 1
@@ -46,20 +46,20 @@ MonoBehaviour:
   maxRequiredSlope: 0
   prefabOriginOffset: {x: 0, y: 0, z: 0}
   prefabRotationOffset: {x: 0, y: 0, z: 0}
-  draggingAction: 2
+  draggingAction: 0
   rotationAxis: 0
   rotationSensitivity: 10
   parentingStyle: 0
   parent: {fileID: 0}
   rotateToMatchSurface: 0
   rotateSurfaceDirection: 0
-  randomizeRotation: 0
+  randomizeRotation: 1
   minXRotation: 0
   maxXRotation: 0
   minYRotation: 0
   maxYRotation: 0
   minZRotation: 0
-  maxZRotation: 0
+  maxZRotation: 360
   scaleType: 0
   scaleApplicationType: 0
   minScale: 1
