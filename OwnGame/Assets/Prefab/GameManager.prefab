@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 838557417354935553}
   - component: {fileID: 838557417354935554}
   - component: {fileID: 838557417354935555}
+  - component: {fileID: 1838027925}
+  - component: {fileID: 1838027929}
+  - component: {fileID: 120082051181789832}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,13 +49,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a633b912714a094eb5ef6ce70fbb0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oPlayer: {fileID: 8195109198909798119, guid: ae8fe3284e4d11e41b52e2b7f86a9b5b, type: 3}
-  respawnPoint: {fileID: 4038003058279408289, guid: b494d576046f83d4eb449fc45766edcc,
-    type: 3}
-  deathTransition: {fileID: 6968487795361922805, guid: 38eabb1f71a734c42aeb3d12c8be5d1e,
-    type: 3}
-  userInterface: {fileID: 1941963354625521189, guid: 8acb849ac29a7cb41b69567a592362cc,
-    type: 3}
+  oPlayer: {fileID: 0}
+  respawnPoint: {fileID: 0}
+  deathTransition: {fileID: 0}
+  userInterface: {fileID: 0}
+  playerFollowTarget: 0
 --- !u!114 &838557417354935553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,10 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c760b9dae116f438a84a6a52fb2cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenueCanvas: {fileID: 5620797758386012005, guid: 9dd62f56f572a7a4d87daa68ce32fd63,
-    type: 3}
-  PlayerUI: {fileID: 6607673221501565709, guid: 524e83d733d628344891dcee1c0d232d,
-    type: 3}
+  PauseMenueCanvas: {fileID: 0}
 --- !u!114 &838557417354935555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,3 +91,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b2b87711c75ef42a4adf9fe8cd741d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1838027925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838557417354935566}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0018727aabf955a46841d6e57f64a3f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCamera: {fileID: 0}
+  oSkyDome: {fileID: 0}
+  SunLight: {fileID: 0}
+  day_Billboards: {fileID: 2100000, guid: 22d5a8e38cd5481468fc51d09fd28a49, type: 2}
+  twillight_Billboards: {fileID: 2100000, guid: dce7db7eb488e92419342df6d5c52bcd,
+    type: 2}
+  day_signs: {fileID: 2100000, guid: 645239ff32eb54b46859289bb9a8efcd, type: 2}
+  night_signs: {fileID: 239378781582670930, guid: 9d622ecb8356a194a9a78cd6f3beec4f,
+    type: 3}
+  Profile_Twillight: {fileID: 11400000, guid: 8107cd0ef53712a46abe00e28ab5f6dd, type: 2}
+  Profile_Day: {fileID: 11400000, guid: 96a6332f1688693458b7a75cc0a92e99, type: 2}
+  Profile_Dust: {fileID: 11400000, guid: d954a38ecb3c2c3449de278c72b49144, type: 2}
+  Profile_Night: {fileID: 11400000, guid: c128c4c357787224e82ac9beaea3aeee, type: 2}
+--- !u!114 &1838027929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838557417354935566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db60a57b02cd3e743867413b6a06afea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Basic_Psycho_attacking_Script: {fileID: 0}
+--- !u!114 &120082051181789832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838557417354935566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26c530b79ebeef4cbf24bd3889a1e43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability_01_txt: {fileID: 0}
+  ability_01_KeyCode: 
+  ability_02_KeyCode: 
+  ability_03_KeyCode: 
