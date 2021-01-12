@@ -16,6 +16,9 @@ GameObject:
   - component: {fileID: 1838027925}
   - component: {fileID: 1838027929}
   - component: {fileID: 120082051181789832}
+  - component: {fileID: 571358151}
+  - component: {fileID: 1816187924544165191}
+  - component: {fileID: 274884594583028548}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -145,3 +148,52 @@ MonoBehaviour:
   ability_01_KeyCode: 
   ability_02_KeyCode: 
   ability_03_KeyCode: 
+--- !u!114 &571358151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838557417354935566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae7e2c70a00e674d945051e8e97ec22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 0}
+  Canvas_Pause_Menue: {fileID: 0}
+  Canvas_Settings: {fileID: 0}
+  Canvas_Player_UI: {fileID: 0}
+  Canvas_KeyBoard_Settings: {fileID: 0}
+  Canvas_FrameRate: {fileID: 0}
+  Canvas_Dead_Transition: {fileID: 0}
+--- !u!114 &1816187924544165191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838557417354935566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd75cea4ac11aa943a6c2474c8166d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability_01_Setting_txt: {fileID: 0}
+  ability_01_UI_txt: {fileID: 0}
+  ability_02_Setting_txt: {fileID: 0}
+  ability_02_UI_txt: {fileID: 0}
+  ability_03_Setting_txt: {fileID: 0}
+  ability_03_UI_txt: {fileID: 0}
+--- !u!114 &274884594583028548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838557417354935566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba2e2ef19ff64e41af767528908ca9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -26,6 +26,7 @@ public class PausedGame : MonoBehaviour
             {
                 Pause();
                 PauseMenueCanvas.SetActive(true);
+                Canvas_Manager.instance.activeCanvas = Canvas_Manager.instance.Canvas_Pause_Menue;
                 PlayerManager.instance.userInterface.SetActive(false);
             }
         }

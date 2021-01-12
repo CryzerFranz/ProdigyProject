@@ -17,23 +17,55 @@ public class OnClick_Menu : MonoBehaviour
         Application.Quit();
     }
 
+    #region Settings
     public void Settings()
     {
-        GameObject canvas_settings = GameObject.Find("Settings");
-        GameObject canvas_menue = GameObject.Find("Pause Menue");
-        canvas_menue.SetActive(false);
-        canvas_settings.SetActive(true);
+        setActiveCanvas(Canvas_Manager.instance.Canvas_Settings);
     }
 
+    public void KeyBoardSettings()
+    {
+        setActiveCanvas(Canvas_Manager.instance.Canvas_KeyBoard_Settings);
+
+    }
+    #endregion
     public void Resume()
     {
         GameObject canvas = GameObject.Find("Pause Menue");
         canvas.SetActive(false);
         PausedGame.Resume();
     }
+   
 
     public void Save()
     {
         Debug.Log("No implementation at the momemnt");
+    }
+
+
+    private void setActiveCanvas(GameObject canvas)
+    {
+        Canvas_Manager.instance.activeCanvas.SetActive(false);
+        Canvas_Manager.instance.activeCanvas = canvas;
+        canvas.SetActive(true);
+    }
+
+    // type == false means -> CanvasToReturn = pauseMenue;
+    // type == true means -> Canvas goes back to settings menue;
+    public void returnButton(bool type)
+    {
+        if(!type)
+        {
+            Canvas_Manager.instance.activeCanvas.SetActive(false);
+            Canvas_Manager.instance.activeCanvas = Canvas_Manager.instance.CanvasToReturn;
+            Canvas_Manager.instance.activeCanvas.SetActive(true);
+        }
+        else
+        {
+            Canvas_Manager.instance.activeCanvas.SetActive(false);
+            Canvas_Manager.instance.activeCanvas = Canvas_Manager.instance.Canvas_Settings;
+            Canvas_Manager.instance.activeCanvas.SetActive(true);
+        }
+        
     }
 }

@@ -272,10 +272,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 120082051181789832, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+      - m_Target: {fileID: 274884594583028548, guid: d769b36c5691c9e47ae0bfb8ed33944d,
           type: 3}
-        m_TargetAssemblyTypeName: Ability_Task, Assembly-CSharp
-        m_MethodName: changeKeyCode_01
+        m_TargetAssemblyTypeName: KeyBoard_Settings, Assembly-CSharp
+        m_MethodName: Ability_01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1292,16 +1292,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620175435}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
-        m_Mode: 1
+        m_TargetAssemblyTypeName: OnClick_Menu, Assembly-CSharp
+        m_MethodName: returnButton
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &261314257
 MonoBehaviour:
@@ -1518,6 +1518,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335142504}
   m_CullTransparentMesh: 1
+--- !u!1 &379861909 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8782660045811981162, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 8782660044260815416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &392068464
 GameObject:
   m_ObjectHideFlags: 0
@@ -8387,7 +8393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1743753440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14256,6 +14262,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 571358151, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 1417872071}
+    - target: {fileID: 571358151, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
+      propertyPath: Canvas_Settings
+      value: 
+      objectReference: {fileID: 379861909}
+    - target: {fileID: 571358151, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
+      propertyPath: Canvas_FrameRate
+      value: 
+      objectReference: {fileID: 96613659}
+    - target: {fileID: 571358151, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
+      propertyPath: Canvas_Player_UI
+      value: 
+      objectReference: {fileID: 1863109005}
+    - target: {fileID: 571358151, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
+      propertyPath: Canvas_Pause_Menue
+      value: 
+      objectReference: {fileID: 578006025}
+    - target: {fileID: 571358151, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
+      propertyPath: Canvas_Dead_Transition
+      value: 
+      objectReference: {fileID: 1307941902}
+    - target: {fileID: 571358151, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
+      propertyPath: Canvas_KeyBoard_Settings
+      value: 
+      objectReference: {fileID: 1743753439}
     - target: {fileID: 1838027925, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
       propertyPath: SunLight
       value: 
@@ -14358,6 +14392,36 @@ PrefabInstance:
       propertyPath: deathTransition
       value: 
       objectReference: {fileID: 1307941902}
+    - target: {fileID: 1816187924544165191, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: ability_01_UI_txt
+      value: 
+      objectReference: {fileID: 741664057}
+    - target: {fileID: 1816187924544165191, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: ability_02_UI_txt
+      value: 
+      objectReference: {fileID: 1051395947}
+    - target: {fileID: 1816187924544165191, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: ability_03_UI_txt
+      value: 
+      objectReference: {fileID: 929220983}
+    - target: {fileID: 1816187924544165191, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: ability_01_Setting_txt
+      value: 
+      objectReference: {fileID: 708813252}
+    - target: {fileID: 1816187924544165191, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: ability_02_Setting_txt
+      value: 
+      objectReference: {fileID: 1231515445}
+    - target: {fileID: 1816187924544165191, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: ability_03_Setting_txt
+      value: 
+      objectReference: {fileID: 732793126}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
 --- !u!1001 &3590035122190341659
@@ -14818,7 +14882,7 @@ PrefabInstance:
     - target: {fileID: 5620797758386012005, guid: 9dd62f56f572a7a4d87daa68ce32fd63,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5620797758579598638, guid: 9dd62f56f572a7a4d87daa68ce32fd63,
         type: 3}
@@ -15099,14 +15163,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8782660044413033347, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782660044413033347, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 620175435}
+    - target: {fileID: 8782660044413033347, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: returnButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782660044413033347, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OnClick_Menu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8782660044457759768, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 620175435}
+    - target: {fileID: 8782660044457759768, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: KeyBoardSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782660044457759768, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OnClick_Menu, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8782660045811981162, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
         type: 3}
       propertyPath: m_Name
@@ -15115,7 +15204,7 @@ PrefabInstance:
     - target: {fileID: 8782660045811981162, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8782660045811981163, guid: 0c0cbcf9ad1514c4bae70d7f031172cf,
         type: 3}
