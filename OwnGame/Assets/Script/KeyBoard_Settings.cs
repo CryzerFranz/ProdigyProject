@@ -7,8 +7,8 @@ public class KeyBoard_Settings : MonoBehaviour
     // Start is called before the first frame update
     public void Ability_01()
     {
-        KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text = Input.name;
-        KeyBoardBinding_Manager.instance.ability_01_UI_txt.text = KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text;
+        //KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text = Input.name;
+        //KeyBoardBinding_Manager.instance.ability_01_UI_txt.text = KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text;
     }
     public void Ability_02()
     {
