@@ -19,9 +19,10 @@ public class OnClick_Menu : MonoBehaviour
 
     public void Settings()
     {
-        Debug.Log("No settings menu at the moment!");
-        //TODO
-        //no settings menu at the moment
+        GameObject canvas_settings = GameObject.Find("Settings");
+        GameObject canvas_menue = GameObject.Find("Pause Menue");
+        canvas_menue.SetActive(false);
+        canvas_settings.SetActive(true);
     }
 
     public void Resume()
