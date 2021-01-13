@@ -272,10 +272,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 274884594583028548, guid: d769b36c5691c9e47ae0bfb8ed33944d,
-          type: 3}
-        m_TargetAssemblyTypeName: KeyBoard_Settings, Assembly-CSharp
-        m_MethodName: Ability_01
+      - m_Target: {fileID: 1138868685}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ChangeAbility_01
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6826,6 +6825,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130790264}
   m_CullTransparentMesh: 0
+--- !u!114 &1138868685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2379189297858572512, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+    type: 3}
+  m_PrefabInstance: {fileID: 838557416894405960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9108891a48ecdd54aacaafe6293b1594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1148414742
 GameObject:
   m_ObjectHideFlags: 0
