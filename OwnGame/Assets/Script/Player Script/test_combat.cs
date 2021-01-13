@@ -31,7 +31,7 @@ public class test_combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(playerMovement.isActiveAndEnabled);
+        //Debug.Log(playerMovement.isActiveAndEnabled);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("Pressed 1");

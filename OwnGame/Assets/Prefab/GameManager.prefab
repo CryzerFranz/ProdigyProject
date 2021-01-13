@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 120082051181789832}
   - component: {fileID: 571358151}
   - component: {fileID: 1816187924544165191}
-  - component: {fileID: 274884594583028548}
+  - component: {fileID: 2379189297858572512}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -185,7 +185,7 @@ MonoBehaviour:
   ability_02_UI_txt: {fileID: 0}
   ability_03_Setting_txt: {fileID: 0}
   ability_03_UI_txt: {fileID: 0}
---- !u!114 &274884594583028548
+--- !u!114 &2379189297858572512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,6 +194,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 838557417354935566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ba2e2ef19ff64e41af767528908ca9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 9108891a48ecdd54aacaafe6293b1594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keybindings: {fileID: 11400000, guid: 32d98495553314b44a6fe88617ae7ab0, type: 2}
