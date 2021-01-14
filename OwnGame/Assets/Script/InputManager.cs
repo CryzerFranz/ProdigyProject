@@ -27,6 +27,7 @@ public class InputManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.M))
         {
+            Debug.Log(keybindings.keybindingChecks[0].keybindingAction);
             Debug.Log(keybindings.keybindingChecks[0].keyCode);
         }
     }
