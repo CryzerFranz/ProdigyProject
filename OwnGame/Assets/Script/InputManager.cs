@@ -5,9 +5,10 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public static InputManager instance;
-
-    private KeyCode changeKeyValue;
-
+    Event e;
+    public InputTester test;
+    public KeyCode changeKeyValue;
+    bool waitingForKey;
     [SerializeField]
     private Keybindings keybindings;
     private void Awake()
@@ -21,6 +22,7 @@ public class InputManager : MonoBehaviour
             Destroy(this);
         }
         DontDestroyOnLoad(this);
+        changeKeyValue = KeyCode.None;
     }
 
     private void Update()
@@ -79,25 +81,50 @@ public class InputManager : MonoBehaviour
         return false;
     }
 
-    private IEnumerator StartCour()
+
+    IEnumerator logicInput()
     {
-        Event e = Event.current;
-        while(!e.isKey)
+        Debug.Log("Starting...");
+        yield return StartCoroutine(WaitForKeyDown());
+    }
+    private void OnGUI()
+    {
+        e = Event.current;
+
+        if(e.isKey && waitingForKey)
         {
-            yield return null;
-            Debug.Log("Kein Key");
+            changeKeyValue = e.keyCode;
+            waitingForKey = false;
         }
-        changeKeyValue = e.keyCode;
+    }
+    IEnumerator WaitForKeyDown()
+    {
+        bool pressed = false;
+        while (!pressed)
+        {
+            Debug.Log("Key pressed: " + e.isKey + " " + e.keyCode);
+            if (e.isKey)
+            {
+                pressed = true;
+                changeKeyValue = e.keyCode;
+                yield return null;
+            }
+
+            yield return WaitForKeyDown(); //you might want to only do this check once per frame -> yield return new WaitForEndOfFrame();
+        }
     }
 
     public void ChangeAbility_01()
     {
-        StartCour();
+        waitingForKey = true;
+        Debug.Log("Button pressed");
+        StartCoroutine(logicInput());
+        ChangeAbility_02();
         keybindings.keybindingChecks[0].keyCode = changeKeyValue;
     }
     public void ChangeAbility_02()
     {
-
+        Debug.Log("function call ");
     }
     public void ChangeAbility_03()
     {
