@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class InputManager : MonoBehaviour
 {
     public static InputManager instance;
+    public TextMeshProUGUI testText;
     Event e;
     public InputTester test;
     public KeyCode changeKeyValue;
@@ -100,31 +103,27 @@ public class InputManager : MonoBehaviour
     IEnumerator WaitForKeyDown()
     {
         bool pressed = false;
-        while (!pressed)
+        while (!e.isKey)
         {
-            Debug.Log("Key pressed: " + e.isKey + " " + e.keyCode);
-            if (e.isKey)
-            {
-                pressed = true;
-                changeKeyValue = e.keyCode;
-                yield return null;
-            }
-
-            yield return WaitForKeyDown(); //you might want to only do this check once per frame -> yield return new WaitForEndOfFrame();
+            // yield return null; //you might want to only do this check once per frame -> yield return new WaitForEndOfFrame();
+            yield return new WaitForEndOfFrame();
         }
+        pressed = true; testText.color = Color.green;
+        changeKeyValue = e.keyCode;
     }
 
     public void ChangeAbility_01()
     {
         waitingForKey = true;
         Debug.Log("Button pressed");
+        testText.color = Color.red;
         StartCoroutine(logicInput());
         ChangeAbility_02();
         keybindings.keybindingChecks[0].keyCode = changeKeyValue;
     }
     public void ChangeAbility_02()
     {
-        Debug.Log("function call ");
+        Debug.Log("Fucked up");
     }
     public void ChangeAbility_03()
     {
