@@ -85,10 +85,10 @@ public class InputManager : MonoBehaviour
     }
 
 
-    IEnumerator logicInput()
+    IEnumerator logicInput(KeybindingActions keyName)
     {
         Debug.Log("Starting...");
-        yield return StartCoroutine(WaitForKeyDown());
+        yield return StartCoroutine(WaitForKeyDown(keyName));
     }
     private void OnGUI()
     {
@@ -98,18 +98,26 @@ public class InputManager : MonoBehaviour
         {
             changeKeyValue = e.keyCode;
             waitingForKey = false;
+            Debug.Log("OnGUI   " + changeKeyValue);
         }
     }
-    IEnumerator WaitForKeyDown()
+    IEnumerator WaitForKeyDown(KeybindingActions keyActionName)
     {
-        bool pressed = false;
-        while (!e.isKey)
+        while (waitingForKey)
         {
-            // yield return null; //you might want to only do this check once per frame -> yield return new WaitForEndOfFrame();
-            yield return new WaitForEndOfFrame();
+            yield return null;
         }
-        pressed = true; testText.color = Color.green;
-        changeKeyValue = e.keyCode;
+        testText.color = Color.green;
+
+        foreach(Keybindings.KeybindingCheck element in keybindings.keybindingChecks)
+        {
+            if(element.keybindingAction == keyActionName)
+            {
+                element.keyCode = changeKeyValue;
+                Debug.Log(changeKeyValue);
+            }
+        }
+
     }
 
     public void ChangeAbility_01()
@@ -117,9 +125,8 @@ public class InputManager : MonoBehaviour
         waitingForKey = true;
         Debug.Log("Button pressed");
         testText.color = Color.red;
-        StartCoroutine(logicInput());
-        ChangeAbility_02();
-        keybindings.keybindingChecks[0].keyCode = changeKeyValue;
+        StartCoroutine(logicInput(KeybindingActions.ability_01));
+        
     }
     public void ChangeAbility_02()
     {
