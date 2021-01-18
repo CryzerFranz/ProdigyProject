@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
@@ -84,7 +84,6 @@ public class InputManager : MonoBehaviour
         return false;
     }
 
-
     IEnumerator logicInput(KeybindingActions keyName)
     {
         Debug.Log("Starting...");
@@ -114,6 +113,7 @@ public class InputManager : MonoBehaviour
             if(element.keybindingAction == keyActionName)
             {
                 element.keyCode = changeKeyValue;
+                element.UI_Setting.text = changeKeyValue.ToString();
                 Debug.Log(changeKeyValue);
             }
         }
@@ -126,7 +126,9 @@ public class InputManager : MonoBehaviour
         Debug.Log("Button pressed");
         testText.color = Color.red;
         StartCoroutine(logicInput(KeybindingActions.ability_01));
-        
+        KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text = changeKeyValue.ToString();
+
+
     }
     public void ChangeAbility_02()
     {
