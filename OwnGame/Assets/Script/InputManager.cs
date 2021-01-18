@@ -14,6 +14,8 @@ public class InputManager : MonoBehaviour
     bool waitingForKey;
     [SerializeField]
     private Keybindings keybindings;
+    [SerializeField]
+    private KeyBoardBinding_Manager bindingtexts;
     private void Awake()
     {
         if (instance == null)
@@ -113,8 +115,22 @@ public class InputManager : MonoBehaviour
             if(element.keybindingAction == keyActionName)
             {
                 element.keyCode = changeKeyValue;
-                element.UI_Setting.text = changeKeyValue.ToString();
                 Debug.Log(changeKeyValue);
+                //stop loop
+                break;
+            }
+        }
+
+       
+        foreach(KeyBoardBinding_Manager.KeyboardBindingText element in bindingtexts.keyboardBindingText)
+        {
+            if (element.keybindingAction == keyActionName)
+            {
+                element.setting_UI_Text.text = changeKeyValue.ToString();
+                if(element.Task_UI_exists)
+                {
+                    element.Task_UI_Text.text = changeKeyValue.ToString();
+                }
             }
         }
 
@@ -126,7 +142,7 @@ public class InputManager : MonoBehaviour
         Debug.Log("Button pressed");
         testText.color = Color.red;
         StartCoroutine(logicInput(KeybindingActions.ability_01));
-        KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text = changeKeyValue.ToString();
+      //  KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text = changeKeyValue.ToString();
 
 
     }
