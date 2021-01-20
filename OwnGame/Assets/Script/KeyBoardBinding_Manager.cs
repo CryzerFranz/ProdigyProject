@@ -3,13 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-/// <summary>
-/// This class is used to change the text from the UI.
-/// </summary>
-/// <param name="keybindingAction"> Shows you for which key this text ist binded </param>
-/// <param name="setting_UI_Text"> The text object to change the text in the settings menue </param>
-/// <param name="Task_UI_Text"> The text object to change the text in the task UI </param>
-/// <param name="Task_UI_exists"> If true, the text in the UI will be changed if not true it's mean no task UI avaible for this keybindingAction </param>
 
 public class KeyBoardBinding_Manager : MonoBehaviour
 {

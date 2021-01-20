@@ -17,9 +17,7 @@ GameObject:
   - component: {fileID: 1838027929}
   - component: {fileID: 120082051181789832}
   - component: {fileID: 571358151}
-  - component: {fileID: 1816187924544165191}
   - component: {fileID: 2379189297858572512}
-  - component: {fileID: 477338372}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -168,19 +166,6 @@ MonoBehaviour:
   Canvas_KeyBoard_Settings: {fileID: 0}
   Canvas_FrameRate: {fileID: 0}
   Canvas_Dead_Transition: {fileID: 0}
---- !u!114 &1816187924544165191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838557417354935566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd75cea4ac11aa943a6c2474c8166d18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyboardBindingText: []
 --- !u!114 &2379189297858572512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,45 +182,4 @@ MonoBehaviour:
   test: {fileID: 0}
   changeKeyValue: 0
   keybindings: {fileID: 11400000, guid: 32d98495553314b44a6fe88617ae7ab0, type: 2}
-  bindingtexts: {fileID: 1816187924544165191}
---- !u!114 &477338372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838557417354935566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd75cea4ac11aa943a6c2474c8166d18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyboardBindingText:
-  - keybindingAction: 8
-    setting_UI_Text: {fileID: 0}
-    Task_UI_Text: {fileID: 0}
-    Task_UI_exists: 1
-  - keybindingAction: 9
-    setting_UI_Text: {fileID: 0}
-    Task_UI_Text: {fileID: 0}
-    Task_UI_exists: 1
-  - keybindingAction: 10
-    setting_UI_Text: {fileID: 0}
-    Task_UI_Text: {fileID: 0}
-    Task_UI_exists: 1
-  - keybindingAction: 11
-    setting_UI_Text: {fileID: 0}
-    Task_UI_Text: {fileID: 0}
-    Task_UI_exists: 1
-  - keybindingAction: 12
-    setting_UI_Text: {fileID: 0}
-    Task_UI_Text: {fileID: 0}
-    Task_UI_exists: 1
-  - keybindingAction: 13
-    setting_UI_Text: {fileID: 0}
-    Task_UI_Text: {fileID: 0}
-    Task_UI_exists: 1
-  - keybindingAction: 14
-    setting_UI_Text: {fileID: 0}
-    Task_UI_Text: {fileID: 0}
-    Task_UI_exists: 1
+  bindingtexts: {fileID: 0}

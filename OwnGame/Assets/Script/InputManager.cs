@@ -122,17 +122,17 @@ public class InputManager : MonoBehaviour
         }
 
        
-        foreach(KeyBoardBinding_Manager.KeyboardBindingText element in bindingtexts.keyboardBindingText)
-        {
-            if (element.keybindingAction == keyActionName)
-            {
-                element.setting_UI_Text.text = changeKeyValue.ToString();
-                if(element.Task_UI_exists)
-                {
-                    element.Task_UI_Text.text = changeKeyValue.ToString();
-                }
-            }
-        }
+        //foreach(KeyBoardBinding_Manager.KeyboardBindingText element in bindingtexts.keyboardBindingText)
+        //{
+        //    if (element.keybindingAction == keyActionName)
+        //    {
+        //        element.setting_UI_Text.text = changeKeyValue.ToString();
+        //        if(element.Task_UI_exists)
+        //        {
+        //            element.Task_UI_Text.text = changeKeyValue.ToString();
+        //        }
+        //    }
+        //}
 
     }
 
