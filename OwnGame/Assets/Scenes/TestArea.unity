@@ -13636,6 +13636,16 @@ PrefabInstance:
       propertyPath: testText
       value: 
       objectReference: {fileID: 708813252}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_01_TaskMenue
+      value: 
+      objectReference: {fileID: 741664057}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_01_SettingMenue
+      value: 
+      objectReference: {fileID: 708813252}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
 --- !u!1001 &1398773711842684598

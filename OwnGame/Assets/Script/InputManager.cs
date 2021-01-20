@@ -86,10 +86,10 @@ public class InputManager : MonoBehaviour
         return false;
     }
 
-    IEnumerator logicInput(KeybindingActions keyName)
+    IEnumerator logicInput(KeybindingActions keyName, TextMeshProUGUI settingText, TextMeshProUGUI taskText)
     {
         Debug.Log("Starting...");
-        yield return StartCoroutine(WaitForKeyDown(keyName));
+        yield return StartCoroutine(WaitForKeyDown(keyName, settingText, taskText));
     }
     private void OnGUI()
     {
@@ -102,7 +102,7 @@ public class InputManager : MonoBehaviour
             Debug.Log("OnGUI   " + changeKeyValue);
         }
     }
-    IEnumerator WaitForKeyDown(KeybindingActions keyActionName)
+    IEnumerator WaitForKeyDown(KeybindingActions keyActionName, TextMeshProUGUI settingText, TextMeshProUGUI taskText)
     {
         while (waitingForKey)
         {
@@ -116,6 +116,10 @@ public class InputManager : MonoBehaviour
             {
                 element.keyCode = changeKeyValue;
                 Debug.Log(changeKeyValue);
+                settingText.text = changeKeyValue.ToString();
+                taskText.text = changeKeyValue.ToString();
+                changeKeyValue = KeyCode.None;
+
                 //stop loop
                 break;
             }
@@ -141,10 +145,8 @@ public class InputManager : MonoBehaviour
         waitingForKey = true;
         Debug.Log("Button pressed");
         testText.color = Color.red;
-        StartCoroutine(logicInput(KeybindingActions.ability_01));
+        StartCoroutine(logicInput(KeybindingActions.ability_01, KeyBoardBinding_Manager.instance.AB_01_SettingMenue, KeyBoardBinding_Manager.instance.AB_01_TaskMenue));
       //  KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text = changeKeyValue.ToString();
-
-
     }
     public void ChangeAbility_02()
     {
