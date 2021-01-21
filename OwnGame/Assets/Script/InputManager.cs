@@ -91,6 +91,7 @@ public class InputManager : MonoBehaviour
         Debug.Log("Starting...");
         yield return StartCoroutine(WaitForKeyDown(keyName, settingText, taskText));
     }
+
     private void OnGUI()
     {
         e = Event.current;
@@ -99,9 +100,9 @@ public class InputManager : MonoBehaviour
         {
             changeKeyValue = e.keyCode;
             waitingForKey = false;
-            Debug.Log("OnGUI   " + changeKeyValue);
         }
     }
+
     IEnumerator WaitForKeyDown(KeybindingActions keyActionName, TextMeshProUGUI settingText, TextMeshProUGUI taskText)
     {
         while (waitingForKey)
@@ -120,56 +121,44 @@ public class InputManager : MonoBehaviour
                 taskText.text = changeKeyValue.ToString();
                 changeKeyValue = KeyCode.None;
 
-                //stop loop
                 break;
             }
         }
-
-       
-        //foreach(KeyBoardBinding_Manager.KeyboardBindingText element in bindingtexts.keyboardBindingText)
-        //{
-        //    if (element.keybindingAction == keyActionName)
-        //    {
-        //        element.setting_UI_Text.text = changeKeyValue.ToString();
-        //        if(element.Task_UI_exists)
-        //        {
-        //            element.Task_UI_Text.text = changeKeyValue.ToString();
-        //        }
-        //    }
-        //}
-
     }
 
     public void ChangeAbility_01()
     {
         waitingForKey = true;
-        Debug.Log("Button pressed");
-        testText.color = Color.red;
         StartCoroutine(logicInput(KeybindingActions.ability_01, KeyBoardBinding_Manager.instance.AB_01_SettingMenue, KeyBoardBinding_Manager.instance.AB_01_TaskMenue));
-      //  KeyBoardBinding_Manager.instance.ability_01_Setting_txt.text = changeKeyValue.ToString();
     }
     public void ChangeAbility_02()
     {
-        Debug.Log("Fucked up");
+        waitingForKey = true;
+        StartCoroutine(logicInput(KeybindingActions.ability_02, KeyBoardBinding_Manager.instance.AB_02_SettingMenue, KeyBoardBinding_Manager.instance.AB_02_TaskMenue));
     }
     public void ChangeAbility_03()
     {
-
+        waitingForKey = true;
+        StartCoroutine(logicInput(KeybindingActions.ability_03, KeyBoardBinding_Manager.instance.AB_03_SettingMenue, KeyBoardBinding_Manager.instance.AB_03_TaskMenue));
     }
     public void ChangeAbility_04()
     {
-
+        waitingForKey = true;
+        StartCoroutine(logicInput(KeybindingActions.ability_04, KeyBoardBinding_Manager.instance.AB_04_SettingMenue, KeyBoardBinding_Manager.instance.AB_04_TaskMenue));
     }
     public void ChangeAbility_05()
     {
-
+        waitingForKey = true;
+        StartCoroutine(logicInput(KeybindingActions.ability_05, KeyBoardBinding_Manager.instance.AB_05_SettingMenue, KeyBoardBinding_Manager.instance.AB_05_TaskMenue));
     }
     public void ChangeAbility_06()
     {
-
+        waitingForKey = true;
+        StartCoroutine(logicInput(KeybindingActions.ability_06, KeyBoardBinding_Manager.instance.AB_06_SettingMenue, KeyBoardBinding_Manager.instance.AB_06_TaskMenue));
     }
     public void ChangeAbility_07()
     {
-
+        waitingForKey = true;
+        StartCoroutine(logicInput(KeybindingActions.ability_07, KeyBoardBinding_Manager.instance.AB_07_SettingMenue, KeyBoardBinding_Manager.instance.AB_07_TaskMenue));
     }
 }

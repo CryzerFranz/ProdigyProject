@@ -515,6 +515,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   framerateText: {fileID: 1659451398}
+--- !u!114 &116764513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1663099871640662973, guid: 87ffe7ae7d6806f499d573d5c140876e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1663099873101809596}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &136779787
 GameObject:
   m_ObjectHideFlags: 0
@@ -3505,9 +3517,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175435}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
+      - m_Target: {fileID: 1138868685}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ChangeAbility_06
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3638,9 +3650,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175435}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
+      - m_Target: {fileID: 1138868685}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ChangeAbility_05
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3783,9 +3795,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175435}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
+      - m_Target: {fileID: 1138868685}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ChangeAbility_02
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4006,9 +4018,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175435}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
+      - m_Target: {fileID: 1138868685}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ChangeAbility_03
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4296,9 +4308,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175435}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
+      - m_Target: {fileID: 1138868685}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ChangeAbility_04
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4618,6 +4630,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751825208}
   m_CullTransparentMesh: 0
+--- !u!114 &753479386 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2414626972904941859, guid: b62e051b3aa5f8b43b367dbb0a73f42a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2414626971686536726}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &758757084
 GameObject:
   m_ObjectHideFlags: 0
@@ -5237,6 +5261,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &772976426 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398773711383046032, guid: f3d7c55a24726e643ac38bbd527fb8c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1398773711842684598}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &777530339 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2387542234887626824, guid: 7099aadd9c89ea046bacd68e88a7e678,
+    type: 3}
+  m_PrefabInstance: {fileID: 2387542234483934041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851288746
 GameObject:
   m_ObjectHideFlags: 0
@@ -6944,6 +6992,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e80d304552ca5494ea53a05500259e80, type: 3}
+--- !u!114 &1366134715 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3044236154585113567, guid: a1385512d3a64ab4db8aed2fc483054e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3044236154838433205}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1417872071
 GameObject:
   m_ObjectHideFlags: 0
@@ -7064,9 +7124,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175435}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Resume
+      - m_Target: {fileID: 1138868685}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: ChangeAbility_07
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9016,6 +9076,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031731072}
   m_CullTransparentMesh: 0
+--- !u!114 &2038721593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 496759669893432692, guid: f372008e56c0d5d40aeb1bc5594956b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 496759670797810208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2096738879
 GameObject:
   m_ObjectHideFlags: 0
@@ -13643,9 +13715,69 @@ PrefabInstance:
       objectReference: {fileID: 741664057}
     - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
         type: 3}
+      propertyPath: AB_02_TaskMenue
+      value: 
+      objectReference: {fileID: 1051395947}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_03_TaskMenue
+      value: 
+      objectReference: {fileID: 929220983}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_04_TaskMenue
+      value: 
+      objectReference: {fileID: 204122605}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_05_TaskMenue
+      value: 
+      objectReference: {fileID: 443611134}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_06_TaskMenue
+      value: 
+      objectReference: {fileID: 1148414744}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_07_TaskMenue
+      value: 
+      objectReference: {fileID: 1716308396}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
       propertyPath: AB_01_SettingMenue
       value: 
       objectReference: {fileID: 708813252}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_02_SettingMenue
+      value: 
+      objectReference: {fileID: 753479386}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_03_SettingMenue
+      value: 
+      objectReference: {fileID: 772976426}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_04_SettingMenue
+      value: 
+      objectReference: {fileID: 2038721593}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_05_SettingMenue
+      value: 
+      objectReference: {fileID: 777530339}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_06_SettingMenue
+      value: 
+      objectReference: {fileID: 116764513}
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+        type: 3}
+      propertyPath: AB_07_SettingMenue
+      value: 
+      objectReference: {fileID: 1366134715}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d769b36c5691c9e47ae0bfb8ed33944d, type: 3}
 --- !u!1001 &1398773711842684598
