@@ -14,8 +14,8 @@ public class InputManager : MonoBehaviour
     bool waitingForKey;
     [SerializeField]
     private Keybindings keybindings;
-    [SerializeField]
-    private KeyBoardBinding_Manager bindingtexts;
+    //[SerializeField]
+    //private KeyBoardBinding_Manager bindingtexts;
     private void Awake()
     {
         if (instance == null)

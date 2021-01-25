@@ -12,8 +12,6 @@ public class Dodge : MonoBehaviour
 
     [SerializeField]
     GameObject arrow;
-    [SerializeField]
-    Transform arrow_End_point;
     GameObject actualArrow;
 
     public float Time_Slow = 0.3f;

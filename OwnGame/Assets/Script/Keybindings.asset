@@ -30,7 +30,7 @@ MonoBehaviour:
   - keybindingAction: 7
     keyCode: 119
   - keybindingAction: 8
-    keyCode: 102
+    keyCode: 113
   - keybindingAction: 9
     keyCode: 119
   - keybindingAction: 10
