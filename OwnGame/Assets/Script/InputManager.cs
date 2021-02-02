@@ -7,13 +7,12 @@ using UnityEngine.UI;
 public class InputManager : MonoBehaviour
 {
     public static InputManager instance;
-    public TextMeshProUGUI testText;
     Event e;
-    public InputTester test;
     public KeyCode changeKeyValue;
     bool waitingForKey;
     [SerializeField]
     private Keybindings keybindings;
+    private KeyBoardBinding_Manager KBM_instance;
     //[SerializeField]
     //private KeyBoardBinding_Manager bindingtexts;
     private void Awake()
@@ -28,16 +27,9 @@ public class InputManager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
         changeKeyValue = KeyCode.None;
+        KBM_instance = KeyBoardBinding_Manager.instance;
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.M))
-        {
-            Debug.Log(keybindings.keybindingChecks[0].keybindingAction);
-            Debug.Log(keybindings.keybindingChecks[0].keyCode);
-        }
-    }
     public KeyCode GetKeyForAction(KeybindingActions keybindgingAction)
     {
         foreach(Keybindings.KeybindingCheck keybindingCheck in keybindings.keybindingChecks)
@@ -109,7 +101,6 @@ public class InputManager : MonoBehaviour
         {
             yield return null;
         }
-        testText.color = Color.green;
 
         foreach(Keybindings.KeybindingCheck element in keybindings.keybindingChecks)
         {
@@ -129,36 +120,36 @@ public class InputManager : MonoBehaviour
     public void ChangeAbility_01()
     {
         waitingForKey = true;
-        StartCoroutine(logicInput(KeybindingActions.ability_01, KeyBoardBinding_Manager.instance.AB_01_SettingMenue, KeyBoardBinding_Manager.instance.AB_01_TaskMenue));
+        StartCoroutine(logicInput(KeybindingActions.ability_01, KBM_instance.AB_01_SettingMenue, KBM_instance.AB_01_TaskMenue));
     }
     public void ChangeAbility_02()
     {
         waitingForKey = true;
-        StartCoroutine(logicInput(KeybindingActions.ability_02, KeyBoardBinding_Manager.instance.AB_02_SettingMenue, KeyBoardBinding_Manager.instance.AB_02_TaskMenue));
+        StartCoroutine(logicInput(KeybindingActions.ability_02, KBM_instance.AB_02_SettingMenue, KBM_instance.AB_02_TaskMenue));
     }
     public void ChangeAbility_03()
     {
         waitingForKey = true;
-        StartCoroutine(logicInput(KeybindingActions.ability_03, KeyBoardBinding_Manager.instance.AB_03_SettingMenue, KeyBoardBinding_Manager.instance.AB_03_TaskMenue));
+        StartCoroutine(logicInput(KeybindingActions.ability_03, KBM_instance.AB_03_SettingMenue, KBM_instance.AB_03_TaskMenue));
     }
     public void ChangeAbility_04()
     {
         waitingForKey = true;
-        StartCoroutine(logicInput(KeybindingActions.ability_04, KeyBoardBinding_Manager.instance.AB_04_SettingMenue, KeyBoardBinding_Manager.instance.AB_04_TaskMenue));
+        StartCoroutine(logicInput(KeybindingActions.ability_04, KBM_instance.AB_04_SettingMenue, KBM_instance.AB_04_TaskMenue));
     }
     public void ChangeAbility_05()
     {
         waitingForKey = true;
-        StartCoroutine(logicInput(KeybindingActions.ability_05, KeyBoardBinding_Manager.instance.AB_05_SettingMenue, KeyBoardBinding_Manager.instance.AB_05_TaskMenue));
+        StartCoroutine(logicInput(KeybindingActions.ability_05, KBM_instance.AB_05_SettingMenue, KBM_instance.AB_05_TaskMenue));
     }
     public void ChangeAbility_06()
     {
         waitingForKey = true;
-        StartCoroutine(logicInput(KeybindingActions.ability_06, KeyBoardBinding_Manager.instance.AB_06_SettingMenue, KeyBoardBinding_Manager.instance.AB_06_TaskMenue));
+        StartCoroutine(logicInput(KeybindingActions.ability_06, KBM_instance.AB_06_SettingMenue, KBM_instance.AB_06_TaskMenue));
     }
     public void ChangeAbility_07()
     {
         waitingForKey = true;
-        StartCoroutine(logicInput(KeybindingActions.ability_07, KeyBoardBinding_Manager.instance.AB_07_SettingMenue, KeyBoardBinding_Manager.instance.AB_07_TaskMenue));
+        StartCoroutine(logicInput(KeybindingActions.ability_07, KBM_instance.AB_07_SettingMenue, KBM_instance.AB_07_TaskMenue));
     }
 }
