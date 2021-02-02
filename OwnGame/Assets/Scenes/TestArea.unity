@@ -762,7 +762,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: rangeCombat
         m_Mode: 1
@@ -3845,18 +3845,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596357302}
   m_CullTransparentMesh: 0
---- !u!114 &620175433 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 838557417354935553, guid: d769b36c5691c9e47ae0bfb8ed33944d,
-    type: 3}
-  m_PrefabInstance: {fileID: 838557416894405960}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feaa22f0fd1b11241897ed1157dbd909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &620175435 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 838557417354935555, guid: d769b36c5691c9e47ae0bfb8ed33944d,
@@ -4151,7 +4139,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: Portal0
         m_Mode: 1
@@ -5914,7 +5902,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: meleeCombat
         m_Mode: 1
@@ -8320,7 +8308,7 @@ GameObject:
   - component: {fileID: 1863109007}
   - component: {fileID: 1863109006}
   m_Layer: 5
-  m_Name: PlayerHealthBar
+  m_Name: PlayerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8735,7 +8723,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 620175433}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: Portal1
         m_Mode: 1
@@ -9818,18 +9806,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1476113932852957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476113932852945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ad9d4d2d8153c74ea8db2ddcc7af4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1476113932852958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13590,6 +13566,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 496759669893432692, guid: f372008e56c0d5d40aeb1bc5594956b3,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f372008e56c0d5d40aeb1bc5594956b3, type: 3}
 --- !u!1001 &838557416894405960
@@ -13639,11 +13620,6 @@ PrefabInstance:
       propertyPath: Basic_Psycho_attacking_Script
       value: 
       objectReference: {fileID: 460209666}
-    - target: {fileID: 120082051181789832, guid: d769b36c5691c9e47ae0bfb8ed33944d,
-        type: 3}
-      propertyPath: ability_01_txt
-      value: 
-      objectReference: {fileID: 708813252}
     - target: {fileID: 838557417354935552, guid: d769b36c5691c9e47ae0bfb8ed33944d,
         type: 3}
       propertyPath: m_RootOrder
@@ -13724,16 +13700,12 @@ PrefabInstance:
       propertyPath: userInterface
       value: 
       objectReference: {fileID: 1863109005}
-    - target: {fileID: 838557417354935567, guid: d769b36c5691c9e47ae0bfb8ed33944d,
+    - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
         type: 3}
-      propertyPath: deathTransition
+      propertyPath: keybindings
       value: 
-      objectReference: {fileID: 1307941902}
-    - target: {fileID: 2379189297858572512, guid: d769b36c5691c9e47ae0bfb8ed33944d,
-        type: 3}
-      propertyPath: testText
-      value: 
-      objectReference: {fileID: 708813252}
+      objectReference: {fileID: 11400000, guid: 32d98495553314b44a6fe88617ae7ab0,
+        type: 2}
     - target: {fileID: 2929815352284725654, guid: d769b36c5691c9e47ae0bfb8ed33944d,
         type: 3}
       propertyPath: AB_01_TaskMenue
@@ -13813,6 +13785,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1743753440}
     m_Modifications:
+    - target: {fileID: 1398773711383046032, guid: f3d7c55a24726e643ac38bbd527fb8c7,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1398773711383046034, guid: f3d7c55a24726e643ac38bbd527fb8c7,
         type: 3}
       propertyPath: m_Name
@@ -14037,6 +14014,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1663099871640662973, guid: 87ffe7ae7d6806f499d573d5c140876e,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1663099871640663107, guid: 87ffe7ae7d6806f499d573d5c140876e,
         type: 3}
       propertyPath: m_Name
@@ -14051,6 +14033,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1743753440}
     m_Modifications:
+    - target: {fileID: 2387542234887626824, guid: 7099aadd9c89ea046bacd68e88a7e678,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2387542234887626825, guid: 7099aadd9c89ea046bacd68e88a7e678,
         type: 3}
       propertyPath: m_Pivot.x
@@ -14275,6 +14262,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2414626972904941859, guid: b62e051b3aa5f8b43b367dbb0a73f42a,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2414626972904941861, guid: b62e051b3aa5f8b43b367dbb0a73f42a,
         type: 3}
       propertyPath: m_Name
@@ -14398,6 +14390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ability_07_Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044236154585113567, guid: a1385512d3a64ab4db8aed2fc483054e,
+        type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1385512d3a64ab4db8aed2fc483054e, type: 3}
@@ -14642,6 +14639,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1743753440}
     m_Modifications:
+    - target: {fileID: 4472239216265016448, guid: 5d2ada4c5d707e34ca15dc9110157574,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4472239216265016454, guid: 5d2ada4c5d707e34ca15dc9110157574,
         type: 3}
       propertyPath: m_Name

@@ -5,14 +5,6 @@ using UnityEngine;
 public class PausedGame : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject PauseMenueCanvas;
-    // Update is called once per frame
-
-    void Start()
-    {
-        PauseMenueCanvas.SetActive(false);
-    }
-
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -20,14 +12,14 @@ public class PausedGame : MonoBehaviour
             if(GameIsPaused)
             {
                 Resume();
-                PauseMenueCanvas.SetActive(false);
+                Canvas_Manager.instance.Canvas_Pause_Menue.SetActive(false);
             }
             else
             {
                 Pause();
-                PauseMenueCanvas.SetActive(true);
+                Canvas_Manager.instance.Canvas_Pause_Menue.SetActive(true);
                 Canvas_Manager.instance.activeCanvas = Canvas_Manager.instance.Canvas_Pause_Menue;
-                PlayerManager.instance.userInterface.SetActive(false);
+                Canvas_Manager.instance.Canvas_Player_UI.SetActive(false);
             }
         }
     }
@@ -36,7 +28,7 @@ public class PausedGame : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
-        PlayerManager.instance.userInterface.SetActive(true);
+        Canvas_Manager.instance.Canvas_Player_UI.SetActive(true);
     }
 
     public static void Pause()

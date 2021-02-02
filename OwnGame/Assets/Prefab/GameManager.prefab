@@ -10,15 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 838557417354935552}
   - component: {fileID: 838557417354935567}
-  - component: {fileID: 838557417354935553}
   - component: {fileID: 838557417354935554}
   - component: {fileID: 838557417354935555}
   - component: {fileID: 1838027925}
   - component: {fileID: 1838027929}
-  - component: {fileID: 120082051181789832}
+  - component: {fileID: 2929815352284725654}
   - component: {fileID: 571358151}
   - component: {fileID: 2379189297858572512}
-  - component: {fileID: 2929815352284725654}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -54,21 +52,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oPlayer: {fileID: 0}
   respawnPoint: {fileID: 0}
-  deathTransition: {fileID: 0}
+  deathTransition: {fileID: 6968487795361922805, guid: 38eabb1f71a734c42aeb3d12c8be5d1e,
+    type: 3}
   userInterface: {fileID: 0}
   playerFollowTarget: 0
---- !u!114 &838557417354935553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838557417354935566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feaa22f0fd1b11241897ed1157dbd909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &838557417354935554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Basic_Psycho_attacking_Script: {fileID: 0}
---- !u!114 &120082051181789832
+--- !u!114 &2929815352284725654
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,13 +128,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 838557417354935566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f26c530b79ebeef4cbf24bd3889a1e43, type: 3}
+  m_Script: {fileID: 11500000, guid: bd75cea4ac11aa943a6c2474c8166d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability_01_txt: {fileID: 0}
-  ability_01_KeyCode: 
-  ability_02_KeyCode: 
-  ability_03_KeyCode: 
+  AB_01_SettingMenue: {fileID: 0}
+  AB_01_TaskMenue: {fileID: 0}
+  AB_02_SettingMenue: {fileID: 0}
+  AB_02_TaskMenue: {fileID: 0}
+  AB_03_SettingMenue: {fileID: 0}
+  AB_03_TaskMenue: {fileID: 0}
+  AB_04_SettingMenue: {fileID: 0}
+  AB_04_TaskMenue: {fileID: 0}
+  AB_05_SettingMenue: {fileID: 0}
+  AB_05_TaskMenue: {fileID: 0}
+  AB_06_SettingMenue: {fileID: 0}
+  AB_06_TaskMenue: {fileID: 0}
+  AB_07_SettingMenue: {fileID: 0}
+  AB_07_TaskMenue: {fileID: 0}
 --- !u!114 &571358151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,20 +176,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9108891a48ecdd54aacaafe6293b1594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testText: {fileID: 0}
-  test: {fileID: 0}
   changeKeyValue: 0
   keybindings: {fileID: 11400000, guid: 32d98495553314b44a6fe88617ae7ab0, type: 2}
-  bindingtexts: {fileID: 0}
---- !u!114 &2929815352284725654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838557417354935566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd75cea4ac11aa943a6c2474c8166d18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

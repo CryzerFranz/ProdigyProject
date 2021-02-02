@@ -107,7 +107,6 @@ public class InputManager : MonoBehaviour
             if(element.keybindingAction == keyActionName)
             {
                 element.keyCode = changeKeyValue;
-                Debug.Log(changeKeyValue);
                 settingText.text = changeKeyValue.ToString();
                 taskText.text = changeKeyValue.ToString();
                 changeKeyValue = KeyCode.None;

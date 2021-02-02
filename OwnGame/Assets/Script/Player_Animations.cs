@@ -8,7 +8,6 @@ public class Player_Animations : MonoBehaviour
     void Awake()
     {
         instance = this;
-
     }
 
     public AnimationClip Test_Ability_01;

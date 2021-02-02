@@ -44,7 +44,7 @@ public class Health : MonoBehaviour
     private void Start()
     {
         deathTransition = PlayerManager.instance.deathTransition;
-        playerUI = PlayerManager.instance.userInterface;
+        playerUI = Canvas_Manager.instance.Canvas_Player_UI;
         playerRespawnPoint = PlayerManager.instance.respawnPoint.transform;
     }
 
@@ -60,7 +60,7 @@ public class Health : MonoBehaviour
                 this.GetComponent<NavMeshAgent>().Warp(playerRespawnPoint.position);
                 animator.SetTrigger("Respawn");
                 deathTransition.SetActive(false);
-                PlayerManager.instance.userInterface.SetActive(true);
+                playerUI.SetActive(true);
                 this.GetComponent<Movement>().enabled = true;
             }
         }
