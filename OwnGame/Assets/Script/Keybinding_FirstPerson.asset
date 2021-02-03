@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c9f6dae375fefd4e96866c6a8299d37, type: 3}
-  m_Name: Keybindings
+  m_Name: Keybinding_FirstPerson
   m_EditorClassIdentifier: 
   keybindingChecks:
   - keybindingAction: 0
@@ -29,17 +29,3 @@ MonoBehaviour:
     keyCode: 115
   - keybindingAction: 7
     keyCode: 119
-  - keybindingAction: 8
-    keyCode: 113
-  - keybindingAction: 9
-    keyCode: 119
-  - keybindingAction: 10
-    keyCode: 101
-  - keybindingAction: 11
-    keyCode: 114
-  - keybindingAction: 12
-    keyCode: 116
-  - keybindingAction: 13
-    keyCode: 49
-  - keybindingAction: 14
-    keyCode: 50
