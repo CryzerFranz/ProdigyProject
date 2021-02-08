@@ -4,6 +4,45 @@ using UnityEngine;
 
 public class Menue_Buttons : MonoBehaviour
 {
+    [SerializeField]
+    private Canvas_Manager UI;
+
+    public static bool GameIsPaused = false;
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+                UI.Canvas_Pause_Menue.SetActive(false);
+            }
+            else
+            {
+                Pause();
+                UI.Canvas_Pause_Menue.SetActive(true);
+                UI.activeCanvas = UI.Canvas_Pause_Menue;
+                UI.Canvas_Player_UI.SetActive(false);
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+        UI.Canvas_Player_UI.SetActive(true);
+        UI.Canvas_Pause_Menue.SetActive(false);
+
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+    }
+
     public void Menu()
     {
         Debug.Log("No menu at the moment!");
@@ -20,33 +59,25 @@ public class Menue_Buttons : MonoBehaviour
     #region Settings
     public void Settings()
     {
-        setActiveCanvas(Canvas_Manager.instance.Canvas_Settings);
+        setActiveCanvas(UI.Canvas_Settings);
     }
 
     public void KeyBoardSettings()
     {
-        setActiveCanvas(Canvas_Manager.instance.Canvas_KeyBoard_Settings);
+        setActiveCanvas(UI.Canvas_KeyBoard_Settings);
 
     }
     #endregion
-    public void Resume()
-    {
-        GameObject canvas = GameObject.Find("Pause Menue");
-        canvas.SetActive(false);
-        PausedGame.Resume();
-    }
-   
-
+  
     public void Save()
     {
         Debug.Log("No implementation at the momemnt");
     }
 
-
     private void setActiveCanvas(GameObject canvas)
     {
-        Canvas_Manager.instance.activeCanvas.SetActive(false);
-        Canvas_Manager.instance.activeCanvas = canvas;
+        UI.activeCanvas.SetActive(false);
+        UI.activeCanvas = canvas;
         canvas.SetActive(true);
     }
 
@@ -56,15 +87,15 @@ public class Menue_Buttons : MonoBehaviour
     {
         if(!type)
         {
-            Canvas_Manager.instance.activeCanvas.SetActive(false);
-            Canvas_Manager.instance.activeCanvas = Canvas_Manager.instance.CanvasToReturn;
-            Canvas_Manager.instance.activeCanvas.SetActive(true);
+            UI.activeCanvas.SetActive(false);
+            UI.activeCanvas = UI.CanvasToReturn;
+            UI.activeCanvas.SetActive(true);
         }
         else
         {
-            Canvas_Manager.instance.activeCanvas.SetActive(false);
-            Canvas_Manager.instance.activeCanvas = Canvas_Manager.instance.Canvas_Settings;
-            Canvas_Manager.instance.activeCanvas.SetActive(true);
+            UI.activeCanvas.SetActive(false);
+            UI.activeCanvas = UI.Canvas_Settings;
+            UI.activeCanvas.SetActive(true);
         }
         
     }

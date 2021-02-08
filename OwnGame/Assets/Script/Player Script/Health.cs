@@ -7,44 +7,38 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    //Canvas
+    //Scriptable Objects
+        //UI
+        [SerializeField]
+        private Canvas_Manager playerUI;
+        //------
+        [SerializeField]
+        private PlayerStats playerStats;
+    //-------------------------------------
+
 
     public Healthbar healthbar;
-
-    private GameObject playerUI; 
-    private GameObject deathTransition;
-
-    private PlayerStats playerStats;
     private Animator animator;
 
     private Transform playerRespawnPoint;
-
-    // maxHealth = Maximale Lebenspunkte
-    private float maxHealth;
-    // currentHealth = aktuelle Lebenspunkte
-    private float currentHealth;
 
     public bool IsPlayerDead
     {
         get
         {
-            return currentHealth <= 0;
+            return playerStats.currentHealth <= 0;
         }
     }
 
     void Awake()
     {
         animator = GetComponent<Animator>();
-        playerStats = GetComponent<PlayerStats>();
 
-        maxHealth = playerStats.LifePoints;
-        currentHealth = maxHealth;
-        healthbar.SetMaxHealth(maxHealth);
+        playerStats.currentHealth = playerStats.health;
+        healthbar.SetMaxHealth(playerStats.currentHealth);
     }
     private void Start()
     {
-        deathTransition = PlayerManager.instance.deathTransition;
-        playerUI = Canvas_Manager.instance.Canvas_Player_UI;
         playerRespawnPoint = PlayerManager.instance.respawnPoint.transform;
     }
 
@@ -59,8 +53,8 @@ public class Health : MonoBehaviour
                 ResetHealth();
                 this.GetComponent<NavMeshAgent>().Warp(playerRespawnPoint.position);
                 animator.SetTrigger("Respawn");
-                deathTransition.SetActive(false);
-                playerUI.SetActive(true);
+                playerUI.Canvas_Dead_Transition.SetActive(false);
+                playerUI.Canvas_Player_UI.SetActive(true);
                 this.GetComponent<Movement>().enabled = true;
             }
         }
@@ -70,32 +64,32 @@ public class Health : MonoBehaviour
         if(!IsPlayerDead)
         {
             ///// TESTPHASE
-            damage -= (damage * (playerStats.Defense * 0.1f));
+            damage -= (damage * (playerStats.defense * 0.1f));
             ///// TESTPHASE
 
-            currentHealth -= damage;
-            healthbar.SetHealth(currentHealth);
+            playerStats.currentHealth -= damage;
+            healthbar.SetHealth(playerStats.currentHealth);
             if (IsPlayerDead)
             {  
                 animator.SetTrigger("isDead");
-                deathTransition.SetActive(true);
-                playerUI.SetActive(false);
+                playerUI.Canvas_Dead_Transition.SetActive(false);
+                playerUI.Canvas_Player_UI.SetActive(true);
             }
         }  
     }
 
     public void ResetHealth()
     {
-        currentHealth = maxHealth;
-        healthbar.slider.value = currentHealth;
+        playerStats.currentHealth = playerStats.health;
+        healthbar.slider.value = playerStats.currentHealth;
     }
 
-    public float MaxHealth
+    public float increaseHealth
     {
         get
         {
-            return maxHealth;
+            return playerStats.health;
         }
-        set { maxHealth += value; }
+        set { playerStats.health += value; }
     }
 }

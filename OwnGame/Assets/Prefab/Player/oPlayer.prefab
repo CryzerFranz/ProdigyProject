@@ -936,7 +936,6 @@ GameObject:
   - component: {fileID: 8191968733080590207}
   - component: {fileID: 8136611286479105103}
   - component: {fileID: 8196514906075794151}
-  - component: {fileID: 8196514906075794175}
   - component: {fileID: 8196514906075794172}
   - component: {fileID: 8196514906075794173}
   - component: {fileID: 8196514906075794170}
@@ -978,10 +977,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
-    are already bound by a Humanoid avatar. These transforms can only be changed
-    by Humanoid clips.\n\tTransform 'Spine_02'\n\tTransform 'Spine_02'\n\tFrom animation
-    clip 'melee_spalte_running'"
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -999,18 +995,6 @@ CapsuleCollider:
   m_Height: 2.2
   m_Direction: 1
   m_Center: {x: 0, y: 0.69, z: 0}
---- !u!114 &8196514906075794175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8195109198909798119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f346fb88eb7e5d247b0693597e4f7f57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8196514906075794172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,7 +1008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthbar: {fileID: 0}
-  transitionAnimator: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!114 &8196514906075794173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,7 +1057,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 8196514905560445895}
   attackPointEnd: {fileID: 8196514906933425506}
-  attackRange: 1.08
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512

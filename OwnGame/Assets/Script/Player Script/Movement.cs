@@ -13,14 +13,10 @@ public class Movement : MonoBehaviour
     private Animator animator;
     private Camera playerCamera;
 
-    private GameObject deathTransition;
-
-   
     void Start()
     {
 
         playerRespawnPoint = PlayerManager.instance.respawnPoint.transform;
-        deathTransition = PlayerManager.instance.deathTransition;
 
         playerNavMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<Health>();

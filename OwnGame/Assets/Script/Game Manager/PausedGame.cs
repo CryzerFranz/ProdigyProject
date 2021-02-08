@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PausedGame : MonoBehaviour
 {
+    [SerializeField]
+    private Canvas_Manager UI;
+
     public static bool GameIsPaused = false;
     void Update()
     {
@@ -12,26 +15,26 @@ public class PausedGame : MonoBehaviour
             if(GameIsPaused)
             {
                 Resume();
-                Canvas_Manager.instance.Canvas_Pause_Menue.SetActive(false);
+                UI.Canvas_Pause_Menue.SetActive(false);
             }
             else
             {
                 Pause();
-                Canvas_Manager.instance.Canvas_Pause_Menue.SetActive(true);
-                Canvas_Manager.instance.activeCanvas = Canvas_Manager.instance.Canvas_Pause_Menue;
-                Canvas_Manager.instance.Canvas_Player_UI.SetActive(false);
+                UI.Canvas_Pause_Menue.SetActive(true);
+                UI.activeCanvas = UI.Canvas_Pause_Menue;
+                UI.Canvas_Player_UI.SetActive(false);
             }
         }
     }
 
-    public static void Resume()
+    public void Resume()
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
-        Canvas_Manager.instance.Canvas_Player_UI.SetActive(true);
+        UI.Canvas_Player_UI.SetActive(true);
     }
 
-    public static void Pause()
+    public void Pause()
     {
         Time.timeScale = 0f;
         GameIsPaused = true;

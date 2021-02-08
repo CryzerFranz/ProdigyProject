@@ -13,7 +13,6 @@ public class PlayerManager : MonoBehaviour
 
     public GameObject oPlayer;
     public GameObject respawnPoint;
-    public GameObject deathTransition;
 
     public bool playerFollowTarget = false;
 

@@ -10,12 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 838557417354935552}
   - component: {fileID: 838557417354935567}
-  - component: {fileID: 838557417354935554}
   - component: {fileID: 838557417354935555}
   - component: {fileID: 1838027925}
   - component: {fileID: 1838027929}
   - component: {fileID: 2929815352284725654}
-  - component: {fileID: 571358151}
   - component: {fileID: 2379189297858572512}
   m_Layer: 0
   m_Name: GameManager
@@ -52,23 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oPlayer: {fileID: 0}
   respawnPoint: {fileID: 0}
-  deathTransition: {fileID: 6968487795361922805, guid: 38eabb1f71a734c42aeb3d12c8be5d1e,
-    type: 3}
-  userInterface: {fileID: 0}
   playerFollowTarget: 0
---- !u!114 &838557417354935554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838557417354935566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62c760b9dae116f438a84a6a52fb2cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseMenueCanvas: {fileID: 0}
 --- !u!114 &838557417354935555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd75cea4ac11aa943a6c2474c8166d18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keybindings: {fileID: 11400000, guid: 32d98495553314b44a6fe88617ae7ab0, type: 2}
   AB_01_SettingMenue: {fileID: 0}
   AB_01_TaskMenue: {fileID: 0}
   AB_02_SettingMenue: {fileID: 0}
@@ -145,25 +128,6 @@ MonoBehaviour:
   AB_06_TaskMenue: {fileID: 0}
   AB_07_SettingMenue: {fileID: 0}
   AB_07_TaskMenue: {fileID: 0}
---- !u!114 &571358151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 838557417354935566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ae7e2c70a00e674d945051e8e97ec22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Canvas: {fileID: 0}
-  Canvas_Pause_Menue: {fileID: 0}
-  Canvas_Settings: {fileID: 0}
-  Canvas_Player_UI: {fileID: 0}
-  Canvas_KeyBoard_Settings: {fileID: 0}
-  Canvas_FrameRate: {fileID: 0}
-  Canvas_Dead_Transition: {fileID: 0}
 --- !u!114 &2379189297858572512
 MonoBehaviour:
   m_ObjectHideFlags: 0
