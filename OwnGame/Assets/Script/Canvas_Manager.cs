@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
-public class Canvas_Manager : ScriptableObject
+public class Canvas_Manager : MonoBehaviour
 {   
     //Prefabs müssen aktuell gehalten werden (Canvas Parent)
     public GameObject mainCanvas;
@@ -25,7 +24,7 @@ public class Canvas_Manager : ScriptableObject
     public GameObject activeCanvas = null;
     [NonSerialized]
     public GameObject CanvasToReturn = null;
-    private void OnEnable()
+    private void Start()
     {
         for (int i = 0; i < mainCanvas.transform.childCount; i++)
         {
@@ -57,7 +56,6 @@ public class Canvas_Manager : ScriptableObject
                     break;
             }
         }
-
-
-    }   
+        CanvasToReturn = Canvas_Pause_Menue;
+    }
 }

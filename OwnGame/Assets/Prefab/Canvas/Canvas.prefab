@@ -1657,6 +1657,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5036965826559365869, guid: 2307d3f6d0420884fa799ea955011f9d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5036965826559365873, guid: 2307d3f6d0420884fa799ea955011f9d,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1926,7 +1931,7 @@ PrefabInstance:
     - target: {fileID: 5620797758386012005, guid: 9dd62f56f572a7a4d87daa68ce32fd63,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5620797758579598638, guid: 9dd62f56f572a7a4d87daa68ce32fd63,
         type: 3}
