@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class test_combat : MonoBehaviour
+public class PlayerCombat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    Animator animator;
+    static public PlayerCombat instance;
+    private void Awake()
+    {
+        instance = this;    
+    }
 
-    public Transform attackPoint;
-    public Transform attackPointEnd;
+    Animator animator;
 
     private NavMeshAgent playerNavMesh;
     private Movement playerMovement;
@@ -28,13 +31,12 @@ public class test_combat : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Debug.Log(playerMovement.isActiveAndEnabled);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("Pressed 1");
+            animator.SetFloat("Forward", 0);
             attackRange = 2f;
             Attack();
         }
@@ -42,20 +44,15 @@ public class test_combat : MonoBehaviour
 
     void Attack()
     {
-        animator.SetTrigger("Melee_Spalten");
+        animator.SetTrigger("Ability_01");
         playerMovement.enabled = false;
         playerNavMesh.ResetPath();
         //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
     }
 
-    void hitEnemies(GameObject _Weapon)
+    public void hitEnemies(Collider other, float damageValue)
     {
-        Collider[] hitEnemies = Physics.OverlapCapsule(attackPoint.position, attackPointEnd.position, attackRange, enemyLayers);
-        foreach (Collider enemy in hitEnemies)
-        {
-            Debug.Log(enemy.name);
-            enemy.GetComponent<BasicEnemyStats>().takeDamage(_Weapon.GetComponent<Wep_Sword>().Damage);
-        }
+            Debug.Log(other.name);
+            other.GetComponent<BasicEnemyStats>().takeDamage(damageValue);
     }
-
 }

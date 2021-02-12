@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Wep_Sword : MonoBehaviour
 {
-    public Transform attackPoint;
-    public Transform attackPointEnd;
-
     public LayerMask enemyLayers;
+    private PlayerCombat pCombat;
 
     private int damage = 20;
     private float critChance = 1f;
+
+    private void Start()
+    {
+        pCombat = PlayerCombat.instance;
+    }
 
     public int Damage
     {
@@ -22,6 +25,16 @@ public class Wep_Sword : MonoBehaviour
     {
         get { return critChance; }
         set { critChance = value; }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Collider hit");
+        if(other.tag == "Enemy")
+        {
+            //do damage
+            pCombat.hitEnemies(other, damage);
+        }
     }
 
 }
