@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,6 +18,8 @@ public class PlayerCombat : MonoBehaviour
     private NavMeshAgent playerNavMesh;
     private Movement playerMovement;
 
+    private RuntimeAnimatorController ac;
+
     public AbilityTImeBar abilityTimeBar;
 
     [SerializeField]
@@ -27,6 +30,7 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponent<Animator>();
         playerNavMesh = GetComponent<NavMeshAgent>();
         playerMovement = GetComponent<Movement>();
+        ac = animator.runtimeAnimatorController;
     }
 
     void Update()
@@ -34,6 +38,15 @@ public class PlayerCombat : MonoBehaviour
         if (InputManager.instance.GetKeyDown(KeybindingActions.ability_01))
         {
             animator.SetFloat("Forward", 0);
+            for (int i = 0; i < ac.animationClips.Length; i++)
+            {
+                Debug.Log(ac.animationClips[i].name);
+                if(ac.animationClips[i].name == "melee_spalten_idle")
+                {
+                    abilityTimeBar.SetMaxValue(ac.animationClips[i].length);
+                    break;
+                }
+            }
             executeAbility("Ability_01");
         }
     }
