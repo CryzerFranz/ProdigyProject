@@ -17,6 +17,8 @@ public class PlayerCombat : MonoBehaviour
     private NavMeshAgent playerNavMesh;
     private Movement playerMovement;
 
+    public AbilityTImeBar abilityTimeBar;
+
     private GameObject weapon;
     private float attackRange = 0f;
     
@@ -33,22 +35,27 @@ public class PlayerCombat : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (InputManager.instance.GetKeyDown(KeybindingActions.ability_01))
         {
-            Debug.Log("Pressed 1");
             animator.SetFloat("Forward", 0);
             attackRange = 2f;
-            Attack();
+            executeAbility("Ability_01");
         }
     }
-
-    void Attack()
+    void executeAbility(string abilityName)
     {
-        animator.SetTrigger("Ability_01");
+        animator.SetTrigger(abilityName);
+        //abilityTimeBar.SetMaxValue(animator.runtimeAnimatorController.animationClips
         playerMovement.enabled = false;
         playerNavMesh.ResetPath();
-        //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
     }
+    //void Attack()
+    //{
+    //    animator.SetTrigger("Ability_01");
+    //    playerMovement.enabled = false;
+    //    playerNavMesh.ResetPath();
+    //    //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+    //}
 
     public void hitEnemies(Collider other, float damageValue)
     {
