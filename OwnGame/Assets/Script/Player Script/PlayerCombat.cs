@@ -12,16 +12,13 @@ public class PlayerCombat : MonoBehaviour
         instance = this;    
     }
 
-    Animator animator;
+    private Animator animator;
 
     private NavMeshAgent playerNavMesh;
     private Movement playerMovement;
 
     public AbilityTImeBar abilityTimeBar;
 
-    private GameObject weapon;
-    private float attackRange = 0f;
-    
     [SerializeField]
     private LayerMask enemyLayers;
 
@@ -30,7 +27,6 @@ public class PlayerCombat : MonoBehaviour
         animator = GetComponent<Animator>();
         playerNavMesh = GetComponent<NavMeshAgent>();
         playerMovement = GetComponent<Movement>();
-
     }
 
     void Update()
@@ -38,24 +34,17 @@ public class PlayerCombat : MonoBehaviour
         if (InputManager.instance.GetKeyDown(KeybindingActions.ability_01))
         {
             animator.SetFloat("Forward", 0);
-            attackRange = 2f;
             executeAbility("Ability_01");
         }
     }
     void executeAbility(string abilityName)
     {
         animator.SetTrigger(abilityName);
-        //abilityTimeBar.SetMaxValue(animator.runtimeAnimatorController.animationClips
+       // abilityTimeBar.SetMaxValue();
         playerMovement.enabled = false;
         playerNavMesh.ResetPath();
     }
-    //void Attack()
-    //{
-    //    animator.SetTrigger("Ability_01");
-    //    playerMovement.enabled = false;
-    //    playerNavMesh.ResetPath();
-    //    //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-    //}
+    
 
     public void hitEnemies(Collider other, float damageValue)
     {
