@@ -29,10 +29,8 @@ public class Wep_Sword : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collider hit");
         if(other.tag == "Enemy")
         {
-            //do damage
             pCombat.hitEnemies(other, damage);
         }
     }

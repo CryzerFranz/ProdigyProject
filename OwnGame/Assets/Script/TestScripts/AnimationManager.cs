@@ -12,6 +12,8 @@ public class AnimationManager : MonoBehaviour
     private Movement playerMovement;
     private NavMeshAgent playerNavMeshAgent;
 
+    public AbilityTImeBar abilityTimeBar;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -21,10 +23,10 @@ public class AnimationManager : MonoBehaviour
     }
     void Update()
     {
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("melee_spalten_idle"))
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Ability_01"))
         {
-            playerNavMeshAgent.ResetPath();    
-            Debug.Log(playerMovement.isActiveAndEnabled);
+            playerNavMeshAgent.ResetPath();
+            abilityTimeBar.SetValue(1 * abilityTimeBar.getMaxValue() / 100);
         }
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("rollBack"))
         {

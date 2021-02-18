@@ -7873,6 +7873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1476113932852954, guid: 73a642ffa6dc2ac439e0ef9d38bd0fc1, type: 3}
+      propertyPath: abilityTimeBar
+      value: 
+      objectReference: {fileID: 496724814}
     - target: {fileID: 8427891837181993443, guid: 73a642ffa6dc2ac439e0ef9d38bd0fc1,
         type: 3}
       propertyPath: m_Name

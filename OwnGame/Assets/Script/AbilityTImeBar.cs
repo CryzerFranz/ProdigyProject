@@ -12,8 +12,15 @@ public class AbilityTImeBar : MonoBehaviour
     [Header("Image")]
     public Image fill;
 
+    private float maxValue;
+
+    public float getMaxValue()
+    {
+        return maxValue;
+    }
     public void SetMaxValue(float value)
     {
+        maxValue = value;
         slider.maxValue = value;
         slider.value = value;
         fill.color = gradient.Evaluate(1f);
@@ -21,7 +28,7 @@ public class AbilityTImeBar : MonoBehaviour
 
     public void SetValue(float value)
     {
-        slider.value = value;
+        slider.value -= value;
         fill.color = gradient.Evaluate(slider.normalizedValue);
     }
 }

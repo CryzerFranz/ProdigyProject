@@ -40,7 +40,6 @@ public class PlayerCombat : MonoBehaviour
             animator.SetFloat("Forward", 0);
             for (int i = 0; i < ac.animationClips.Length; i++)
             {
-                Debug.Log(ac.animationClips[i].name);
                 if(ac.animationClips[i].name == "melee_spalten_idle")
                 {
                     abilityTimeBar.SetMaxValue(ac.animationClips[i].length);
@@ -61,7 +60,6 @@ public class PlayerCombat : MonoBehaviour
 
     public void hitEnemies(Collider other, float damageValue)
     {
-            Debug.Log(other.name);
             other.GetComponent<BasicEnemyStats>().takeDamage(damageValue);
     }
 }
