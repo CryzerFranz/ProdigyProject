@@ -8,7 +8,26 @@ public class Player_Animations : MonoBehaviour
     void Awake()
     {
         instance = this;
+        //Test
+        Ability_01_TimeStart = 40.0f;
+        Ability_01_TimeEnd = 50.0f;
+        //
     }
+
+    public float Ability_01_TimeStart;
+    public float Ability_01_TimeEnd;
+
+    public float Ability_02_TimeStart;
+    public float Ability_02_TimeEnd;
+
+    public float Ability_03_TimeStart;
+    public float Ability_03_TimeEnd;
+
+    public float Ability_04_TimeStart;
+    public float Ability_04_TimeEnd;
+
+    public float Ability_05_TimeStart;
+    public float Ability_05_TimeEnd;
 
     public AnimationClip Test_Ability_01;
     public AnimationClip Test_Ability_02;
