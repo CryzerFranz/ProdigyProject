@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityStandardAssets.Effects;
 
 public class AnimationManager : MonoBehaviour
 {
@@ -11,22 +12,44 @@ public class AnimationManager : MonoBehaviour
     private Dodge dodge;
     private Movement playerMovement;
     private NavMeshAgent playerNavMeshAgent;
+    private PlayerCombat pc;
 
     public AbilityTImeBar abilityTimeBar;
+    AnimatorClipInfo[] animClip;
+    int testCurFrame;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        pc = PlayerCombat.instance;
+           animator = GetComponent<Animator>();
+        animClip = animator.GetCurrentAnimatorClipInfo(0);
         playerMovement = GetComponent<Movement>();
         playerNavMeshAgent = GetComponent<NavMeshAgent>();
         dodge = GetComponent<Dodge>();
+        for (int i = 0; i < animClip.Length; i++)
+        {
+            Debug.Log(animClip[i].clip);
+        }
     }
     void Update()
     {
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Ability_01"))
+        //animClip = animator.GetCurrentAnimatorClipInfo(0);
+
+        //Debug.Log(animClip[0].clip);
+
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Ability_01") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
-            playerNavMeshAgent.ResetPath();
-            abilityTimeBar.SetValue(1 * abilityTimeBar.getMaxValue() / 100);
+
+            if (abilityTimeBar.slider.value <= abilityTimeBar.slider.maxValue)
+            {
+                abilityTimeBar.SetValue();
+            }
+        }
+        else
+        {
+            abilityTimeBar.slider.value = 0.0f;
+            playerMovement.enabled = true;
+            pc.firstAnimationPressed = false;
         }
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("rollBack"))
         {

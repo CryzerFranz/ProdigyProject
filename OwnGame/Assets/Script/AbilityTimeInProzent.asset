@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea2a947255388c4cb2290d4771f9191, type: 3}
+  m_Name: AbilityTimeInProzent
+  m_EditorClassIdentifier: 
+  Ability_01_TimeStart: 0.4
+  Ability_01_TimeEnd: 0.5
+  Ability_02_TimeStart: 0.4
+  Ability_02_TimeEnd: 0.5
+  Ability_03_TimeStart: 0.4
+  Ability_03_TimeEnd: 0.5
+  Ability_04_TimeStart: 0.4
+  Ability_04_TimeEnd: 0.5
+  Ability_05_TimeStart: 0.4
+  Ability_05_TimeEnd: 0.5

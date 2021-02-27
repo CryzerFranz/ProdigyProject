@@ -27,7 +27,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        
         Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
