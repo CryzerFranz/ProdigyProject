@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ea2a947255388c4cb2290d4771f9191, type: 3}
   m_Name: AbilityTimeInProzent
   m_EditorClassIdentifier: 
-  Ability_01_TimeStart: 0.4
-  Ability_01_TimeEnd: 0.5
+  Ability_01_TimeStart: 0.2
+  Ability_01_TimeEnd: 0.8
   Ability_02_TimeStart: 0.4
   Ability_02_TimeEnd: 0.5
   Ability_03_TimeStart: 0.4

@@ -21,22 +21,11 @@ public class AbilityTImeBar : MonoBehaviour
     [SerializeField]
     private Movement playerMovement;
 
-    public Animator animator;
-
-    private PlayerCombat playerCombat;
-
-    private float update = 0;
-    int cf;
-
-    AnimatorClipInfo[] animClip;
-
-
-
-    private float sliderAdditionsValue;
+    //vll nicht mehr notwendig
+    private float sliderAdditionsValue = 1;
 
     private void Start()
     {
-        playerCombat = PlayerCombat.instance;
 
         slider.maxValue = 1.0f; //default value
         slider.value = 0.0f;
@@ -58,17 +47,11 @@ public class AbilityTImeBar : MonoBehaviour
 
     public void Update()
     {
-        animClip = animator.GetCurrentAnimatorClipInfo(0);
-        if(animClip[0].clip.name == "melee_spalten_idle")
-        {
-           cf = (int)(animClip[0].weight * (animClip[0].clip.length * animClip[0].clip.frameRate));
-
-        }
         //if (slider.value == slider.maxValue)
         //{
         //    slider.value = 0.0f;
         //    playerMovement.enabled = true;
-        //    playerCombat.firstAnimationPressed = false;
+        //    PlayerCombat.instance.firstAnimationPressed = false;
         //}
     }
     public void setKeyGradientValue(float value_01, float value_02)
@@ -87,14 +70,13 @@ public class AbilityTImeBar : MonoBehaviour
 
     public void SetMaxValue(float value)
     {
-        slider.maxValue = 148;
+        slider.maxValue = value;
         slider.value = 0;
     }
 
     public void SetValue()
     {
-
-        slider.value += sliderAdditionsValue;
+        slider.value += 1;
         fill.color = gradient.Evaluate(slider.normalizedValue);
         
     }

@@ -8,39 +8,43 @@ using UnityEngine.AI;
 
 public class PlayerCombat : MonoBehaviour
 {
+    /*
+    Variable:
+        firstAnimationPressed -> True = Ability is in Progress. Player movement is disabled
+                              -> False = Ability is no more in Progress. Player movement is enabled
+    */
     static public PlayerCombat instance;
+   
+    public AbilityTImeBar abilityTimeBar;
+    
+    private Movement playerMovement;
+    private NavMeshAgent playerNavMesh;    
+    private Animator animator;
+    private RuntimeAnimatorController ac;
+    private AbilityProzentTimeBar abilitiesStartEndValue;
+    private InputManager input;
+    
+    public bool firstAnimationPressed;
+    
+    [SerializeField]
+    private LayerMask enemyLayers;
+    private float timeOfAnimation;
+   
     private void Awake()
     {
         instance = this;    
     }
 
-    private Animator animator;
-
-    private NavMeshAgent playerNavMesh;
-    private Movement playerMovement;
-
-    private RuntimeAnimatorController ac;
-    private AbilityProzentTimeBar abilitiesStartEndValue;
-
-    public AbilityTImeBar abilityTimeBar;
-
-    [SerializeField]
-    private LayerMask enemyLayers;
-
-    private InputManager input;
-
-    private float timeOfAnimation;
-
-    public bool firstAnimationPressed;
-
     void Start()
     {
-        abilitiesStartEndValue = abilityTimeBar.abilityKeyPosition;
-        input = InputManager.instance;
-        firstAnimationPressed = false;
         animator = GetComponent<Animator>();
         playerNavMesh = GetComponent<NavMeshAgent>();
         playerMovement = GetComponent<Movement>();
+        
+        abilitiesStartEndValue = abilityTimeBar.abilityKeyPosition;
+        input = InputManager.instance;
+
+        firstAnimationPressed = false;
         ac = animator.runtimeAnimatorController;
     }
    
@@ -48,26 +52,18 @@ public class PlayerCombat : MonoBehaviour
     {
         if (input.GetKeyDown(KeybindingActions.ability_01) && firstAnimationPressed == false)
         {
-            firstAnimationPressed = true;
             abilityTimeBar.setKeyGradientValue(abilitiesStartEndValue.Ability_01_TimeStart, abilitiesStartEndValue.Ability_01_TimeEnd);
             animator.SetFloat("Forward", 0);
             timeOfAnimation = getAnimationLengthInFrame("melee_spalten_idle");
-            abilityTimeBar.setSliderAdditionsValue(1);
-
-
-
             abilityTimeBar.SetMaxValue(timeOfAnimation);
-          
-            //Debug.Log(timeOfAnimation);
-            //abilityTimeBar.setSliderAdditionsValue(1);
-            executeAbility("Ability_01");
-           
+            executeAbility("Ability_01");     
         }
      
     }
     void executeAbility(string abilityName)
     {
         animator.SetTrigger(abilityName);
+        firstAnimationPressed = true;
         playerMovement.enabled = false;
         playerNavMesh.ResetPath();
     }
@@ -88,7 +84,7 @@ public class PlayerCombat : MonoBehaviour
                 {
                     seconds[ii] = float.Parse(subs[ii]);
                 }
-                result += seconds[0] * (float)ac.animationClips[i].frameRate;
+                result += seconds[0] * (ac.animationClips[i].frameRate * ac.animationClips[i].length);
                 result += seconds[1];
                 break;
             }

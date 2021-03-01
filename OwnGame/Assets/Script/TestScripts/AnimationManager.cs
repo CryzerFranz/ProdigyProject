@@ -16,7 +16,6 @@ public class AnimationManager : MonoBehaviour
 
     public AbilityTImeBar abilityTimeBar;
     AnimatorClipInfo[] animClip;
-    int testCurFrame;
 
     void Start()
     {
@@ -33,12 +32,11 @@ public class AnimationManager : MonoBehaviour
     }
     void Update()
     {
-        //animClip = animator.GetCurrentAnimatorClipInfo(0);
-
-        //Debug.Log(animClip[0].clip);
-
         if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("Ability_01") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
         {
+            if(    pc.firstAnimationPressed == false)
+                pc.firstAnimationPressed = true;
+
 
             if (abilityTimeBar.slider.value <= abilityTimeBar.slider.maxValue)
             {
@@ -47,11 +45,14 @@ public class AnimationManager : MonoBehaviour
         }
         else
         {
-            abilityTimeBar.slider.value = 0.0f;
-            playerMovement.enabled = true;
-            pc.firstAnimationPressed = false;
+            if (pc.firstAnimationPressed == true)
+            {
+                abilityTimeBar.slider.value = 0.0f;
+                playerMovement.enabled = true;
+                pc.firstAnimationPressed = false;
+            }
         }
-        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("rollBack"))
+        if (this.animator.GetCurrentAnimatorStateInfo(0).IsName("rollBack")) //maybe need fix
         {
             transform.position = Vector3.MoveTowards(transform.position, dodge.PortPosition, 30 * Time.deltaTime);
         }

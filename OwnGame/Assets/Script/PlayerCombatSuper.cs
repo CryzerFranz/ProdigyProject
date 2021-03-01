@@ -28,11 +28,10 @@ public class PlayerCombatSuper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (input.GetKeyDown(KeybindingActions.ability_01) && playerCombatInstance.firstAnimationPressed)
+        if (input.GetKeyDown(KeybindingActions.ability_01) && playerCombatInstance.firstAnimationPressed == true)
         {
-            if(abilityTimeBar.slider.value >= abilitiesStartEndValue.Ability_01_TimeStart && abilityTimeBar.slider.value <= abilitiesStartEndValue.Ability_01_TimeEnd)
+            if(abilityTimeBar.slider.normalizedValue >= abilitiesStartEndValue.Ability_01_TimeStart && abilityTimeBar.slider.normalizedValue <= abilitiesStartEndValue.Ability_01_TimeEnd)
             {
-                playerCombatInstance.firstAnimationPressed = false;
                 Debug.Log("Super Animation!!!!");
             }
         }
