@@ -129,7 +129,12 @@ public class playerDetector : MonoBehaviour
                         //Attacks player
                         animator.SetFloat("Forward", 0f);
                         FaceTarget();
-                        attack.BasicAttackAnimation();
+                        // attack.BasicAttackAnimation();
+                        attack.inRange = true;
+                    }
+                    else
+                    {
+                        attack.inRange = false;
                     }
                 }
                 checkPlayerInRadius(enemyNavMeshAgent, player, ref sawPlayer, ref maxRadius, minRadius);

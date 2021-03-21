@@ -12,6 +12,7 @@ public class BasicEnemyStats : MonoBehaviour
 
     private float health;
     private float damage;
+    private float critChance;
    
     public bool Dead
     {
@@ -22,6 +23,7 @@ public class BasicEnemyStats : MonoBehaviour
         animator = GetComponent<Animator>();
         health = 80;
         damage = 20;
+        critChance = 0.4f;
     }
 
     public void takeDamage(float dmg)
@@ -56,6 +58,12 @@ public class BasicEnemyStats : MonoBehaviour
     {
         get { return damage; }
         set { damage += value; }
+    }
+
+    public float CritChance
+    {
+        get { return critChance; }
+        set { critChance += value; }
     }
 
 

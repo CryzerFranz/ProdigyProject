@@ -14,49 +14,61 @@ public class Attacking : MonoBehaviour
    
     private BasicEnemyStats enemyStat; 
     
-    NavMeshAgent navMesh;
-
     public float attackSpeed = 0.25f;
+    public bool inRange = false;
+
     private float attackCooldown = 0f;
-
+    private float heavyAttackCooldown = 3f;
     // Stärkeren Angriff versuchen // TEST
-    private short counterForHeavyAttack;
+    private float damageMultiplicator = 1f;
+    private float damageCritMultiplicator = 1f;
 
+
+    private System.Random critNumber = new System.Random();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        navMesh = GetComponent<NavMeshAgent>();
         enemyStat = GetComponent<BasicEnemyStats>();
         playerHealth = PlayerManager.instance.oPlayer.GetComponent<Health>();
-
-        counterForHeavyAttack = 0;
-
     }
 
     private void Update()
     {
         // Cooldown for basic-Attack
         attackCooldown -= Time.deltaTime;
-    }
 
-    public void BasicAttackAnimation()
-    {
-      
+        if (inRange)
+        {
+            heavyAttackCooldown -= Time.deltaTime;
             if (attackCooldown <= 0f)
             {
                 animator.SetTrigger("attack");
                 attackCooldown = 1f / attackSpeed;
-                //TEST
-                counterForHeavyAttack++;
             }
-        
+            if (heavyAttackCooldown <= 0f)
+            {
+                animator.SetTrigger("attack");
+                heavyAttackCooldown = 3f / attackSpeed;
+                attackCooldown = 1f / attackSpeed;
+                damageMultiplicator = 2f;
+            }
+        }
     }
 
     public void BasicAttack()
     {
-        playerHealth.TakeDamage(enemyStat.Damage);
+        float critChance = (float)critNumber.NextDouble();
+        if (critChance <= enemyStat.CritChance)
+        {
+            damageCritMultiplicator = 1.5f;
+            Debug.Log("Crit");
+        }
+        playerHealth.TakeDamage(enemyStat.Damage * damageMultiplicator * damageCritMultiplicator);
+        Debug.Log("Damage: " + enemyStat.Damage * damageMultiplicator * damageCritMultiplicator);
+        damageMultiplicator = 1f;
+        damageCritMultiplicator = 1f;
     }
 
     public void SpecialAttack()
