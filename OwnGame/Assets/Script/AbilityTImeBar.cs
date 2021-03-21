@@ -45,15 +45,6 @@ public class AbilityTImeBar : MonoBehaviour
         alphaKey[2].time = 1.0f;
     }
 
-    public void Update()
-    {
-        //if (slider.value == slider.maxValue)
-        //{
-        //    slider.value = 0.0f;
-        //    playerMovement.enabled = true;
-        //    PlayerCombat.instance.firstAnimationPressed = false;
-        //}
-    }
     public void setKeyGradientValue(float value_01, float value_02)
     {
         colorKey[0].time = value_01;
