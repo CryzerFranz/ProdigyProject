@@ -1,6 +1,7 @@
 public enum KeybindingActions
 {
     Jump,
+    Down,
     Interact,
     Pause,
     Intentory,

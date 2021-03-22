@@ -15,6 +15,11 @@ public class InputManager : MonoBehaviour
     private KeyBoardBinding_Manager KBM_instance;
     //[SerializeField]
     //private KeyBoardBinding_Manager bindingtexts;
+
+    public Keybindings keybindingDrone;
+    public Keybindings keybindingThrid;
+
+
     private void Awake()
     {
         if (instance == null)
@@ -150,5 +155,13 @@ public class InputManager : MonoBehaviour
     {
         waitingForKey = true;
         StartCoroutine(logicInput(KeybindingActions.ability_07, KBM_instance.AB_07_SettingMenue, KBM_instance.AB_07_TaskMenue));
+    }
+
+
+
+    /////TEST//////
+    public void ChangeToDrone()
+    {
+        keybindings = keybindingDrone;
     }
 }

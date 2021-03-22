@@ -15,7 +15,7 @@ MonoBehaviour:
   keybindingChecks:
   - keybindingAction: 0
     keyCode: 32
-  - keybindingAction: 1
+  - keybindingAction: 2
     keyCode: 102
   - keybindingAction: 2
     keyCode: 27
