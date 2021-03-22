@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Keybinding_ThirdPerson
   m_EditorClassIdentifier: 
   keybindingChecks:
-  - keybindingAction: 8
-    keyCode: 113
   - keybindingAction: 9
-    keyCode: 119
+    keyCode: 113
   - keybindingAction: 10
-    keyCode: 101
+    keyCode: 119
   - keybindingAction: 11
-    keyCode: 114
+    keyCode: 101
   - keybindingAction: 12
-    keyCode: 116
+    keyCode: 114
   - keybindingAction: 13
-    keyCode: 49
+    keyCode: 116
   - keybindingAction: 14
+    keyCode: 49
+  - keybindingAction: 15
     keyCode: 50
