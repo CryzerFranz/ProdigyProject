@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class thrusters : MonoBehaviour
 {
+    public DroneControl drone;
+
     private InputManager input;
+
 
     void Start()
     {
@@ -12,20 +15,20 @@ public class thrusters : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //if(base.Engine == true)
-        //{
-        //    if (input.GetKey(KeybindingActions.Up))
-        //    {
-        //        Vector3 tempVect = new Vector3(0, 5, 0);
-        //        tempVect = tempVect * base.speed * Time.deltaTime;
-        //        base.rb.MovePosition(base.transform.position + tempVect);
-        //    }
-        //    if (input.GetKey(KeybindingActions.Down))
-        //    {
-        //        Vector3 tempVect = new Vector3(0, -5, 0);
-        //        tempVect = tempVect * base.speed * Time.deltaTime;
-        //        rb.MovePosition(base.transform.position + tempVect);
-        //    }
-        //}
+        if (drone.Engine == true)
+        {
+            if (input.GetKey(KeybindingActions.Up))
+            {
+                Vector3 tempVect = new Vector3(0, 0.05f, 0);
+                Vector3 newPosition = drone.rb.position + transform.TransformDirection(tempVect);
+                drone.rb.MovePosition(newPosition);
+            }
+            if (input.GetKey(KeybindingActions.Down))
+            {
+                Vector3 tempVect = new Vector3(0, -0.05f, 0);
+                Vector3 newPosition = drone.rb.position + transform.TransformDirection(tempVect);
+                drone.rb.MovePosition(newPosition);
+            }
+        }
     }
 }

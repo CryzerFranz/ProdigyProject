@@ -86,11 +86,11 @@ public class DroneControl : MonoBehaviour
         }
         if(input.GetKey(KeybindingActions.rotateLeft))
         {
-            transform.Rotate(new Vector3(0, 0, 2) * 50 * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, 10) * 50 * Time.deltaTime);
         }
         if (input.GetKey(KeybindingActions.rotateRight))
         {
-            transform.Rotate(new Vector3(0, 0, -2) * 50 * Time.deltaTime);
+            transform.Rotate(new Vector3(0, 0, -10) * 50 * Time.deltaTime);
         }
 
     }
