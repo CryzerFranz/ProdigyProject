@@ -16,5 +16,9 @@ public enum KeybindingActions
     ability_05,
     ability_06,
     ability_07,
+    EngineOnOf,
+    Up,
+    rotateLeft,
+    rotateRight
 
 }

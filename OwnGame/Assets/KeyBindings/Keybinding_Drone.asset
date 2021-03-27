@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Keybinding_Drone
   m_EditorClassIdentifier: 
   keybindingChecks:
-  - keybindingAction: 0
+  - keybindingAction: 17
     keyCode: 32
   - keybindingAction: 1
     keyCode: 306
@@ -25,3 +25,9 @@ MonoBehaviour:
     keyCode: 115
   - keybindingAction: 8
     keyCode: 119
+  - keybindingAction: 16
+    keyCode: 114
+  - keybindingAction: 18
+    keyCode: 101
+  - keybindingAction: 19
+    keyCode: 113
