@@ -92,6 +92,18 @@ public class DroneControl : MonoBehaviour
         {
             transform.Rotate(new Vector3(0, 0, -10) * 50 * Time.deltaTime);
         }
+        if(input.GetKey(KeybindingActions.Up))
+        {
+            Vector3 tempVect = new Vector3(0, 5, 0);
+            tempVect = tempVect * speed * Time.deltaTime;
+            rb.MovePosition(transform.position + tempVect);
+        }
+        if(input.GetKey(KeybindingActions.Down))
+        {
+            Vector3 tempVect = new Vector3(0, -5, 0);
+            tempVect = tempVect * speed * Time.deltaTime;
+            rb.MovePosition(transform.position + tempVect);
+        }
 
     }
 }

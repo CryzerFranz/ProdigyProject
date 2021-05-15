@@ -13,21 +13,22 @@ public class thrusters : MonoBehaviour
     {
         input = InputManager.instance;
     }
-    void FixedUpdate()
+    void Update()
     {
         if (drone.Engine == true)
         {
             if (input.GetKey(KeybindingActions.Up))
             {
                 Vector3 tempVect = new Vector3(0, 0.05f, 0);
-                Vector3 newPosition = drone.rb.position + transform.TransformDirection(tempVect);
-                drone.rb.MovePosition(newPosition);
+                //Vector3 newPosition = rb.position + transform.TransformDirection(tempVect);
+                transform.Translate(Vector3.up * Time.deltaTime);
             }
             if (input.GetKey(KeybindingActions.Down))
             {
                 Vector3 tempVect = new Vector3(0, -0.05f, 0);
-                Vector3 newPosition = drone.rb.position + transform.TransformDirection(tempVect);
-                drone.rb.MovePosition(newPosition);
+                //Vector3 newPosition = rb.position + transform.TransformDirection(tempVect);
+                transform.Translate(-Vector3.up * Time.deltaTime);
+
             }
         }
     }
