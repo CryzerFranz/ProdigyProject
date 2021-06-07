@@ -1,0 +1,23 @@
+.menu-button {
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-font: url('/Assets/TextMesh Pro/Fonts/VCR_OSD_MONO_1.001.ttf');
+    background-image: url('/Assets/Texture/UI Elements/Button/Button_final.png');
+    width: 400px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(56, 56, 56, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 167, 251, 255);
+}
+
+.menu-button:hover {
+    color: rgba(183, 92, 179, 255);
+    width: 400px;
+    height: 120px;
+    font-size: 50px;
+}
