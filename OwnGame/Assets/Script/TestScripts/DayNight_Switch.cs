@@ -11,6 +11,7 @@ public class DayNight_Switch : MonoBehaviour
 
     private GameObject[] billboardsSwitcher;
     private GameObject[] signsSwitcher;
+    private GameObject[] polygonEmissiveModTextureSwitcher;
 
     [Header("Camera")]
     [SerializeField]
@@ -35,6 +36,10 @@ public class DayNight_Switch : MonoBehaviour
     private Material day_signs;
     [SerializeField]
     private Material night_signs;
+    [SerializeField]
+    private Material day_PolygonEmissiveModTexture;
+    [SerializeField]
+    private Material night_PolygonEmissiveModTexture;
     [Space]
     [Header("PP Profiles")]
     [SerializeField]
@@ -51,6 +56,7 @@ public class DayNight_Switch : MonoBehaviour
     {
         billboardsSwitcher = GameObject.FindGameObjectsWithTag("BillBoards");
         signsSwitcher = GameObject.FindGameObjectsWithTag("Signs");
+        polygonEmissiveModTextureSwitcher = GameObject.FindGameObjectsWithTag("PolygonEmissiveTexture");
     }
 
     void Update()
@@ -65,6 +71,8 @@ public class DayNight_Switch : MonoBehaviour
             setSkyDomeOffset(0, 0f);
             changeMaterialOfGameObjects(ref billboardsSwitcher ,day_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, day_signs);
+            changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, day_PolygonEmissiveModTexture);
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -79,6 +87,8 @@ public class DayNight_Switch : MonoBehaviour
             setSkyDomeOffset(-0.26f, 0f);
             changeMaterialOfGameObjects(ref billboardsSwitcher ,twillight_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, night_signs);
+            changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, night_PolygonEmissiveModTexture);
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
@@ -92,6 +102,8 @@ public class DayNight_Switch : MonoBehaviour
             setSkyDomeOffset(-0.52f, 0f);
             changeMaterialOfGameObjects(ref billboardsSwitcher,twillight_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, night_signs);
+            changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, night_PolygonEmissiveModTexture);
+
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
@@ -105,6 +117,8 @@ public class DayNight_Switch : MonoBehaviour
             setSkyDomeOffset(0.79f, 0f);
             changeMaterialOfGameObjects(ref billboardsSwitcher ,day_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, day_signs);
+            changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, day_PolygonEmissiveModTexture);
+
         }
     }
     private void changeMaterialOfGameObjects(ref GameObject[] _object, Material _material)
