@@ -12,6 +12,8 @@ public class DayNight_Switch : MonoBehaviour
     private GameObject[] billboardsSwitcher;
     private GameObject[] signsSwitcher;
     private GameObject[] polygonEmissiveModTextureSwitcher;
+    private GameObject[] lightSwitcher;
+
 
     [Header("Camera")]
     [SerializeField]
@@ -57,6 +59,7 @@ public class DayNight_Switch : MonoBehaviour
         billboardsSwitcher = GameObject.FindGameObjectsWithTag("BillBoards");
         signsSwitcher = GameObject.FindGameObjectsWithTag("Signs");
         polygonEmissiveModTextureSwitcher = GameObject.FindGameObjectsWithTag("PolygonEmissiveTexture");
+        lightSwitcher = GameObject.FindGameObjectsWithTag("Light");
     }
 
     void Update()
@@ -65,10 +68,12 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Tag
             //PP Profile vorhanden
+            //Licht aus
 
             setSunLightColor(new Vector4(1f, 1f, 1f));
             setProfile(Profile_Day);
             setSkyDomeOffset(0, 0f);
+            setLightOffOn(ref lightSwitcher, false);
             changeMaterialOfGameObjects(ref billboardsSwitcher ,day_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, day_signs);
             changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, day_PolygonEmissiveModTexture);
@@ -78,6 +83,7 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Abenddaemmerung
             //PP Profile vorhanden
+            //Licht an
             //SunLight.color.blue = 0.972549f;
             //SunLight.color.red = 0.5960785f;
             //SunLight.color.green = 0.4705882f;
@@ -85,6 +91,7 @@ public class DayNight_Switch : MonoBehaviour
             setSunLightColor(new Vector4(0.5960785f, 0.4705882f, 0.972549f));
             setProfile(Profile_Twillight);
             setSkyDomeOffset(-0.26f, 0f);
+            setLightOffOn(ref lightSwitcher);
             changeMaterialOfGameObjects(ref billboardsSwitcher ,twillight_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, night_signs);
             changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, night_PolygonEmissiveModTexture);
@@ -94,12 +101,14 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Nacht
             //PP Profile vorhanden
+            //Licht an
             //SunLight.color.blue = 0.5372549f;
             //SunLight.color.red = 0.3333333f;
             //SunLight.color.green = 0f;
             setSunLightColor(new Vector4(0.3333333f, 0f, 0.5372549f));
             setProfile(Profile_Night);
             setSkyDomeOffset(-0.52f, 0f);
+            setLightOffOn(ref lightSwitcher);
             changeMaterialOfGameObjects(ref billboardsSwitcher,twillight_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, night_signs);
             changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, night_PolygonEmissiveModTexture);
@@ -109,12 +118,15 @@ public class DayNight_Switch : MonoBehaviour
         {
             //Tageszyklus = Morgendaemmerung
             //PP Profile vorhanden
+            //Licht aus
             //SunLight.color.blue = 0.4039216f;
             //SunLight.color.red = 0.7176471f;
             //SunLight.color.green = 0.5529412f;
             setSunLightColor(new Vector4(0.7176471f, 0.5529412f, 0.4039216f));
             setProfile(Profile_Dust);
             setSkyDomeOffset(0.79f, 0f);
+            setLightOffOn(ref lightSwitcher, false);
+            setLightOffOn(ref lightSwitcher, false);
             changeMaterialOfGameObjects(ref billboardsSwitcher ,day_Billboards);
             changeMaterialOfGameObjects(ref signsSwitcher, day_signs);
             changeMaterialOfGameObjects(ref polygonEmissiveModTextureSwitcher, day_PolygonEmissiveModTexture);
@@ -139,5 +151,13 @@ public class DayNight_Switch : MonoBehaviour
     public void setSunLightColor(Vector4 container)
     {
         SunLight.color = container;
+    }
+
+    private void setLightOffOn(ref GameObject[] _object, bool turnOn = true)
+    {
+        for (int i = 0; i < _object.Length; i++)
+        {
+            _object[i].active = turnOn;
+        }
     }
 }
