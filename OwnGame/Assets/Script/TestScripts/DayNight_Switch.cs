@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class DayNight_Switch : MonoBehaviour
 {
@@ -69,7 +70,7 @@ public class DayNight_Switch : MonoBehaviour
             //Tageszyklus = Tag
             //PP Profile vorhanden
             //Licht aus
-
+            SunLight.shadows = LightShadows.Soft;
             setSunLightColor(new Vector4(1f, 1f, 1f));
             setProfile(Profile_Day);
             setSkyDomeOffset(0, 0f);
@@ -88,6 +89,7 @@ public class DayNight_Switch : MonoBehaviour
             //SunLight.color.red = 0.5960785f;
             //SunLight.color.green = 0.4705882f;
 
+            SunLight.shadows = LightShadows.None;
             setSunLightColor(new Vector4(0.5960785f, 0.4705882f, 0.972549f));
             setProfile(Profile_Twillight);
             setSkyDomeOffset(-0.26f, 0f);
@@ -105,6 +107,7 @@ public class DayNight_Switch : MonoBehaviour
             //SunLight.color.blue = 0.5372549f;
             //SunLight.color.red = 0.3333333f;
             //SunLight.color.green = 0f;
+            SunLight.shadows = LightShadows.None;
             setSunLightColor(new Vector4(0.3333333f, 0f, 0.5372549f));
             setProfile(Profile_Night);
             setSkyDomeOffset(-0.52f, 0f);
@@ -122,6 +125,7 @@ public class DayNight_Switch : MonoBehaviour
             //SunLight.color.blue = 0.4039216f;
             //SunLight.color.red = 0.7176471f;
             //SunLight.color.green = 0.5529412f;
+            SunLight.shadows = LightShadows.Soft;
             setSunLightColor(new Vector4(0.7176471f, 0.5529412f, 0.4039216f));
             setProfile(Profile_Dust);
             setSkyDomeOffset(0.79f, 0f);
