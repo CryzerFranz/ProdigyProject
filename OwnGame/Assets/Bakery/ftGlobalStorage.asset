@@ -442,7 +442,304 @@ MonoBehaviour:
   - Assets/BruteForce-GrassShader/Mesh/IcoGrass.fbx
   - Assets/BruteForce-GrassShader/Mesh/BallPlatform.fbx
   - Assets/BruteForce-GrassShader/Mesh/TerrainGrassExample01Lod.fbx
-  uvOverlapAssetList: 0000000000000000000000000101000000000000010100000101000000000000000000000000000001010000010100000000000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000000000000000000010100000101000000000000
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunBackward_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitFrontRight.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotRight90.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo2.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenGunShoot.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotRight45.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo3.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToWalkForward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenSpawn.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenWalkForwardsLanding.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStrafe90RightRunBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenIdle_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotRight180.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn180RightRun.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotLeft135.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitFront.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStrafeWalkBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitBackLeft.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn180LeftRun.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn90LeftWalk.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenIdle.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenGunTakeOut.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo1_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunForwardLandingFast.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenDeath_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo4_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitRight.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenDeath.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo3_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotRight135.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStrafe90LeftRunBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn180RightWalk.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenIdleLandFast.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunForwardStrafeRight_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitFrontLeft.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn90RightRun.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo6_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRandomIdle1.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo5_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunForward_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenJump_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn180LeftWalk.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitBackRight.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn90RightWalk.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunForward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunForwardLanding.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenWalkBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenQuickTurnLeft.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStrafe90LeftWalkBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitLeft.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenQuickTurnRight.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo1.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRandomIdle2.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotLeft180.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenJump.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRandomIdle3.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo2_Unity.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStrafeRunBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenWalkForward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenGunIdle.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToTurn90LeftRun.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotLeft90.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStrafe90RightBackward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenStationaryToRunForward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenGunPutAway.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenCombo4.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenRunForwardBackwardTransition.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenHitBack.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Unity/@EllenTurnOnSpotLeft45.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Cone01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Boar/Boar
+    Death.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/Swirl02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Actions.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Sleep.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Rabbit/Rabbit_Idle.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Longsword_01_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Boar/Boar
+    Walk.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Shield_17_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/Chest_Open.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Deer/Deer
+    Get Hit.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Quiver_01_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_Fence_Small_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Bear/Bear
+    Attack.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Attacks.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Staff_02_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Animations
+    v2/Locomotion/Wolfr_Run_Forward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Rabbit/Rabbit_Run.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Helix_5.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Animations
+    v2/Fall/Wolfr_Fall_High_Forward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Deer/Deer
+    Idle.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Swirl02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Bear/Bear
+    Actions.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Helix_7.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Run.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Wolf Proxy.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Boar/Boar
+    Idle.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/DanielShervheim/Stylized Water/Meshes/UniformHighPolyPlane.fbx
+  - Assets/Blink/Art/Props/Stylized/Wooden/Fence/Fence_01_Combined.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Models/Station_Jewelcrafting_Simple.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/Arrow02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Cylinder_3.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Fly_Left.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Sack_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Wyvern Proxy.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Hand_Lantern_02.fbx
+  - Assets/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Axes/Axe1h.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Barrel_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Staff_02_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_ShortWaraxe_01_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Fly_Stand.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Damage_Front_Right.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_Wing_Fist_Left.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Boar/Boar
+    Get Hit.FBX
+  - Assets/Blink/Art/Props/Stylized/Wooden/Bridge_Big/Bridge_Big.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Cylinder_7.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Rabbit/Rabbit_Walk.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/Dungeon.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Walk_Forward.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Models/Station_Alchemy_Simple.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Sword_01_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Animations
+    v2/Attacks/Wolfr_Attack_Bite_Forward.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/PORTAL (AAA)/Mesh/Portal.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_Fence_Small_03.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Spike01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/Sphere01_lowpoly.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/Arrow_1.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_FireBall.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Furnace_Small_Stone_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_Fence_03.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Rabbit/Rabbit_Attacks.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Bear/Bear
+    Walk.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Fly_Right.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_LongWaraxe_03_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Characters/Mesh/PT_Medieval_Male_Armor_Skeleton_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Idle.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Death02.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Small_Mound_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_LongWaraxe_03_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/Sword01.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polyart/Meshes/SM_RPGTree_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Characters/Mesh/PT_Medieval_Male_Armor_05_A.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Plant_01_Gathered_Remains.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Book_open_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_Fence_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Chest_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_Wing_Fist_Right.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Cylinder_6.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_FireBreath_Swipe.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Wooden_Cross_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Death01.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Deer/Deer
+    Run.FBX
+  - Assets/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Axes/Axe2h.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Helix_2.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_06.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Bow_04_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Proxy_Deer.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Stool_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Bear Proxy.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polyart/Meshes/SM_RPGTree_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/NPCs/Prefabs/NPCSpawner_Cylinder.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_FireBreath.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Deer/Deer
+    Attack.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Animations
+    v2/Actions/Wolfr_Sit_Howl.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Hand_Lantern_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Helix_4.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Characters/Mesh/PT_Medieval_Male_Armor_01_A.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_03.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Sword_07_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Idles.FBX
+  - Assets/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Shield/Shield.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Animations
+    v2/Idles/Wolfr_Idle.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Damaged.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Deer/Deer
+    Walk.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Anvil_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Proxy_Boar.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Models/Station_Enchanting_Simple.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Polytope Studio/Lowpoly
+    Medieval Characters/Modular_Armors/Prefabs/PolytopeCharacter.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Sword_03_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Run_Forward.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/Cone01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polyart/Meshes/SM_Bush_04.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Rock_4.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/Teleport.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_WarHammer_01_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Models/Pickaxe_Metal_Sample.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Animations
+    v2/Actions/Wolfr_Sit_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_Tail_Left.FBX
+  - Assets/Blink/Tools/RPGBuilder/Prefabs/LootBag/money_bag.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Helix_6.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Wooden_Cross_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Box_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Boar/Boar
+    Run.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Rabbit/Rabbit_Actions.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Bear/Bear
+    Run.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polyart/Meshes/SM_RockFormation_04.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_08.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Tree_1.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_Fence_04.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Fly_Forward.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Plant_01_Gathered_Part.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Sphere.FBX
+  - Assets/Blink/Art/Props/Stylized/Wooden/Bridge_Big/Bridge_Big_Modular.fbx
+  - Assets/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Maces/Mace1h.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Bear/Bear
+    Idle.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Rock_S_Deposit_Empty.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_Fence_Small_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_House_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Walk.FBX
+  - Assets/Blink/Art/Props/Stylized/Wooden/Fence/Fence_02_Combined.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Cylinder_5.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Staff_05_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Cylinder_2.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment2/Meshes/PT_Apple_Tree_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Staff_03_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Wooden_Cross_03.fbx
+  - Assets/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Staff/Staff.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Staff_03_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Bear/Bear
+    Damaged.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Staff_05_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Helix_3.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_WarHammer_01_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Log_With_Axe_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Characters/Mesh/PT_Medieval_Plague_Doctor.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_Tail_Right.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Shield_01_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Characters/Mesh/PT_Medieval_Male_Armor_03_A.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Death.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Book_closed_01.fbx
+  - Assets/Blink/Art/Weapons/LowPoly/FreeRPGWeapons/Bow/Bow.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Small_Mound_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/Chest_Closed.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Boar/Boar
+    Attack.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/Path02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Village_Fence_01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Bear/Bear
+    Death.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_FireMask.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Shield_18_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Idle_Combat.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Attack_Bite_Front.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/RingMesh02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wolf/Canine_Combat_Idle.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/PortalTest.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Rabbit Proxy.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Mace_01_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Deer/Deer
+    Death.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Arrow_01_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/Models/Cylinder02.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/TitanForge Assets/TitanForge Sample
+    Pack/Rock_S_Deposit_Metal.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Shield_17_c.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Weapons/Meshes/PT_Medieval_Sheath_01_a.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/MalbersAnimations/Animations/Wyvern/WD_Fly_Backwards.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_07.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_05.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/Coin.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Props/Meshes/PT_Medieval_Medicine_Bottle_04.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/GabrielAguiarProductions/RingMesh01.fbx
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/RDR/Particles/RPG Effect Pack/Mesh/FX/Helix_1.FBX
+  - Assets/Blink/Tools/RPGBuilder/ThirdPartyAssets/Polytope Studio/Environment/Meshes/PT_Medieval_Rock_6.fbx
+  uvOverlapAssetList: 000000000000000000000000010100000000000001010000010100000000000000000000000000000101000001010000000000000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000000000000000000001010000010100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010100000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000ffffffff00000000000000000000000000000000000000000000000000000000010100000101000000000000000000000000000000000000000000000000000000000000010100000000000000000000010100000000000000000000010100000000000000000000000000000000000000000000000000000000000001010000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000001010000000000000000000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010000010100000000000000000000000000000000000000000000010100000000000000000000000000000000000000000000000000000101000000000000010100000000000000000000000000000000000001010000000000000000000000000000000000000101000000000000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101000000000000000000000000000001010000
   xatlasWarningShown: 0
   foundCompatibleSetup: 0
   gpuName: 
