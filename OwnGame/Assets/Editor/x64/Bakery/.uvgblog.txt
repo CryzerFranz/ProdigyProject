@@ -1425,3 +1425,742 @@ Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/Spawnpoint_L
 Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/Spawnpoint_LMA19_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/Spawnpoint_LMA19_final.hdr" 1024
 Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/Spawnpoint_LMA24_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/Spawnpoint_LMA24_final.hdr" 1024
 Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/Spawnpoint_LMA5_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/Spawnpoint_LMA5_final.hdr" 1024
+2021-9-16
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace diradd "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_lights_Dir.lz4" 64 0 0 dircomp_0.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgidir "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 68 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN D "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_Dir.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_Dir.lz4" 512 0
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 512 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4" "TestRendering_LM0_final_Dir.lz4
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running rgba2tga "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_Dir.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_dir.tga" 
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA3 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA4.lz4" 2 0 4 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA3.lz4" 2 0 3 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA2.lz4" 2 0 2 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftrace diradd "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_lights_Dir.lz4" 64 0 1 dircomp_1.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4" 4 0 4 comp_4.bin
+Running ftrace diradd "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_lights_Dir.lz4" 64 0 4 dircomp_4.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3" 4 0 3 comp_3.bin
+Running ftrace diradd "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_lights_Dir.lz4" 64 0 3 dircomp_3.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace diradd "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_lights_Dir.lz4" 64 0 0 dircomp_0.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2" 4 0 2 comp_2.bin
+Running ftrace diradd "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_lights_Dir.lz4" 64 0 2 dircomp_2.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA40.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA30.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA20.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA41.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA31.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA21.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA42.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA32.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA22.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA43.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA33.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA23.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgidir "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 68 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgidir "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_final" 68 16 4 "gi_TestRendering_LMA44.bin" "TestRendering_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgidir "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_final" 68 16 3 "gi_TestRendering_LMA34.bin" "TestRendering_LMA3_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgidir "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 68 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgidir "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_final" 68 16 2 "gi_TestRendering_LMA24.bin" "TestRendering_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN D "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_Dir.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_Dir.lz4" 512 0
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 512 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4" "TestRendering_LMA1_final_Dir.lz4
+Running denoiserOIDN D "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_Dir.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_Dir.lz4" 256 0
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" 256 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "4" "TestRendering_LMA4_final_HDR.lz4" "TestRendering_LMA4_final_Dir.lz4
+Running denoiserOIDN D "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_Dir.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_Dir.lz4" 256 0
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_HDR.lz4" 256 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "3" "TestRendering_LMA3_final_HDR.lz4" "TestRendering_LMA3_final_Dir.lz4
+Running denoiserOIDN D "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_Dir.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_Dir.lz4" 1024 0
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4" "TestRendering_LM0_final_Dir.lz4
+Running denoiserOIDN D "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_Dir.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_Dir.lz4" 256 0
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" 256 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "2" "TestRendering_LMA2_final_HDR.lz4" "TestRendering_LMA2_final_Dir.lz4
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running rgba2tga "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_Dir.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_dir.tga" 
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA4_final.hdr" 1024
+Running rgba2tga "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_Dir.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA4_dir.tga" 
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA3_final.hdr" 1024
+Running rgba2tga "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_Dir.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA3_dir.tga" 
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running rgba2tga "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_Dir.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_dir.tga" 
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA2_final.hdr" 1024
+Running rgba2tga "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_Dir.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA2_dir.tga" 
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA3 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA4.lz4" 2 0 4 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA3.lz4" 2 0 3 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA2.lz4" 2 0 2 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4" 4 0 4 comp_4.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3" 4 0 3 comp_3.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2" 4 0 2 comp_2.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA40.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA30.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA20.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA41.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA31.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA21.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA42.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA32.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA22.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 4 "gi_TestRendering_LMA43.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_diffuse" 4 16 3 "gi_TestRendering_LMA33.bin" "TestRendering_LMA3_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA23.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 4 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_final" 4 16 4 "gi_TestRendering_LMA44.bin" "TestRendering_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA3_final" 4 16 3 "gi_TestRendering_LMA34.bin" "TestRendering_LMA3_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_final" 4 16 2 "gi_TestRendering_LMA24.bin" "TestRendering_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 512 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" 256 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "4" "TestRendering_LMA4_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_HDR.lz4" 256 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "3" "TestRendering_LMA3_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" 256 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "2" "TestRendering_LMA2_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA4_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA3_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA3_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA2_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 4 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiser72 c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiser72 c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 4 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiser72 c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiser72 c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 4 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiserLegacy c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftraceRTX fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 4 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 4 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 20 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 20 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace add "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftrace add "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 20 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 20 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace add "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final_HDR.lz4" 4 0 1 comp_indirect1.bin
+Running ftrace add "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final_HDR.lz4" 4 0 0 comp_indirect0.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running ftraceRTX.exe /sun hwtestdata light 4 0 0 direct0.bin
+Running ftrace.exe /sun hwtestdata light 4 0 0 direct0.bin
+Running denoiserLegacy c hwtestdata/image.lz4 hwtestdata/image.lz4 16 0
+Running denoiser c hwtestdata/image.lz4 hwtestdata/image.lz4 16 0
+Running denoiser72 c hwtestdata/image.lz4 hwtestdata/image.lz4 16 0
+Running denoiserOIDN c hwtestdata/image.lz4 hwtestdata/image.lz4 16 0
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA2 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA1.lz4" 2 0 1 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA2.lz4" 2 0 2 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1" 4 0 1 comp_1.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2" 4 0 2 comp_2.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA10.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA20.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA11.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA21.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA12.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA22.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_diffuse" 4 16 1 "gi_TestRendering_LMA13.bin" "TestRendering_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_diffuse" 4 16 2 "gi_TestRendering_LMA23.bin" "TestRendering_LMA2_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA1_final" 4 16 1 "gi_TestRendering_LMA14.bin" "TestRendering_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA2_final" 4 16 2 "gi_TestRendering_LMA24.bin" "TestRendering_LMA2_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA1_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "2" "TestRendering_LMA2_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA1_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA1_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA2_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA2_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA5 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA4.lz4" 2 0 2 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA5.lz4" 2 0 1 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4" 4 0 2 comp_2.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5" 4 0 1 comp_1.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_final" 4 16 2 "gi_TestRendering_LMA40.bin" "TestRendering_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_final" 4 16 1 "gi_TestRendering_LMA50.bin" "TestRendering_LMA5_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "2" "TestRendering_LMA4_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 4096 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA5_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA4_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA5_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA5 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA4.lz4" 2 0 2 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA5.lz4" 2 0 1 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4" 4 0 2 comp_2.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5" 4 0 1 comp_1.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA40.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA50.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA41.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA51.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA42.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA52.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA43.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA53.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_final" 4 16 2 "gi_TestRendering_LMA44.bin" "TestRendering_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_final" 4 16 1 "gi_TestRendering_LMA54.bin" "TestRendering_LMA5_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "2" "TestRendering_LMA4_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 4096 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA5_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA4_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA5_final.hdr" 1024
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Done
+Rendering UV GBuffer for TestRendering_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA5 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for TestRendering_LMA4 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA4.lz4" 2 0 2 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LM0.lz4" 2 0 0 0
+Running ftrace fixpos12 "C:\Users\Paleyron\AppData\Local\Temp\frender" "uvpos_TestRendering_LMA5.lz4" 2 0 1 0
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4" 4 0 2 comp_2.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0" 4 0 0 comp_0.bin
+Running ftrace addmul "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5" 4 0 1 comp_1.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA40.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM00.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA50.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA41.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM01.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA51.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA42.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM02.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA52.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_diffuse" 4 16 2 "gi_TestRendering_LMA43.bin" "TestRendering_LMA4_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_diffuse" 4 16 0 "gi_TestRendering_LM03.bin" "TestRendering_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_diffuse" 4 16 1 "gi_TestRendering_LMA53.bin" "TestRendering_LMA5_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA4_final" 4 16 2 "gi_TestRendering_LMA44.bin" "TestRendering_LMA4_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LM0_final" 4 16 0 "gi_TestRendering_LM04.bin" "TestRendering_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftrace texgi "C:\Users\Paleyron\AppData\Local\Temp\frender" "TestRendering_LMA5_final" 4 16 1 "gi_TestRendering_LMA54.bin" "TestRendering_LMA5_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" 2048 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "2" "TestRendering_LMA4_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" 4096 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "0" "TestRendering_LM0_final_HDR.lz4"
+Running denoiserOIDN c "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" 1024 0
+Running seamfixer "C:\Users\Paleyron\AppData\Local\Temp\frender" "1" "TestRendering_LMA5_final_HDR.lz4"
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA4_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA4_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LM0_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LM0_final.hdr" 1024
+Running halffloat2hdr "C:\Users\Paleyron\AppData\Local\Temp\frender/TestRendering_LMA5_final_HDR.lz4" "C:/Users/Paleyron/Documents/GitHub/Game2020/OwnGame/Assets/BakeryLightmaps/TestRendering_LMA5_final.hdr" 1024
