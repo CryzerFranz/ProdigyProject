@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3761798586541444615}
   - component: {fileID: 259885479457030562}
   - component: {fileID: 2630026585041892712}
+  - component: {fileID: -1480036115166063078}
   m_Layer: 0
   m_Name: SM_Env_Sidewalk_Grate_02_SF_Modified
   m_TagString: Untagged
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -81,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-1480036115166063078
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4575454149615735997}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7991139082726903243, guid: 793215c5bdc2e8a45b33192d34558b63, type: 3}

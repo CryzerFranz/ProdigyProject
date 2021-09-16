@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 104314801493815300}
   - component: {fileID: 3953388989764190113}
   - component: {fileID: 1241222316860722027}
+  - component: {fileID: 8202727421009346514}
   m_Layer: 0
   m_Name: SM_Veh_Hoverboard_01_Modified
   m_TagString: Untagged
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -81,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8202727421009346514
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736700754159135422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5298497702452277405, guid: 7aa9f03aba255444f86cd99ab5c81dc8, type: 3}

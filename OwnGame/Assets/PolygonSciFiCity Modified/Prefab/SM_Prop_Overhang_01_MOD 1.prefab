@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2835995309692764961}
   - component: {fileID: 1221778558220127364}
   - component: {fileID: 3967766284828325966}
+  - component: {fileID: -3546593599128224986}
   m_Layer: 0
   m_Name: SM_Prop_Overhang_01_MOD 1
   m_TagString: Untagged
@@ -52,6 +53,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -82,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3546593599128224986
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3175224764874168731}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4785897570489229953, guid: e76f9d933ba8a3b4fb0366e3eeeab60e, type: 3}
 --- !u!1 &8815105492678295513
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +149,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
