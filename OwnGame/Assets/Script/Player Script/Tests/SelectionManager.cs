@@ -12,8 +12,8 @@ public class SelectionManager : MonoBehaviour
         _input = new Input();
     }
 
-    private void OnEnable()
-    {
-        _input;
-    }
+    //private void OnEnable()
+    //{
+    //    _input;
+    //}
 }
