@@ -2,7 +2,7 @@
     "name": "TopDownPlayerController",
     "maps": [
         {
-            "name": "Move",
+            "name": "Movement",
             "id": "aacf29f4-101a-45eb-82d1-ec3185cada5d",
             "actions": [
                 {
@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Execute",
+                    "name": "Target",
                     "type": "Button",
                     "id": "b0db1480-ad88-42f6-984d-d1c7835804c8",
                     "expectedControlType": "Button",
@@ -49,7 +49,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Execute",
+                    "action": "Target",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

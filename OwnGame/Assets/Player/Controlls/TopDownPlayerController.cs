@@ -15,7 +15,7 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
     ""name"": ""TopDownPlayerController"",
     ""maps"": [
         {
-            ""name"": ""Move"",
+            ""name"": ""Movement"",
             ""id"": ""aacf29f4-101a-45eb-82d1-ec3185cada5d"",
             ""actions"": [
                 {
@@ -27,7 +27,7 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Execute"",
+                    ""name"": ""Target"",
                     ""type"": ""Button"",
                     ""id"": ""b0db1480-ad88-42f6-984d-d1c7835804c8"",
                     ""expectedControlType"": ""Button"",
@@ -62,7 +62,7 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Execute"",
+                    ""action"": ""Target"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -82,11 +82,11 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Move
-        m_Move = asset.FindActionMap("Move", throwIfNotFound: true);
-        m_Move_MousePosition = m_Move.FindAction("MousePosition", throwIfNotFound: true);
-        m_Move_Execute = m_Move.FindAction("Execute", throwIfNotFound: true);
-        m_Move_Select = m_Move.FindAction("Select", throwIfNotFound: true);
+        // Movement
+        m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
+        m_Movement_MousePosition = m_Movement.FindAction("MousePosition", throwIfNotFound: true);
+        m_Movement_Target = m_Movement.FindAction("Target", throwIfNotFound: true);
+        m_Movement_Select = m_Movement.FindAction("Select", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -133,58 +133,58 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Move
-    private readonly InputActionMap m_Move;
-    private IMoveActions m_MoveActionsCallbackInterface;
-    private readonly InputAction m_Move_MousePosition;
-    private readonly InputAction m_Move_Execute;
-    private readonly InputAction m_Move_Select;
-    public struct MoveActions
+    // Movement
+    private readonly InputActionMap m_Movement;
+    private IMovementActions m_MovementActionsCallbackInterface;
+    private readonly InputAction m_Movement_MousePosition;
+    private readonly InputAction m_Movement_Target;
+    private readonly InputAction m_Movement_Select;
+    public struct MovementActions
     {
         private @TopDownPlayerController m_Wrapper;
-        public MoveActions(@TopDownPlayerController wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MousePosition => m_Wrapper.m_Move_MousePosition;
-        public InputAction @Execute => m_Wrapper.m_Move_Execute;
-        public InputAction @Select => m_Wrapper.m_Move_Select;
-        public InputActionMap Get() { return m_Wrapper.m_Move; }
+        public MovementActions(@TopDownPlayerController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MousePosition => m_Wrapper.m_Movement_MousePosition;
+        public InputAction @Target => m_Wrapper.m_Movement_Target;
+        public InputAction @Select => m_Wrapper.m_Movement_Select;
+        public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MoveActions set) { return set.Get(); }
-        public void SetCallbacks(IMoveActions instance)
+        public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
+        public void SetCallbacks(IMovementActions instance)
         {
-            if (m_Wrapper.m_MoveActionsCallbackInterface != null)
+            if (m_Wrapper.m_MovementActionsCallbackInterface != null)
             {
-                @MousePosition.started -= m_Wrapper.m_MoveActionsCallbackInterface.OnMousePosition;
-                @MousePosition.performed -= m_Wrapper.m_MoveActionsCallbackInterface.OnMousePosition;
-                @MousePosition.canceled -= m_Wrapper.m_MoveActionsCallbackInterface.OnMousePosition;
-                @Execute.started -= m_Wrapper.m_MoveActionsCallbackInterface.OnExecute;
-                @Execute.performed -= m_Wrapper.m_MoveActionsCallbackInterface.OnExecute;
-                @Execute.canceled -= m_Wrapper.m_MoveActionsCallbackInterface.OnExecute;
-                @Select.started -= m_Wrapper.m_MoveActionsCallbackInterface.OnSelect;
-                @Select.performed -= m_Wrapper.m_MoveActionsCallbackInterface.OnSelect;
-                @Select.canceled -= m_Wrapper.m_MoveActionsCallbackInterface.OnSelect;
+                @MousePosition.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnMousePosition;
+                @MousePosition.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnMousePosition;
+                @MousePosition.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnMousePosition;
+                @Target.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnTarget;
+                @Target.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnTarget;
+                @Target.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnTarget;
+                @Select.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnSelect;
+                @Select.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnSelect;
+                @Select.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnSelect;
             }
-            m_Wrapper.m_MoveActionsCallbackInterface = instance;
+            m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @MousePosition.started += instance.OnMousePosition;
                 @MousePosition.performed += instance.OnMousePosition;
                 @MousePosition.canceled += instance.OnMousePosition;
-                @Execute.started += instance.OnExecute;
-                @Execute.performed += instance.OnExecute;
-                @Execute.canceled += instance.OnExecute;
+                @Target.started += instance.OnTarget;
+                @Target.performed += instance.OnTarget;
+                @Target.canceled += instance.OnTarget;
                 @Select.started += instance.OnSelect;
                 @Select.performed += instance.OnSelect;
                 @Select.canceled += instance.OnSelect;
             }
         }
     }
-    public MoveActions @Move => new MoveActions(this);
-    public interface IMoveActions
+    public MovementActions @Movement => new MovementActions(this);
+    public interface IMovementActions
     {
         void OnMousePosition(InputAction.CallbackContext context);
-        void OnExecute(InputAction.CallbackContext context);
+        void OnTarget(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
     }
 }
