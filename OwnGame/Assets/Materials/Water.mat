@@ -78,13 +78,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Wave_Scale: 153.11
-    - Wave_Speed: 2.77
+    - Wave_Scale: 0.32
+    - Wave_Speed: 5.03
     - _AlphaClip: 0
-    - _Angle_Offset: 9.53
+    - _Angle_Offset: 0
     - _Blend: 0
     - _BumpScale: 1
-    - _Cell_Size: 98.41
+    - _Cell_Size: 2
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2

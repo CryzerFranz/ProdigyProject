@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
     {
         if(IsPlayerDead)
         {
-            this.GetComponent<Movement>().enabled = false;
+           // this.GetComponent<Movement>().enabled = false;
             this.GetComponent<NavMeshAgent>().ResetPath();
             if(Input.anyKeyDown)
             {
@@ -55,7 +55,7 @@ public class Health : MonoBehaviour
                 animator.SetTrigger("Respawn");
                 playerUI.Canvas_Dead_Transition.SetActive(false);
                 playerUI.Canvas_Player_UI.SetActive(true);
-                this.GetComponent<Movement>().enabled = true;
+               // this.GetComponent<Movement>().enabled = true;
             }
         }
     }

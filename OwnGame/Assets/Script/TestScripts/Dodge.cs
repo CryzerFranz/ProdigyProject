@@ -7,7 +7,7 @@ public class Dodge : MonoBehaviour
 {
     // Start is called before the first frame update
     Animator animator;
-    Movement move;
+   // Movement move;
     NavMeshAgent nv;
 
     [SerializeField]
@@ -28,7 +28,7 @@ public class Dodge : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        move = GetComponent<Movement>();
+       // move = GetComponent<Movement>();
         nv = GetComponent<NavMeshAgent>();
        
     }
@@ -40,7 +40,7 @@ public class Dodge : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                move.enabled = false;
+               // move.enabled = false;
                 nv.ResetPath();
                 animator.SetFloat("Forward", 0f);
                 Time.timeScale = Time_Slow;
@@ -65,7 +65,7 @@ public class Dodge : MonoBehaviour
                 if(isArrowSpawned)
                 {
                     destroyArrow();
-                    move.enabled = true;
+                   // move.enabled = true;
                     Time.timeScale = 1f;
                 }
             }
@@ -74,7 +74,7 @@ public class Dodge : MonoBehaviour
     public void dodgeDone()
     {
         Time.timeScale = 1f;
-        move.enabled = true;
+        //move.enabled = true;
     }
 
     private void spawnArrow()

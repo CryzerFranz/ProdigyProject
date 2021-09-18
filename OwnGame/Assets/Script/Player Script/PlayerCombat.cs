@@ -17,7 +17,7 @@ public class PlayerCombat : MonoBehaviour
    
     public AbilityTImeBar abilityTimeBar;
     
-    private Movement playerMovement;
+   // private Movement playerMovement;
     private NavMeshAgent playerNavMesh;    
     private Animator animator;
     private RuntimeAnimatorController ac;
@@ -39,7 +39,6 @@ public class PlayerCombat : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerNavMesh = GetComponent<NavMeshAgent>();
-        playerMovement = GetComponent<Movement>();
         
         abilitiesStartEndValue = abilityTimeBar.abilityKeyPosition;
         input = InputManager.instance;
@@ -64,7 +63,7 @@ public class PlayerCombat : MonoBehaviour
     {
         animator.SetTrigger(abilityName);
         firstAnimationPressed = true;
-        playerMovement.enabled = false;
+       // playerMovement.enabled = false;
         playerNavMesh.ResetPath();
     }
     

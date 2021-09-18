@@ -19,7 +19,7 @@ public class AbilityTImeBar : MonoBehaviour
     GradientAlphaKey[] alphaKey;
 
     [SerializeField]
-    private Movement playerMovement;
+    //private Movement playerMovement;
 
     //vll nicht mehr notwendig
     private float sliderAdditionsValue = 1;

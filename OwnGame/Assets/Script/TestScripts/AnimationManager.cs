@@ -10,7 +10,7 @@ public class AnimationManager : MonoBehaviour
     private Animator animator;
 
     private Dodge dodge;
-    private Movement playerMovement;
+   // private Movement playerMovement;
     private NavMeshAgent playerNavMeshAgent;
     private PlayerCombat pc;
 
@@ -22,7 +22,7 @@ public class AnimationManager : MonoBehaviour
         pc = PlayerCombat.instance;
            animator = GetComponent<Animator>();
         animClip = animator.GetCurrentAnimatorClipInfo(0);
-        playerMovement = GetComponent<Movement>();
+        //playerMovement = GetComponent<Movement>();
         playerNavMeshAgent = GetComponent<NavMeshAgent>();
         dodge = GetComponent<Dodge>();
         for (int i = 0; i < animClip.Length; i++)
@@ -48,7 +48,7 @@ public class AnimationManager : MonoBehaviour
             if (pc.firstAnimationPressed == true)
             {
                 abilityTimeBar.slider.value = 0.0f;
-                playerMovement.enabled = true;
+               // playerMovement.enabled = true;
                 pc.firstAnimationPressed = false;
             }
         }
@@ -60,6 +60,6 @@ public class AnimationManager : MonoBehaviour
 
     public void animationDone()
     {
-        playerMovement.enabled = true;
+       // playerMovement.enabled = true;
     }
 }
