@@ -78,6 +78,33 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Combat"",
+            ""id"": ""350ebd15-3fda-4bd3-a8d5-666385455a76"",
+            ""actions"": [
+                {
+                    ""name"": ""Target"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a68c889-d594-426e-b38f-00716d09aaf2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""2a7ea6f6-7014-4367-8e17-876f3d951606"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Target"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -87,6 +114,9 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
         m_Movement_MousePosition = m_Movement.FindAction("MousePosition", throwIfNotFound: true);
         m_Movement_Target = m_Movement.FindAction("Target", throwIfNotFound: true);
         m_Movement_Select = m_Movement.FindAction("Select", throwIfNotFound: true);
+        // Combat
+        m_Combat = asset.FindActionMap("Combat", throwIfNotFound: true);
+        m_Combat_Target = m_Combat.FindAction("Target", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -181,10 +211,47 @@ public class @TopDownPlayerController : IInputActionCollection, IDisposable
         }
     }
     public MovementActions @Movement => new MovementActions(this);
+
+    // Combat
+    private readonly InputActionMap m_Combat;
+    private ICombatActions m_CombatActionsCallbackInterface;
+    private readonly InputAction m_Combat_Target;
+    public struct CombatActions
+    {
+        private @TopDownPlayerController m_Wrapper;
+        public CombatActions(@TopDownPlayerController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Target => m_Wrapper.m_Combat_Target;
+        public InputActionMap Get() { return m_Wrapper.m_Combat; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(CombatActions set) { return set.Get(); }
+        public void SetCallbacks(ICombatActions instance)
+        {
+            if (m_Wrapper.m_CombatActionsCallbackInterface != null)
+            {
+                @Target.started -= m_Wrapper.m_CombatActionsCallbackInterface.OnTarget;
+                @Target.performed -= m_Wrapper.m_CombatActionsCallbackInterface.OnTarget;
+                @Target.canceled -= m_Wrapper.m_CombatActionsCallbackInterface.OnTarget;
+            }
+            m_Wrapper.m_CombatActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Target.started += instance.OnTarget;
+                @Target.performed += instance.OnTarget;
+                @Target.canceled += instance.OnTarget;
+            }
+        }
+    }
+    public CombatActions @Combat => new CombatActions(this);
     public interface IMovementActions
     {
         void OnMousePosition(InputAction.CallbackContext context);
         void OnTarget(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
+    }
+    public interface ICombatActions
+    {
+        void OnTarget(InputAction.CallbackContext context);
     }
 }

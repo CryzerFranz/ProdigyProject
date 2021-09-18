@@ -65,6 +65,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Combat",
+            "id": "350ebd15-3fda-4bd3-a8d5-666385455a76",
+            "actions": [
+                {
+                    "name": "Target",
+                    "type": "Button",
+                    "id": "4a68c889-d594-426e-b38f-00716d09aaf2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2a7ea6f6-7014-4367-8e17-876f3d951606",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Target",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

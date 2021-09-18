@@ -27,7 +27,7 @@ public class AnimationManager : MonoBehaviour
         dodge = GetComponent<Dodge>();
         for (int i = 0; i < animClip.Length; i++)
         {
-            Debug.Log(animClip[i].clip);
+            //Debug.Log(animClip[i].clip);
         }
     }
     void Update()

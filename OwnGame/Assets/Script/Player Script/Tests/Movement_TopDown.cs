@@ -113,7 +113,6 @@ public class Movement_TopDown : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision Entered");
         if (other.gameObject.tag == "Enemy")
         {
             Debug.Log("Enemy collision");
@@ -134,6 +133,11 @@ public class Movement_TopDown : MonoBehaviour
             navMeshAgent.SetDestination(targetPosition.transform.position);
             collided = false;
         }
+    }
+
+    public bool isFollowing()
+    {
+        return followTarget;
     }
  
 }
