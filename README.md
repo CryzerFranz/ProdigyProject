@@ -9,8 +9,9 @@ ProdigyProject ist mein erstes Versuch, ein eigenes Videospiel zu programmieren.
 - **Setting**: Futuristische Hauptstadt
 - **Spielercharakter**: Cyborg
 - **Kernmechaniken**:
-  - Betreten eines Levels durch ein Portal
-  - Kauf von Charakter-Upgrades in der Hauptstadt
+  - Hauptstadt-Hub: Ein zentraler Ort, den der Spieler über ein Portal erreicht, um dort Upgrades für seinen Charakter zu erwerben.
+  - Levelsystem: Zufällig generierte Level, die der Spieler durchquert, um Ressourcen zu sammeln.
+  - Charakterentwicklung: Möglichkeiten zur Verbesserung des Cyborgs durch gesammelte Ressourcen und gekaufte Upgrades.
 - **Status**: Unfertiger Prototyp
 
 ## Technologien
